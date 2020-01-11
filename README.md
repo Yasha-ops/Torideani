@@ -7,6 +7,6 @@ Ne pas merge votre travail tant que votre version n'est pas
 verifié !! 
 Avant chaque modification faite un pull pour actualiser votre 
 version !
-NE TOUCHEZ PAS AU CHOSES QUE NE VOUS CONSERNE PAS ! 
+NE TOUCHEZ PAS AU CHOSES QUI NE VOUS CONSERNE PAS ! 
 
 
