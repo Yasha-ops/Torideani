@@ -1,0 +1,192 @@
+\documentclass[12pt]{report}
+\usepackage[french]{babel}
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage{titlesec}
+\usepackage{amssymb,amsmath,latexsym,amsfonts}
+\usepackage{color}
+\usepackage{eurosym}
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}} 
+%Permet de garder seulement le nom du chapitre sans le mot "chapitre" et sans son numero
+%Entête de toutes les pages haut\bas 
+\renewcommand\plainheadrulewidth{.4pt} 
+\fancyhf{}
+\fancyhead[RE,LO]{The Smashing Pumpkins}
+\fancyhead[LE,RO]{Epita 2020}
+\fancyfoot[RE,LO]{\thepage}
+\fancyfoot[LE,RO]{\leftmark}
+\fancyhead[C]{\fancyplain{\textbf{Torideani}}{\textbf{Torideani}}}
+%Enlever le mot chapitre
+\titleformat{\chapter}[display]{\normalfont\bfseries}{}{0pt}{\Huge}
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Titre 
+\title{\HUGE{Cahier des charges}}
+%Auteur
+\author{- \textbf{\textit{\textwidth{Torideani}}} - 
+\\ \textit{by} \\ \textit{The Smashing IT} \\ 
+\\ Yassine Damiri \\ Louis D'Hollande \\ Julien Calisto \\
+ Tahri Bahaaeddine }
+\date{Vendredi 17 Janvier 2020}
+
+
+%Debut du Cahier des Charges
+\begin{document}
+
+%Applique le titre authors etc
+\maketitle
+
+%Table des matières
+\tableofcontents
+
+%Annonce du Chapitre 1
+\chapter{Membres du groupe}
+\noindent
+\textbf{Nom :} Damiri (Chef de projet)\\
+\textbf{Prénom :} Yassine\\
+\textbf{Login :} yassine.damiri\\
+\textbf{Mail :} yassine.damiri@epita.fr\\
+Description \\ \\ \\
+\textbf{Nom :} D'Hollande\\
+\textbf{Prénom :} Louis\\
+\textbf{Login :} louis.dhollande\\
+\textbf{Mail :} louis.dhollande@epita.fr\\
+Description \\ \\ \\
+\textbf{Nom :} Calisto\\
+\textbf{Prénom :} Julien\\
+\textbf{Login :} julien.calisto\\
+\textbf{Mail :} julien.calisto@epita.fr\\
+Description \\ \\ \\
+\textbf{Nom :} Bahaaeddine\\
+\textbf{Prénom :} Tahri\\
+\textbf{Login :} tahri.bahaaeddine\\
+\textbf{Mail :} tahri.bahaaeddine@epita.fr\\
+Description \\ \\
+
+%Annonce de Chapitre 2
+
+%Annonce de Chapitre 2
+
+%Annonce du Chapitre 2
+\chapter{Le projet}
+    \section{Origine du projet}
+    \section{Le scénario / but du jeu}
+    \section{Les ancêtres}
+    \section{Une expérience enrichissante}
+
+%Annonce du Chapitre 3
+\chapter{L'aspect technique} 
+    \section{Les mécaniques de jeu}
+        \subsection{Les personnages}
+        \subsection{Les objets / Bonus}
+        \subsection{Monnaie et performances}
+    \section{Le langage de programmation}
+
+Comme proposé dans la partie Restrictions du Dossier Projet Informatique, nous utiliserons C# accompagné de UNITY.
+Utiliser ces deux derniers nous procure beaucoup d’avantages. Concernant
+C#, il s’agit du langage que nous maı̂trisons tous le plus grâce aux multiples
+TP dessus mais aussi car c'est un langage de programmation orienté objet (ET NOUS ON ADORE L OBJET) . 
+Quant à UNITY, nous suivons la lignée de la majorité des projets précédents
+de SUP. 
+    \section{Les graphismes}
+    \section{L'intelligence Artificielle}
+\\ Pour la parite sur l'intelligence artificielle, plusieurs problématiques vont se dresser durant l'avancer projet.
+Pour eviter ces dernieres nous allons d'abord travailler sur une IA "naive" mais fonctionnelle qui permettra aux PNJ (Personnage Non-Jouable) de se deplacer de maniere aleatoire mais aussi de maniere autonome.\\ L'IA devra être capable de generer des points aleatoire sur la carte auxquelles elle assimilira une direction, un sens et une vitesse aleatoire à un PNJ.\\ Une fois ceci traité, l'IA sera aussi responsable de l'apparition de bonus et de malus qu'elle affligera au jouers mais aussi des quetes divers que les jouers devront realisé pour gagner la partie.
+    \section{Multijouer}
+\\ Le multijouer sera réaliser a l'aide du moteur réseau Photon. \\
+Ce dernier se baserait sur un systéme de notoriéte entre les "Cherifs" 
+et les "Bandis" c'est a dire sur le nombre de partie gagnée. Plus le nombre de partie est grand, plus les gains de notorité seront grand. Le but étant d'être le "bandit" ou "cherif" le plus connus du Far West. 
+\\ Le multijouer sera disponible aussi bien OFFLINE qu'ONLINE, le nombre de jouer quant a lui sera fixé a 10; 5 bandis vs 5 cherif.
+    \section{Editeur de Maps}
+\\ 
+Tout les joueurs pourront creer leurs cartes personel et les partagé avec leurs amis. En effet nous allons incorporer la possibilité de creer nos propres maps sans avoir a coder une ligne de code supplémentaire !\\ Les maps seront stockés sur l'espace de stockage personnele de l'utilisateur.
+    \section{Répartition des tâches} 
+
+Nous avons décidé dès le début d'attribuer à chacun une
+spécialité, sachant que notre but reste tout de même d'apprendre
+des choses et de "toucher à tout". Chacun travaillerait un minimum
+sur les spécialités des autres pour notre apprentissage personnel,
+et ne serait-ce que par obligation : comment afficher une courbe
+extraite si on ne connaît rien à l'interface graphique ?
+Les spécialités de chacun furent récapitulées dans le tableau de répartition pour le début du projet.\\
+    \section{Tableau de la répartition des tâches}
+    %Creation du Tableau
+    \begin{center}
+    \begin{tabular}{|p{2 cm}||p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|}
+\hline
+ & Yassine D. & Louis D. & Julien C. & Tahri B.
+\\
+\hline \hline Première soutenance
+ & Lecteur de Wave.
+ & Lecteur de Wave.
+ & Interface graphique : GTK
+ & Interface graphique : GTK
+\\
+ & Recherche sur les FFT.
+ & Recherche sur l'algorithme de compression du mp3.
+ & Recherche sur l'algorithme de compression du mp3.
+ & Recherche sur l'algorithme de compression du mp3.
+\\
+ & Recherche sur la programmation du son sous Linux.
+ & Recherche sur la programmation du son sous Linux.
+ & Recherche sur la programmation du son sous Linux.
+ & Recherche sur la programmation du son sous Linux.
+\\
+\hline Deuxième soutenance
+ & Etude et affichage de la courbe de son.
+ & Lecteur de mp3.
+ & Lecture de deux sons.
+ & Avancement de l'interface graphique
+\\
+ &
+ & Calculateur de bpm
+ &
+ &
+\\
+\hline Troisième soutenance
+ & Gestion des volumes sonores selon canaux et généraux
+ & Création du Bouton ``mixage-auto''
+ & Création du Bouton ``mixage-auto''
+ & Création de la playlist
+\\
+ & Création d'un Cross-Fader
+ & Gestion du pitch.
+ & Gestion du pitch.
+ &
+\\
+ &
+ & Alignement des bpm.
+ & Alignement des bpm.
+ &
+\\
+\hline Soutenance finale
+ & Débuggage
+ & Débuggage
+ & Débuggage
+ & Débuggage
+\\
+\hline
+\end{tabular}
+    \end{center}
+    \\
+Cela dit, le but étant de travailler en groupe, et les tâches
+étant souvent très liées, nous travaillerons quasiment tous sur
+tout d'autant plus pour les premières soutenances où nous posons
+les bases du projet et ou on ne peut donc pas ignorer le travail
+des autres membres.
+    \section{L'avancement (Soutenance 1,2 final)} 
+    \section{Les outils utilisés}
+    \section{Futures ventes}
+
+%Annonce du Chapitre 4
+\chapter{Conclusion}
+Un groupe stable et uni est nécessaire à l'acomplissement du
+projet, et bien plus qu'un projet informatique, Torideani sera pour
+nous une aventure humaine nécessaire à notre integration dans le
+monde du travail.
+
+
+\end{document}
