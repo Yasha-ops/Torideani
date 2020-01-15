@@ -7,6 +7,7 @@
 \usepackage{color}
 \usepackage{eurosym}
 \usepackage{fancyhdr}
+\usepackage{graphics}
 \pagestyle{fancyplain}
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}} 
 %Permet de garder seulement le nom du chapitre sans le mot "chapitre" et sans son numero
@@ -27,17 +28,20 @@
 \title{\HUGE{Cahier des charges}}
 %Auteur
 \author{- \textbf{\textit{\textwidth{Torideani}}} - 
-\\ \textit{by} \\ \textit{The Smashing IT} \\ 
+\\ \textit{by} \\ \textit{The Smashing IT} \\ \begin{center}\includegraphics[scale=0.1]{logo.png} \end{center}  \\ 
 \\ Yassine Damiri \\ Louis D'Hollande \\ Julien Calisto \\
  Tahri Bahaaeddine }
-\date{Vendredi 17 Janvier 2020}
-
-
+\date{Vendredi 17 Janvier 2020 }
 %Debut du Cahier des Charges
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{document}
 
 %Applique le titre authors etc
 \maketitle
+
 
 %Table des matières
 \tableofcontents
@@ -71,11 +75,25 @@ Description \\ \\
 %Annonce de Chapitre 2
 
 %Annonce du Chapitre 2
+
+%Annonce du Chapitre 2
 \chapter{Le projet}
     \section{Origine du projet}
+    
+ Nous nous somme concerté dans l’objectif de trouver un projet qui plairait à tous les membres du groupe. \\ Plusieurs idées nous effleuraient la pensée mais le modèle du “jeu” étant bien trop tentant, nous nous laissâmes plonger dans le tréfond de celle-ci. L’évidence du modèle adopté était claire pour tout le monde, celui-ci étant un choix permettant d’apprendre d’une façon ludique et de laisser cour à l’imagination de chacun.\\ \par Suite à de nombreuses tentatives (tower defence,RPG, course...), nous avons constaté que la vision des jeux qui nous correspondait n’était pas la même pour tous les membres. L’idée presque trop simple est soudainement apparue comme une illumination : “Et si on jouait à cache cache ?”. Un jeu si simple pourtant déjà joué partout dans le monde. Sans délibération, le jeu fût déjà adopté.\\ \par Le choix du nom si spéciale en sonorité; “Torideani”, est le résultat de la fusion de la fin des noms de famille de chacun dans l'ordre suivant : Calisto, Damiri, D’Hollande, beaucoups trop long-ani. Sans forcément de sens caché derrière ce nom, ce choix a pour but de mentionner les auteurs de ce projet de manière à peu près subtile...
     \section{Le scénario / but du jeu}
+    Les règles du “cache cache” étant comprises sans trop de difficultées par tout le monde (du moins, nous l'espérons...), l’enjeu étant de transformer ce jeu connu en jeu vidéo amusant pour tous. \\
+        \begin{enumerate}
+            \item Nous avons ainsi choisi ces règles : Le jeu se compose de deux équipe allant de 1 à 5 personnes environs chacunes, les shérifs et les bandits. Les shérifs doivent tuer ou capturer les bandits. Les bandits, à leur tour, ont pour objectif de fuir les policiers et d’accomplir des tâches secondaires pour gagner plus vite. 
+            \item Le jeu se compose de deux équipes : les shérifs et les bandits. \\
+        \end{enumerate}
+        \par \textbf{\textit{Les Shérifs :}} Une évasion de la prison qui gardait les crapules les plus dangereuses a été déclarée. Votre rôle est de surveiller les habitants de votre ville, car parmi eux se cache certainement au moins un assassin extrêmement dangereux.\\
+        \par \textbf{\textit{Les Bandits :}} Vous vous êtes enfin échappé de votre cage, il est temps pour vous de vous venger des traîtres qui sont responsables du gâchis de votre précieux temps de vie.
+        
     \section{Les ancêtres}
+        \par Outre le jeu enfantin que tout le monde connait, les jeux vidéos de cache cache connus ne sont pas nombreux. Cependant il en existe deux modes de jeu qui sont assez connu. Issue du jeu \textit{\textbf{Garry’s mod}} sorti le 24 décembre en 2004, le \textit{\textbf{Prop hunt}} qui signifie \textit{“chasse aux accessoires”}, a pour même principe le cache cache, sauf que les bandits sont ici des personnes pouvant se changer en accessoires de la vie de tous les jours pour se cacher parmi d’autres vrais accessoires. Il fut très répandu et on peut le retrouver aussi dans \textbf{\textit{Team Fortress 2}} ou encore dans \textbf{\textit{Fortnite}} qui est plus récent.\\ \par Le \textbf{\textit{Guess Who?}}, ayant le même principe, se démarque car le bandit est une personne ayant une apparence aléatoire et doit se fondre dans la masse de personnages non joueurs qui lui ressemble ou non et imiter leurs mouvements. Enfin, on peut aussi citer \textbf{\textit{SpyParty}} où le shérif joue le rôle d’un sniper qui a une vue périphérique sur la fête qui se déroule (c’est à dire, qu’il possède une vision restreinte à partir des bords de la carte vers le centre) et le bandit lui est un personnage qui doit se fondre dans son personnage pour accomplir des objectifs. \par Ce jeu mélange à la fois une vue immersive à travers l’espion et une vue stratégique à travers le sniper ce qui le rend à part et très plaisant à jouer.
     \section{Une expérience enrichissante}
+        Ce projet est une bonne façon de découvrir les difficultées et les interrogations qu’on rencontre lors de la création d’un jeu vidéo. Il nous permet à la fois d’expérimenter la joie de la programmation à plusieurs en vue d’un but commun, d’apprendre à programmer une intelligence artificielle, un multijoueur fonctionnel, le design d’une carte et des personnages qui vont avec. Le tout de façon organisé à l’aide d’une bonne répartition et d’un planning adapté. \\ \par Toutes ces expériences permettent d’introduire un mode de travail professionnel pour ceux d’entre nous qui ne l’aurait pas encore expérimenté. 
 
 %Annonce du Chapitre 3
 \chapter{L'aspect technique} 
@@ -95,11 +113,12 @@ de SUP.
     \section{L'intelligence Artificielle}
 \\ Pour la parite sur l'intelligence artificielle, plusieurs problématiques vont se dresser durant l'avancer projet. \newline
 Pour eviter ces dernieres nous allons d'abord travailler sur une IA "naive" mais fonctionnelle qui permettra aux PNJ (Personnage Non-Jouable) de se deplacer de maniere aleatoire mais aussi de maniere autonome.\\ L'IA devra être capable de generer des points aleatoire sur la carte auxquelles elle assimilira une direction, un sens et une vitesse aleatoire à un PNJ.\\ Une fois ceci traité, l'IA sera aussi responsable de l'apparition de bonus et de malus qu'elle affligera au jouers mais aussi de divers quêtes qu'elle assignera au jouers aussi bien en debut qu'en cours de partieles pour dynamiser le jeu et creer des retournement de situation.
+    \section{Solo}
     \section{Multijouer}
 \\ Le multijouer sera réaliser a l'aide du moteur réseau Photon. \\
 Ce dernier se baserait sur un systéme de notoriéte entre les "Cherifs" 
 et les "Bandis" c'est a dire sur le nombre de partie gagnée. Plus le nombre de partie est grand, plus les gains de notorité seront grand. Le but étant d'être le "bandit" ou "cherif" le plus connus du Far West. 
-\\ Le multijouer sera disponible aussi bien OFFLINE qu'ONLINE, le nombre de jouer quant a lui sera fixé a 10; 5 bandis vs 5 cherif.
+\\ Le multijouer sera disponible aussi bien OFFLINE qu'ONLINE, le nombre de jouer quant a lui sera fixé a 10; 6 bandis vs 4 cherif.
     \section{Editeur de Maps}
 \\ 
 Tout les joueurs pourront creer leurs cartes personel et les partagé avec leurs amis. En effet nous allons incorporer la possibilité de creer nos propres maps sans avoir a coder une ligne de code supplémentaire !\\ Les maps seront stockés sur l'espace de stockage personnele de l'utilisateur.
@@ -115,7 +134,7 @@ Les spécialités de chacun furent récapitulées dans le tableau de répartitio
     \section{Tableau de la répartition des tâches}
     %Creation du Tableau
     \begin{center}
-    \begin{tabular}{|p{2 cm}||p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|}
+        \begin{tabular}{|p{2 cm}||p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|}
 \hline
  & Yassine D. & Louis D. & Julien C. & Tahri B.
 \\
@@ -172,13 +191,23 @@ Les spécialités de chacun furent récapitulées dans le tableau de répartitio
 \end{tabular}
     \end{center}
     \\
-Cela dit, le but étant de travailler en groupe, et les tâches
-étant souvent très liées, nous travaillerons quasiment tous sur
-tout d'autant plus pour les premières soutenances où nous posons
-les bases du projet et ou on ne peut donc pas ignorer le travail
-des autres membres.
+    Cela dit, le but étant de travailler en groupe, et les tâches
+    étant souvent très liées, nous travaillerons quasiment tous sur
+    tout d'autant plus pour les premières soutenances où nous posons
+    les bases du projet et ou on ne peut donc pas ignorer le travail
+    des autres membres.
     \section{L'avancement (Soutenance 1,2 final)} 
     \section{Les outils utilisés}
+        \begin{enumerate}
+            \item \textbf{\textit{Unity :}} \\
+            \item \textbf{\textit{Inkspace :}} \\
+            \item \textbf{\textit{Blender :}} \\
+            \item \textbf{\textit{Zenkit :}} \\
+            \item \textbf{\textit{Discord / Whatsaap :}} \\
+            \item \textbf{\textit{VIM :}} \\
+            \item \textbf{\textit{Notepad ++ / Rider :}} \\
+            % Spotify etc ...
+        \end{enumerate}
     \section{Futures ventes}
 
 %Annonce du Chapitre 4
