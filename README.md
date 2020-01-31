@@ -9,4 +9,6 @@ Avant chaque modification faite un pull pour actualiser votre
 version !
 NE TOUCHEZ PAS AU CHOSES QUI NE VOUS CONSERNE PAS ! 
 
+# UNITY
+La version d'unity est 2019.2.5f1
 

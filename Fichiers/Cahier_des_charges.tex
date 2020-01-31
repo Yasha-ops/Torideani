@@ -1,0 +1,320 @@
+\documentclass[12pt]{report}
+\usepackage[french]{babel}
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage{titlesec}
+\usepackage{amssymb,amsmath,latexsym,amsfonts}
+\usepackage{color}
+\usepackage{eurosym}
+\usepackage{fancyhdr}
+\usepackage{graphics}
+\usepackage{enumitem}
+\pagestyle{fancyplain}
+\usepackage{MnSymbol,wasysym}
+
+
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}} 
+%Permet de garder seulement le nom du chapitre sans le mot "chapitre" et sans son numero
+%Entête de toutes les pages haut\bas 
+\renewcommand\plainheadrulewidth{.4pt} 
+\fancyhf{}
+\fancyhead[RE,LO]{The Smashing Pumpkins}
+\fancyhead[LE,RO]{Epita 2020}
+\fancyfoot[RE,LO]{\thepage}
+\fancyfoot[LE,RO]{\leftmark}
+\fancyhead[C]{\fancyplain{\textbf{Torideani}}{\textbf{Torideani}}}
+%Enlever le mot chapitre
+\titleformat{\chapter}[display]{\normalfont\bfseries}{}{0pt}{\Huge}
+
+\title{\HUGE{Cahier des charges}}
+\author{- \textbf{\textit{\textwidth{Torideani}}} - 
+\\ \textit{by} \\ \textit{The Smashing IT} \\ \begin{center}\includegraphics[scale=0.1]{logo.png} \end{center}  \\ 
+\\ Yassine Damiri \\ Louis D'Hollande \\ Julien Calisto \\
+ Tahri Bahaaeddine }
+
+\begin{document}
+    \maketitle
+    
+    %Table des matières
+    \tableofcontents
+    
+    \chapter{Introduction}
+
+    \chapter{Membres du groupe}
+    \noindent
+        \textbf{Nom :} Damiri (Chef de projet)\\
+        \textbf{Prénom :} Yassine\\
+        \textbf{Login :} yassine.damiri\\
+        \textbf{Mail :} yassine.damiri@epita.fr\\
+        \par J'ai toujours etait fasciné par l'informatique, en effet depuis mon très jeune âge, influencé par mon entourage constitué principalement d’ingénieurs, j’ai très vite créé un véritable engouement autour des sciences de l’ingenierie et de l’informatiques, et je désire plus que tout pouvoir faire de cette passion mon futur métier. Faire ce projet me permettra d'acquerir de l'experience dans le domaine de la programmation objet et ainsi me rapprocher de plus en plus vers mon rêve ... Vivre de ma passion; l'informatique \smiley{}  \\ \\ \\ 
+        \textbf{Nom :} D'Hollande\\
+        \textbf{Prénom :} Louis\\
+        \textbf{Login :} louis.dhollande\\
+        \textbf{Mail :} louis.dhollande@epita.fr\\
+        Description \\ \\ \\
+        \textbf{Nom :} Calisto\\
+        \textbf{Prénom :} Julien\\
+        \textbf{Login :} julien.calisto\\
+        \textbf{Mail :} julien.calisto@epita.fr\\
+        Description \\ \\ \\
+        \textbf{Nom :} Bahaaeddine\\
+        \textbf{Prénom :} Tahri\\
+        \textbf{Login :} tahri.bahaaeddine\\
+        \textbf{Mail :} tahri.bahaaeddine@epita.fr\\
+        Description \\ \\
+
+%Annonce de Chapitre 2
+
+%Annonce de Chapitre 2
+
+%Annonce du Chapitre 2
+
+%Annonce du Chapitre 2
+
+    \chapter{Le projet}
+        \section{Origine du projet}
+            Nous nous somme concerté dans l’objectif de trouver un projet qui plairait à tous les membres du groupe. \\ Plusieurs idées nous effleuraient la pensée mais le modèle du “jeu” étant bien trop tentant, nous nous laissâmes plonger dans le tréfond de celle-ci. L’évidence du modèle adopté était claire pour tout le monde, celui-ci étant un choix permettant d’apprendre d’une façon ludique et de laisser cour à l’imagination de chacun.\\ \par Suite à de nombreuses tentatives (tower defence,RPG, course...), nous avons constaté que la vision des jeux qui nous correspondait n’était pas la même pour tous les membres. L’idée presque trop simple est soudainement apparue comme une illumination : “Et si on jouait à cache cache ?”. Un jeu si simple pourtant déjà joué partout dans le monde. Sans délibération, le jeu fût déjà adopté.\\ \par Le choix du nom si spéciale en sonorité; “Torideani”, est le résultat de la fusion de la fin des noms de famille de chacun dans l'ordre suivant : Calisto, Damiri, D’Hollande, beaucoups trop long-ani. Sans forcément de sens caché derrière ce nom, ce choix a pour but de mentionner les auteurs de ce projet de manière à peu près subtile...
+        \section{Le scénario / but du jeu}
+            Les règles du “cache cache” étant comprises sans trop de difficultées par tout le monde (du moins, nous l'espérons...), l’enjeu étant de transformer ce jeu connu en jeu vidéo amusant pour tous. \\
+             
+            Le jeu se compose de deux équipes : les shérifs et les bandits. \\
+    
+            \par \textbf{\textit{Les Shérifs :}} Une évasion de la prison qui gardait les crapules les plus dangereuses a été déclarée. Votre rôle est de surveiller les habitants de votre ville, car parmi eux se cache certainement au moins un assassin extrêmement dangereux.\\
+            \par \textbf{\textit{Les Bandits :}} Vous vous êtes enfin échappé de votre cage, il est temps pour vous de vous venger des traîtres qui sont responsables du gâchis de votre précieux temps de vie.
+        \section{Les ancêtres}
+            \par Outre le jeu enfantin que tout le monde connait, les jeux vidéos de cache cache     connus ne sont pas nombreux. Cependant il en existe deux modes de jeu qui sont assez connu. Issue du jeu \textit{\textbf{Garry’s mod}} sorti le 24 décembre en 2004, le \textit{\textbf{Prop hunt}} qui signifie \textit{“chasse aux accessoires”}, a pour même principe le cache cache, sauf que les bandits sont ici des personnes pouvant se changer en accessoires de la vie de tous les jours pour se cacher parmi d’autres vrais accessoires. Il fut très répandu et on peut le retrouver aussi dans \textbf{\textit{Team Fortress 2}} ou encore dans \textbf{\textit{Fortnite}} qui est plus récent.\\ \par Le \textbf{\textit{Guess Who?}}, ayant le même principe, se démarque car le bandit est une personne ayant une apparence aléatoire et doit se fondre dans la masse de personnages non joueurs qui lui ressemble ou non et imiter leurs mouvements. Enfin, on peut aussi citer \textbf{\textit{SpyParty}} où le shérif joue le rôle d’un sniper qui a une vue périphérique sur la fête qui se déroule (c’est à dire, qu’il possède une vision restreinte à partir des bords de la carte vers le centre) et le bandit lui est un personnage qui doit se fondre dans son personnage pour accomplir des objectifs. \par Ce jeu mélange à la fois une vue immersive à travers l’espion et une vue stratégique à travers le sniper ce qui le rend à part et très plaisant à jouer.
+        \section{Une expérience enrichissante}
+            Ce projet est une bonne façon de découvrir les difficultées et les interrogations qu’on rencontre lors de la création d’un jeu vidéo. Il nous permet à la fois d’expérimenter la joie de la programmation à plusieurs en vue d’un but commun, d’apprendre à programmer une intelligence artificielle, un multijoueur fonctionnel, le design d’une carte et des personnages qui vont avec. Le tout de façon organisé à l’aide d’une bonne répartition et d’un planning adapté. \\ \par Toutes ces expériences permettent d’introduire un mode de travail professionnel pour ceux d’entre nous qui ne l’aurait pas encore expérimenté. 
+
+%Annonce du Chapitre 3
+
+    \chapter{L'aspect technique} 
+        \section{Les mécaniques de jeu}
+            \subsection{Les personnages}
+                Le but du jeu est simple, il y a deux groupes : les shérifs et les bandits. Les shérifs doivent éliminer tous les bandits avant un délai imparti. Les bandits quant à eux doivent survivre aux shérifs jusqu'à la fin du temps imparti.
+                Une partie se déroule en plusieurs manches. A chaque manche, les joueurs ont un rôle attribué aléatoirement entre les shérifs et les bandits. Si le joueur gagne la manche il obtient un point de score. A la fin de la partie, les scores sont additionnés dans un tableau récapitulatif.
+            \subsection{Les objets / Bonus}
+                Pour pimenter les parties nous avons décidé d'ajouter des Objets et Bonus permettant d'acquérir des compétences : \\
+                \begin{itemize}[label=$\square$]
+                    \item{\textbf{\textit{Shérif :}}} Pour combattre la     vermine les représentants      seront équipé       comme il faut. 
+                        \begin{itemize}
+                            \item Ils seront équipé d’une arme qu’ils pourront choisir parmi une collection.
+                            \item Une palette de compétences sera disponible afin d'offrir un style de jeu adapté à chacun. Les compétences pourront aller du simple au complexe suivant le style de jeu; par exemple : augmentation de la vitesse, anneau de détection autour du shérifs ou sons autour du bandits pour indiquer au shérif sa position. \\
+                    \end{itemize}
+                    \item{\textbf{\textit{Bandit :}}} Les bandits sont     prêt à tous les sacrifices pour échapper à la     loi.
+                        \begin{itemize}
+                            \item En plus de la ruse et de la lâcheté, ils seront équipé de compétences qui ralentiront la recherche des shérifs et aideront les bandits à fuir. Par exemple : pouvoir étourdir le shérif s’il est trop proche, pouvoir courir très vite ou encore être invincible pendant quelques secondes.
+                            \item Les traitres qui vous ont trahi sont marqué par une indication physique; par exemple : il a un chapeau bleu avec une étoile rouge ou encore un borgne avec une jambe de bois.
+                            Tuer les traîtres vous récompensera d’argent utilisable au cours de la partie.
+                        \end{itemize}
+                \end{itemize}
+            \subsection{Monnaie et performances}
+                \par Des récompenses seront donné en fonction du score et des objectifs accomplis par chacun durant la partie. La récompense sera sous forme de monnaie utilisable uniquement en jeu pour acheter et améliorer des compétences. Les compétences seront réinitialisées après chaque partie et on se laisse la possibilité de rajouter des apparats payants dans la mesure ou le jeux sortirait officiellement. 
+                \par Une deuxième monnaie sera donnée en récompense en fin de partie afin d’acheter des armes qui offriront différent style de jeu et peut être d’autres améliorations qu’on envisagerait dans le futur. 
+        \section{Le langage de programmation}
+            Pour créer un jeu vidéo, il va de soi de choisir 
+            convenablement le bon langage programmation mais 
+            aussi du bon environnement de developpement. C'est pour cela que, comme proposé dans la partie \textbf{Restrictions du Dossier Projet Informatique}, nous utiliserons du \textbf{C\#} accompagné d'\textbf{Unity}. Nous avons acquis grâce au divers TP effectué durant la S1 des bases solides dans ce langage de programmation, facilitant ainsi le travail et nous permettant aussi de plus se concentrer sur les algorithmes qui animeront notre jeu.
+            Quant à UNITY, tant de sa simplicité que dans sa prise en main, cela fut pour nous inné de le choisir en tant que IDE et ainsi suivre la lignée de la majorité des projets précédents
+            de SUP. 
+        \section{Les graphismes}
+            Dans une optique d'authenticité, il est envisagé de concevoir nos propres modèles 3D. Néanmoins, ce n'est pas la chose facile et il n'est pas impossible d'être pris pas le temps, tant il est long de réaliser des modèles satisfaisants à nos yeux. Il se pourrait que par soucis de temps ou de compétences nous soyons obligés d'importer une partie significative des modèles, notamment via l'assets store de Unity. Le style graphique sera cartoon, d'une part car c'est techniquement simple à réaliser et d'autre part car cela promet d'apporter une identité visuelle au jeu.
+        \section{L'intelligence Artificielle}
+            \\ Pour la partie sur l'intelligence artificielle, plusieurs problématiques vont se dresser durant l'avancer du projet. \newline
+            Pour eviter ces dernieres nous allons d'abord travailler sur une IA "naive" mais fonctionnelle qui permettra aux PNJ (Personnage Non-Jouable) de se deplacer de maniere aleatoire mais aussi de maniere autonome.\\ L'IA devra être capable de generer des points aleatoire sur la carte auxquelles elle assimilira une direction, un sens et une vitesse aleatoire à un PNJ.\\ Une fois ceci traité, l'IA sera aussi responsable de l'apparition de bonus et de malus qu'elle affligera aux joueurs mais aussi de diverses quêtes qu'elle assignera aux joueurs aussi bien en debut qu'en cours de partie pour dynamiser le jeu et créer des retournements de situation.
+        \section{Solo}
+        \section{Multijouer}
+            \\ Le multijouer sera réaliser a l'aide du moteur réseau \textbf{Photon}. \\
+              Ce dernier se baserait sur un systéme de notorié entre les "Sherifs" 
+            et les "Bandits", c'est à dire, sur le nombre de partie gagnée. Plus le nombre de partie est grand, plus les gains de notorité seront grand. Le but étant d'être le "bandit" ou "sherif" le plus connus du \textit{Far West}. 
+            \\ Le multijouer sera disponible aussi bien \textbf{OFFLINE} qu'\textbf{ONLINE}, le nombre de joueur maximum quant a lui sera fixé a 10; 6 bandits vs 4 sherifs.
+        \section{Editeur de Maps}
+            \\ 
+            Tous les joueurs pourront créer leurs cartes personelles et les partager avec leurs amis. En effet nous allons incorporer la possibilité de créer nos propres maps(cartes) sans avoir a coder une ligne de code supplémentaire !\\ Les maps seront stockées sur l'espace de stockage personnel de l'utilisateur.
+        \section{Répartition des tâches} 
+            Nous avons décidé dès le début d'attribuer à chacun une
+            spécialité, sachant que notre but reste tout de même d'apprendre
+            des choses et de "toucher à tout". Chacun travaillerait un minimum
+            sur les spécialités des autres pour notre apprentissage personnel,
+            et ne serait-ce que par obligation : Comment maitriser la programmation orienté object
+            Les spécialités de chacun furent récapitulées dans le tableau de répartition pour le début du projet.\\
+        \section{Tableau de la répartition des tâches}
+            \begin{center}
+            \begin{tabular}{|p{2 cm}||p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|}
+             \hline
+             & Yassine D. & Louis D. & Julien C. & Tahri B.
+             \\
+             \hline \hline Design
+                & & & & 
+                \\
+                & & & \begin{center}
+                     \textbf{\Huge+ }
+                  \end{center}
+                & \begin{center}
+                     \textbf{\Huge-}
+                  \end{center}
+                \\
+                & & & &  
+                \\
+            \hline IA
+                & & & &
+                \\
+                & \begin{center}
+                    \textbf{\Huge-}
+                \end{center}
+                & \begin{center}
+                    \textbf{\Huge+}
+                \end{center} & & 
+                \\
+                    & & & &
+                \\
+            \hline Multijouer
+                & & & &
+                \\
+                & \begin{center}
+                    \textbf{\Huge+}
+                \end{center} & 
+                & \begin{center}
+                     \textbf{\Huge-}
+                \end{center} & 
+                \\
+                 & & & &
+                \\
+                \hline Solo
+                & & & &
+                \\
+                & & \begin{center}
+                     \textbf{\Huge-}
+                \end{center}
+                & \begin{center}
+                     \textbf{\Huge+}
+                \end{center} & 
+                \\ & & & &
+                 \\
+                \hline Reseaux / dev web
+                 & & & &
+                \\
+                & \begin{center}
+                 \textbf{\Huge-}
+                \end{center}
+                 & & & \begin{center}
+                     \textbf{\Huge+}
+                \end{center}
+                \\
+                    & & & & 
+                \\
+            \hline
+            \end{tabular}
+        \end{center}
+            Legende :
+            \\+ == Chef de projet
+            \\- == Assistant
+            \\
+            Cela dit, le but étant de travailler en groupe, et les tâches
+            étant souvent très liées, nous travaillerons quasiment tous sur
+            tout d'autant plus pour les premières soutenances où nous posons
+            les bases du projet et ou on ne peut donc pas ignorer le travail
+            des autres membres.
+        \section{L'avancement (Soutenance 1,2 final)} 
+            \begin{center}
+            \begin{tabular}{|p{2 cm}||p{2.5cm}|p{2.5cm}|p{2.5cm}|}
+             \hline
+             & 1 & 2 & 3
+             \\
+             \hline \hline Design
+                & & & 
+                \\
+                & \begin{center}
+                     \textbf{\Huge25\%}
+                  \end{center}
+                & \begin{center}
+                    /
+                \end{center}& \begin{center}
+                    /
+                \end{center}
+                \\
+                & & &
+                \\
+            \hline IA
+                & & &
+                \\
+                & \begin{center}
+                    \textbf{\Huge15\%}
+                \end{center}
+                & \begin{center}
+                    /
+                \end{center} & \begin{center}
+                    /
+                \end{center}
+                \\
+                    & & &
+                \\
+            \hline Multijouer
+                & & &
+                \\
+                & \begin{center}
+                    \textbf{\Huge40\%}
+                \end{center} & \begin{center}
+                    /
+                \end{center}
+                & \begin{center}
+                    /
+                \end{center}
+                \\
+                 & & &
+                \\
+            \hline Solo
+                & & &
+                \\
+                & \begin{center}
+                     \textbf{\Huge10\%}
+                \end{center}
+                & \begin{center}
+                    /
+                \end{center} & \begin{center}
+                    /
+                \end{center}
+                \\ & & &
+                \\
+            \hline Reseaux / dev web
+                 & & &
+                \\
+                & \begin{center}
+                 \textbf{\Huge25\%}
+                \end{center}
+                & \begin{center}
+                    /
+                \end{center} & \begin{center}
+                    /
+                \end{center} 
+                \\
+                    & & &
+                \\
+            \hline
+            \end{tabular}
+        \end{center}
+        Il est a noter que les pourcentages sont donnés à titre indicatif, avec une marge d’erreurs plus ou moins élevée. Les pourcentages représentent des portions du travail final, dans notre cas c’est le pourcentage que l’on souhaite atteindre d’ici la première soutenance.
+        \section{Les outils utilisés}
+        \begin{itemize}
+            \item \textbf{\textit{Unity version 2.1.2 :}} 
+             Meilleur Plateforme de développement en temps réel orienté jeu vidéo.  \\
+            \item \textbf{\textit{Inkspace :}} Création de Logo en format svg (vectoriser) \\
+            \item \textbf{\textit{Blender 3D :}} Modelisation des assets en 3D et leurs animations.\\
+            \item \textbf{\textit{Zenkit :}} Permet un bon suivi du travail. \\
+            \item \textbf{\textit{Discord / Whatsaap :}} Moyen de communication. \\
+            \item \textbf{\textit{GIT  :}} Meilleur gestionnaire de version.\\
+            \item \textbf{\textit{VIM / VI :}} Editeur de code super fluid et configurable à souhait.\\
+            \item \textbf{\textit{Rider :}} Editeur de code avec de debugger. \\
+            \item \textbf{\textit{Spotify ... :}} Faut bien coder avec de la musique non ? :) .
+        \end{itemize}
+    \section{Futures ventes}
+
+
+    \chapter{Conclusion}
+        Un groupe stable et uni est nécessaire à l'acomplissement du
+        projet, et bien plus qu'un projet informatique, Torideani sera pour
+        nous une aventure humaine nécessaire à notre integration dans le
+        monde du travail.
+
+
+\end{document}
