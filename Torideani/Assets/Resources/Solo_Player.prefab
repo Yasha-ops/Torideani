@@ -93,12 +93,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2141412228997052193}
   - component: {fileID: 2141412228997052194}
-  - component: {fileID: 2141412228997052195}
-  - component: {fileID: 1761128645893057467}
-  - component: {fileID: 6025778926950537935}
-  - component: {fileID: 3163829652107052184}
-  - component: {fileID: 6855765928146423596}
-  - component: {fileID: 2478377043677234389}
+  - component: {fileID: 6320679766383741491}
+  - component: {fileID: 2722495070096442321}
   m_Layer: 0
   m_Name: Solo_Player
   m_TagString: Player
@@ -140,7 +136,7 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &2141412228997052195
+--- !u!114 &6320679766383741491
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -149,47 +145,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2141412228997052196}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46434c3529cf9c0b28a1bfd8ae31f3e8, type: 3}
+  m_Script: {fileID: 11500000, guid: b5cb12dddde1eba17b4b5de40cfad074, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 100
-  rotationSpeed: 0
-  mainCamera: {fileID: 0}
-  cameraParent: {fileID: 4331734604038251487}
-  speed: 6
-  gravity: -9.81
-  jumpHeight: 2
-  groundCheck: {fileID: 0}
-  groundDistance: 0.2
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 256
-  isGrounded: 0
---- !u!114 &1761128645893057467
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2141412228997052196}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  Synchronization: 3
-  OwnershipTransfer: 0
-  ObservedComponents:
-  - {fileID: 3163829652107052184}
-  - {fileID: 6855765928146423596}
-  - {fileID: 3163829652107052184}
-  viewIdField: 0
-  InstantiationId: 0
-  isRuntimeInstantiated: 0
---- !u!95 &6025778926950537935
+--- !u!95 &2722495070096442321
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -199,7 +158,7 @@ Animator:
   m_GameObject: {fileID: 2141412228997052196}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 4837235d67e136e4b883adb2bafc73e8, type: 3}
-  m_Controller: {fileID: 9100000, guid: 483dc37c06fda504798f3c7087734bec, type: 2}
+  m_Controller: {fileID: 9100000, guid: 60a2e38a75e5035a291568aaca7ba2b8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -208,74 +167,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &3163829652107052184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2141412228997052196}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizePosition: 1
-  m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
---- !u!114 &6855765928146423596
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2141412228997052196}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShowLayerWeightsInspector: 1
-  ShowParameterInspector: 1
-  m_SynchronizeParameters:
-  - Type: 1
-    SynchronizeType: 2
-    Name: Speed
-  - Type: 1
-    SynchronizeType: 2
-    Name: Direction
-  - Type: 4
-    SynchronizeType: 2
-    Name: Jump
-  - Type: 4
-    SynchronizeType: 2
-    Name: Hi
-  - Type: 9
-    SynchronizeType: 2
-    Name: Jumpstart
-  - Type: 4
-    SynchronizeType: 2
-    Name: Ground
-  - Type: 4
-    SynchronizeType: 2
-    Name: Fire1
-  m_SynchronizeLayers:
-  - SynchronizeType: 2
-    LayerIndex: 0
-  - SynchronizeType: 2
-    LayerIndex: 1
---- !u!114 &2478377043677234389
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2141412228997052196}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3f6588199714935ca2982e76aa6506e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4331734604038251487
 GameObject:
   m_ObjectHideFlags: 0

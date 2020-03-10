@@ -50,13 +50,13 @@ public class Mouvement : MonoBehaviourPun
     }
     #region Constantes
     public float speed = 6f;
-     public float gravity = -9.81f;
-     public float jumpHeight = 2f;
-     private float xRotation = 0f;
-     public Transform groundCheck;
-     public float groundDistance = 0f;
-     public LayerMask groundMask;
-     private float mouseSensitivity = 100; 
+    public float gravity = -9.81f;
+    public float jumpHeight = 2f;
+    private float xRotation = 0f;
+    public Transform groundCheck;
+    public float groundDistance = 0f;
+    public LayerMask groundMask;
+    private float mouseSensitivity = 100; 
      
      private Vector3 velocity;
      #endregion

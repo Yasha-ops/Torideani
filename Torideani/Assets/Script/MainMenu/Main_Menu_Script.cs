@@ -9,6 +9,17 @@ public class Main_Menu_Script : MonoBehaviour
     {
         SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex + 1)); 
     }
+
+    public void Exit()
+    {
+        Application.Quit();
+    }
+
+    public void Solo()
+    {
+        SceneManager.LoadScene("Solo_Game");
+    }
     
     
+
 }

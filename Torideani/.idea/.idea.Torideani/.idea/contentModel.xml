@@ -315,16 +315,24 @@
           </e>
         </e>
         <e p="Script" t="Include">
-          <e p="Camera_mov.cs" t="Include" />
-          <e p="Count_Down.cs" t="Include" />
-          <e p="MainMenu.cs" t="Include" />
-          <e p="Main_Menu_Script.cs" t="Include" />
-          <e p="Mouvement.cs" t="Include" />
-          <e p="Move_Camera_MainMenu.cs" t="Include" />
-          <e p="Parallax.cs" t="Include" />
-          <e p="PlayerInputName.cs" t="Include" />
-          <e p="Player_Class.cs" t="Include" />
-          <e p="Player_Spawner.cs" t="Include" />
+          <e p="MainMenu" t="Include">
+            <e p="Main_Menu_Script.cs" t="Include" />
+            <e p="Move_Camera_MainMenu.cs" t="Include" />
+            <e p="Parallax.cs" t="Include" />
+          </e>
+          <e p="Multiplayer Script" t="Include">
+            <e p="Count_Down.cs" t="Include" />
+            <e p="Mouvement.cs" t="Include" />
+            <e p="Player_Class.cs" t="Include" />
+            <e p="Player_Spawner.cs" t="Include" />
+          </e>
+          <e p="Networking" t="Include">
+            <e p="MainMenu.cs" t="Include" />
+            <e p="PlayerInputName.cs" t="Include" />
+          </e>
+          <e p="Solo Script" t="Include">
+            <e p="Camera_mov.cs" t="Include" />
+          </e>
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
