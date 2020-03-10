@@ -38,6 +38,9 @@ public class Mouvement : MonoBehaviourPun
             {
                 Anim.SetBool("Ground", false);
             }
+            
+            if (Input.GetButton("Cancel") || Input.GetKey("escape"))
+                Application.Quit();
         }
 
 
