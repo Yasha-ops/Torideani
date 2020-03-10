@@ -324,18 +324,6 @@
           <e p="PlayerInputName.cs" t="Include" />
           <e p="Player_Spawner.cs" t="Include" />
         </e>
-        <e p="SpeedTutor_Full_Menu_System" t="Include">
-          <e p="GUI Elements" t="Include">
-            <e p="UI_BrightnessShader" t="Include">
-              <e p="Brightness.cs" t="Include" />
-              <e p="BrightnessEffect.shader" t="Include" />
-            </e>
-          </e>
-          <e p="MenuScripts" t="Include">
-            <e p="Init_LoadPreferences.cs" t="Include" />
-            <e p="MenuController.cs" t="Include" />
-          </e>
-        </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
             <e p="LiberationSans - OFL.txt" t="Include" />

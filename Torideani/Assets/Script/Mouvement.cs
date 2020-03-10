@@ -82,13 +82,13 @@ public class Mouvement : MonoBehaviourPun
             move = transform.right * x  + transform.forward * z ;
             Anim.SetFloat("Speed", z);
             Anim.SetBool("Fire1", true);
-        }
+         }
          else
          {
             move = transform.right * x /2+ transform.forward * z /2;
             Anim.SetFloat("Speed", z/2);
-            Anim.SetBool("Fire1", false);
-        }
+            Anim.SetBool("Fire1", false); 
+         }
          
  
          controller.Move(move * speed * Time.deltaTime);
