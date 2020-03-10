@@ -127,6 +127,7 @@ GameObject:
   - component: {fileID: 33620780}
   - component: {fileID: 5471617559685149272}
   - component: {fileID: 3717975902157089807}
+  - component: {fileID: 5139834117707114427}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -212,6 +213,7 @@ MonoBehaviour:
   OwnershipTransfer: 0
   ObservedComponents:
   - {fileID: 3717975902157089807}
+  - {fileID: 5139834117707114427}
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -249,6 +251,47 @@ MonoBehaviour:
   m_SynchronizePosition: 1
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
+--- !u!114 &5139834117707114427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416330351513870259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowLayerWeightsInspector: 1
+  ShowParameterInspector: 1
+  m_SynchronizeParameters:
+  - Type: 1
+    SynchronizeType: 2
+    Name: Speed
+  - Type: 1
+    SynchronizeType: 2
+    Name: Direction
+  - Type: 4
+    SynchronizeType: 2
+    Name: Jump
+  - Type: 4
+    SynchronizeType: 2
+    Name: Hi
+  - Type: 9
+    SynchronizeType: 2
+    Name: Jumpstart
+  - Type: 4
+    SynchronizeType: 2
+    Name: Ground
+  - Type: 4
+    SynchronizeType: 2
+    Name: Fire1
+  m_SynchronizeLayers:
+  - SynchronizeType: 2
+    LayerIndex: 0
+  - SynchronizeType: 2
+    LayerIndex: 1
 --- !u!1001 &5071272226258793450
 PrefabInstance:
   m_ObjectHideFlags: 0
