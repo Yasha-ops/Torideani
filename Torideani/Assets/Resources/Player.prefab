@@ -126,6 +126,7 @@ GameObject:
   - component: {fileID: 416330351513870260}
   - component: {fileID: 33620780}
   - component: {fileID: 5471617559685149272}
+  - component: {fileID: 3717975902157089807}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -207,10 +208,10 @@ MonoBehaviour:
   ObservedComponentsFoldoutOpen: 1
   Group: 0
   prefixField: -1
-  Synchronization: 0
+  Synchronization: 3
   OwnershipTransfer: 0
   ObservedComponents:
-  - {fileID: 0}
+  - {fileID: 3717975902157089807}
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -224,7 +225,7 @@ Animator:
   m_GameObject: {fileID: 416330351513870259}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 4837235d67e136e4b883adb2bafc73e8, type: 3}
-  m_Controller: {fileID: 9100000, guid: 8eb492fcbcf594c438fb8edb08953dd3, type: 2}
+  m_Controller: {fileID: 9100000, guid: 483dc37c06fda504798f3c7087734bec, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -233,6 +234,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3717975902157089807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416330351513870259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
 --- !u!1001 &5071272226258793450
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -293,8 +309,7 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 95918252503098470, guid: 085e53ee40ad24b40a83bd90705ad460, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 085e53ee40ad24b40a83bd90705ad460, type: 3}
 --- !u!4 &5075780837736993520 stripped
 Transform:

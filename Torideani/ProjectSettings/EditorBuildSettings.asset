@@ -6,12 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/PolygonWestern/Original/MainMenu.unity
+    path: Assets/TestMenu.unity
+    guid: 683f0bf8121d596e986cd85dbeca1aae
+  - enabled: 0
+    path: Assets/MainMenu.unity
     guid: e84c9862265a1104a9d724503d4111aa
   - enabled: 1
-    path: Assets/PolygonWestern/Original/Test.unity
+    path: Assets/Multi_Game.unity
     guid: aba5329229a032140b6f0d56ced25b52
-  - enabled: 1
-    path: Assets/PolygonWestern/Original/Pop.unity
-    guid: 51ed7b3b9f22e7264a0b0d22bf0fe458
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}

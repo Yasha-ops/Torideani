@@ -4,20 +4,20 @@ using System.Collections.Generic;
 using Photon.Pun;
 using UnityEngine;
 
-[RequireComponent(typeof(CharacterController))]
+    [RequireComponent(typeof(CharacterController))]
 
 public class Mouvement : MonoBehaviourPun
 {
+    #region Constantes
     [SerializeField] private float movementSpeed = 0f;
-
     private CharacterController controller = null;
     [SerializeField] private float rotationSpeed;
     [SerializeField] private Camera mainCamera;
+    #endregion
 
     private Animator Anim;
     private void Start()
     {
-
         Anim = GetComponent<Animator>();
         controller = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
@@ -29,21 +29,21 @@ public class Mouvement : MonoBehaviourPun
         {
             TakeInput();
             BasicRotation();
+            Anim.SetFloat("Direction", Input.GetAxis("Horizontal"));
+            if (isGrounded)
+            {
+                Anim.SetBool("Ground", true);
+            }
+            else
+            {
+                Anim.SetBool("Ground", false);
+            }
         }
 
-        Anim.SetFloat("Direction", Input.GetAxis("Horizontal"));
 
-        if (isGrounded)
-        {
-            Anim.SetBool("Ground", true);
-        }
-        else
-        {
-            Anim.SetBool("Ground", false);
-        }
     }
-
-     public float speed = 6f;
+    #region Constantes
+    public float speed = 6f;
      public float gravity = -9.81f;
      public float jumpHeight = 2f;
      private float xRotation = 0f;
@@ -53,6 +53,8 @@ public class Mouvement : MonoBehaviourPun
      private float mouseSensitivity = 100; 
      
      private Vector3 velocity;
+     #endregion
+     
      public bool isGrounded;
 
      private void TakeInput()
