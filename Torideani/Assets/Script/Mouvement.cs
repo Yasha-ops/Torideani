@@ -13,14 +13,19 @@ public class Mouvement : MonoBehaviourPun
     private CharacterController controller = null;
     [SerializeField] private float rotationSpeed;
     [SerializeField] private Camera mainCamera;
+    public GameObject cameraParent; 
+    private Animator Anim;
     #endregion
 
-    private Animator Anim;
     private void Start()
     {
-        Anim = GetComponent<Animator>();
-        controller = GetComponent<CharacterController>();
-        Cursor.lockState = CursorLockMode.Locked;
+        if (photonView.IsMine)
+        {
+            cameraParent.SetActive(true);
+            Anim = GetComponent<Animator>();
+            controller = GetComponent<CharacterController>();
+            Cursor.lockState = CursorLockMode.Locked;
+        }
     }
 
     private void Update()
@@ -42,8 +47,6 @@ public class Mouvement : MonoBehaviourPun
             if (Input.GetButton("Cancel") || Input.GetKey("escape"))
                 Application.Quit();
         }
-
-
     }
     #region Constantes
     public float speed = 6f;
