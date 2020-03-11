@@ -16,7 +16,7 @@ public class MainMenu : MonoBehaviourPunCallbacks
    private bool isConnecting = false;
 
    private const string GameVersion = "0.1";
-   private const int MaxPlayerPerRoom = 3;
+   private const int MaxPlayerPerRoom = 4;
 
    private void Awake()
    {
@@ -54,6 +54,11 @@ public class MainMenu : MonoBehaviourPunCallbacks
            PhotonNetwork.JoinRandomRoom();
        }
    }
+
+    public static void Disconect()
+    {
+        PhotonNetwork.Disconnect();
+    }
 
    public override void OnDisconnected(DisconnectCause cause)
    {

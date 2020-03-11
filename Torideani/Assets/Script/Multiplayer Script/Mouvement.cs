@@ -3,8 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using Photon.Pun;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-    [RequireComponent(typeof(CharacterController))]
+[RequireComponent(typeof(CharacterController))]
 
 public class Mouvement : MonoBehaviourPun
 {
@@ -46,6 +47,11 @@ public class Mouvement : MonoBehaviourPun
             
             if (Input.GetButton("Cancel") || Input.GetKey("escape"))
                 Application.Quit();
+            if (Input.GetKey("m"))
+            {
+                MainMenu.Disconect();
+                SceneManager.LoadScene("MainMenu");
+            }
         }
     }
     #region Constantes

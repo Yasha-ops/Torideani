@@ -3,12 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using Photon.Pun;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Camera_mov : MonoBehaviourPun
 {
    private float xRotation = 0f;
    private float yRotation = 0f;
    private float mouseSensitivity = 100;
+   public Transform effect;
    private Animator anime;
    private void Update()
    {
@@ -18,13 +20,18 @@ public class Camera_mov : MonoBehaviourPun
       {
          anime.SetTrigger("shoot");
       }
-   }
+      if (Input.GetKey("m"))
+      {
+            SceneManager.LoadScene("MainMenu");
+      }
+    }
 
    private void Start()
    {
-      anime = GetComponent<Animator>(); 
-      
-   }
+      anime = GetComponent<Animator>();
+      Cursor.lockState = CursorLockMode.Locked;
+
+    }
 
    private void BasicRotation()
    {
@@ -35,7 +42,9 @@ public class Camera_mov : MonoBehaviourPun
       xRotation = Mathf.Clamp(xRotation, -45f, 45f);
         
       yRotation += mouseX;
-         
-      transform.Rotate(Vector3.up * mouseX);
-   }
+      yRotation = Mathf.Clamp(yRotation, -45f, 45f);
+
+        transform.Rotate(Vector3.left * mouseY);
+        transform.Rotate(Vector3.up * mouseX);
+    }
 }
