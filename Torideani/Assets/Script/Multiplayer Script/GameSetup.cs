@@ -17,7 +17,7 @@ public class GameSetup : MonoBehaviour
 
     public float timer = 0.0f;
 
-    public Transform[] spawnPowerUps;
+    public GameObject[] spawnPowerUps;
     private Random rnd = new Random();
     private int seconds;
 
@@ -48,12 +48,13 @@ public class GameSetup : MonoBehaviour
 
         timer += Time.deltaTime;
         seconds = (int)(timer % 60);
-        if (seconds % 50 == 0)
+        if ((int)timer % 100 == 0)
         {
             Debug.Log("Generating PowerUps!");
-            Transform pos = spawnPowerUps[rnd.Next(0, spawnPowerUps.Length-1)];
+            GameObject pos = spawnPowerUps[rnd.Next(0, spawnPowerUps.Length-1)];
             RemovePowerUps();
-            PhotonNetwork.Instantiate(PowerUps.name, pos.position, Quaternion.identity);
+            pos.gameObject.SetActive(true);
+            timer = timer + 1.0f  ;
         }
     }
 
@@ -62,7 +63,7 @@ public class GameSetup : MonoBehaviour
         GameObject[] powerups = GameObject.FindGameObjectsWithTag("PowerUp"); 
         foreach (var power in powerups)
         {
-            PhotonNetwork.Destroy(power);
+            power.GetComponent<PowerUp_Class>().Remove();
         }
     }
 

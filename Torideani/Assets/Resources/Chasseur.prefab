@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 5139834117707114427}
   - component: {fileID: 4185040212552068162}
   - component: {fileID: 3940694662756322141}
+  - component: {fileID: 1705795529810981319}
   m_Layer: 0
   m_Name: Chasseur
   m_TagString: Chasseur
@@ -331,6 +332,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rayOrigin: {fileID: 8160335867136469097}
   info: {fileID: 8521512861609398208}
+--- !u!136 &1705795529810981319
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416330351513870259}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.34741357
+  m_Height: 2.145944
+  m_Direction: 1
+  m_Center: {x: -0.009151906, y: 0.8820207, z: 0}
 --- !u!1 &2452243921635446549
 GameObject:
   m_ObjectHideFlags: 0
@@ -731,10 +746,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 416330351513870262}
     m_Modifications:
-    - target: {fileID: 1942289980213182, guid: 085e53ee40ad24b40a83bd90705ad460, type: 3}
-      propertyPath: m_Name
-      value: Character_Badguy_01
-      objectReference: {fileID: 0}
     - target: {fileID: 4517892917420314, guid: 085e53ee40ad24b40a83bd90705ad460, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -778,6 +789,10 @@ PrefabInstance:
     - target: {fileID: 4517892917420314, guid: 085e53ee40ad24b40a83bd90705ad460, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1942289980213182, guid: 085e53ee40ad24b40a83bd90705ad460, type: 3}
+      propertyPath: m_Name
+      value: Character_Badguy_01
       objectReference: {fileID: 0}
     - target: {fileID: 95918252503098470, guid: 085e53ee40ad24b40a83bd90705ad460,
         type: 3}

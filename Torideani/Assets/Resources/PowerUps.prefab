@@ -149,6 +149,7 @@ MonoBehaviour:
   bonusOfTheGame:
   - Speed
   - Locked
+  PV: {fileID: -8903335198789614790}
 --- !u!54 &1023466882279637792
 Rigidbody:
   m_ObjectHideFlags: 0

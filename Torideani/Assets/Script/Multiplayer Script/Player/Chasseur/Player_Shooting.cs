@@ -33,7 +33,7 @@ public class Player_Shooting : MonoBehaviour
             PV= PhotonView.Get(this);
             RPC_Shooting();
         }
-        if (Input.GetKey(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F))
         {
             if (this.gameObject.GetComponent<Chasseur_Class>().current_bonus == "")
             {
@@ -42,8 +42,11 @@ public class Player_Shooting : MonoBehaviour
                 Invoke("Disapear", 5);
             }
             else
-            {
+            { 
                 Applying_Bonus(this.gameObject.GetComponent<Chasseur_Class>().current_bonus);
+                info.text = $"The {this.GetComponent<Chasseur_Class>().current_bonus} bonus is applied";
+                this.GetComponent<Chasseur_Class>().current_bonus = "";
+                Invoke("Disapear", 5);
             }
         }
     }
