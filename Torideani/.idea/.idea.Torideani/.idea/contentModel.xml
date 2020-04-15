@@ -315,6 +315,9 @@
           </e>
         </e>
         <e p="Script" t="Include">
+          <e p="IA" t="Include">
+            <e p="IA.cs" t="Include" />
+          </e>
           <e p="MainMenu" t="Include">
             <e p="Main_Menu_Script.cs" t="Include" />
             <e p="Move_Camera_MainMenu.cs" t="Include" />
@@ -322,7 +325,9 @@
           </e>
           <e p="Multiplayer Script" t="Include">
             <e p="Count_Down.cs" t="Include" />
+            <e p="GameSetup.cs" t="Include" />
             <e p="Mouvement.cs" t="Include" />
+            <e p="PayerShooting.cs" t="Include" />
             <e p="Player_Class.cs" t="Include" />
             <e p="Player_Spawner.cs" t="Include" />
           </e>

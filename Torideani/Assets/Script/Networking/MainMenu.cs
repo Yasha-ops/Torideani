@@ -16,7 +16,11 @@ public class MainMenu : MonoBehaviourPunCallbacks
    private bool isConnecting = false;
 
    private const string GameVersion = "0.1";
-   private const int MaxPlayerPerRoom = 4;
+   private const int MaxPlayerPerRoom = 1;
+
+
+   public bool First = false; 
+
 
    private void Awake()
    {
@@ -88,8 +92,11 @@ public class MainMenu : MonoBehaviourPunCallbacks
        else
        {
            waitingStatusText.text = "Opponent Found";
-           if (PhotonNetwork.IsMasterClient) 
+           if (PhotonNetwork.IsMasterClient)
+           {
+               First = true;
                PhotonNetwork.LoadLevel(1);
+           }
        }
    }
 

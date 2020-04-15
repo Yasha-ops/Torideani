@@ -34,5 +34,19 @@ MonoBehaviour:
   - DestroySpaceship
   - Fire
   - RespawnSpaceship
+  - RPC_Shooting
+  - RPC_GetTeam
+  - RPC_SentTeam
+  - ChangeTeam
+  - Jdid
+  - klawi
+  - Shooot
+  - TakeDamage
+  - RPC_Finished
+  - RPC_BONUS
+  - RPC_Bonus
+  - RPC_EnableBonus
+  - RPC_EnableBonusLocked
+  - RPC_EnableBonusSpeed
   DisableAutoOpenWizard: 1
   ShowSettings: 1
