@@ -26,7 +26,7 @@ public class Player_Shooting : MonoBehaviour
     }
 
 
-    public void InputKey()
+    public void InputKey() // Att les inputs du chasseur
     {
         if (Input.GetKey(KeyCode.E))
         {
@@ -43,35 +43,45 @@ public class Player_Shooting : MonoBehaviour
             }
             else
             { 
-                Applying_Bonus(this.gameObject.GetComponent<Chasseur_Class>().current_bonus);
                 info.text = $"The {this.GetComponent<Chasseur_Class>().current_bonus} bonus is applied";
+                Applying_Bonus(this.gameObject.GetComponent<Chasseur_Class>().current_bonus);
                 this.GetComponent<Chasseur_Class>().current_bonus = "";
                 Invoke("Disapear", 5);
             }
         }
     }
 
-    void Disapear()
+    public void NotifyText(string message)
+    {
+        info.text = "";
+        info.text = message;
+        Invoke("Disappear", 2);
+    }
+
+
+    void Disapear() // Reinitialise le text
     {
         info.text = "";
     }
 
-    public void Applying_Bonus(string bonus)
+    public void Applying_Bonus(string bonus) // Applique bonus a tous les bandits
     {
+        if (bonus == "Scanner")
+        {
+            this.GetComponent<Chasseur_Class>().EnableBonus("Scanner");
+            return;
+        }
         GameObject[] bandits = GameObject.FindGameObjectsWithTag("Bandit");
         Debug.Log($"There is {bandits.Length} bandits in the current room !");
         foreach (GameObject p in bandits)
         {
-            Debug.Log("Je suis entree dans le foreach"); 
             p.gameObject.GetComponent<Bandit_Class>().EnableBonus(bonus);
         }
 
     }
 
 
-
-
-    public void RPC_Shooting()
+    public void RPC_Shooting() // Fonction tirer
     {
         RaycastHit hit;
         if (Physics.Raycast(rayOrigin.position, rayOrigin.TransformDirection(Vector3.forward), out hit, 100))

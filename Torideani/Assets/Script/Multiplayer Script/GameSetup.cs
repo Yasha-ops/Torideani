@@ -45,7 +45,6 @@ public class GameSetup : MonoBehaviour
 
     void Update()
     {
-
         timer += Time.deltaTime;
         seconds = (int)(timer % 60);
         if ((int)timer % 100 == 0)
@@ -53,14 +52,16 @@ public class GameSetup : MonoBehaviour
             Debug.Log("Generating PowerUps!");
             GameObject pos = spawnPowerUps[rnd.Next(0, spawnPowerUps.Length-1)];
             RemovePowerUps();
-            pos.gameObject.SetActive(true);
+            PhotonNetwork.Instantiate(PowerUps.name, pos.transform.position , Quaternion.identity);
             timer = timer + 1.0f  ;
         }
     }
 
     private void RemovePowerUps()
     {
-        GameObject[] powerups = GameObject.FindGameObjectsWithTag("PowerUp"); 
+        GameObject[] powerups = GameObject.FindGameObjectsWithTag("PowerUp");
+        if (powerups.Length == 0)
+            return;
         foreach (var power in powerups)
         {
             power.GetComponent<PowerUp_Class>().Remove();

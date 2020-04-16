@@ -2437,7 +2437,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 792466481}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 29f09d9cac0c5d75182e926d31ef49cd, type: 3}
@@ -3541,6 +3541,7 @@ MonoBehaviour:
   findOpponentPanel: {fileID: 1155297050}
   waitingStatusPanel: {fileID: 1155297050}
   waitingStatusText: {fileID: 783891142}
+  First: 0
 --- !u!1 &1155876867
 GameObject:
   m_ObjectHideFlags: 0
@@ -5426,3 +5427,4 @@ MonoBehaviour:
   findOpponentPanel: {fileID: 2083802074}
   waitingStatusPanel: {fileID: 2083802074}
   waitingStatusText: {fileID: 310005790}
+  First: 0
