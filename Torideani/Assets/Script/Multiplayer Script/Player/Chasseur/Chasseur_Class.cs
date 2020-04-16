@@ -13,20 +13,19 @@ public class Chasseur_Class : MonoBehaviour
     private PhotonView PV;
 
 
-    public int health;
+    public float  health;
     public int damage;
     private bool dead;
     public string current_bonus;
     public Text infoScanner;
     public Transform rayOrigin; 
     public bool Dead => dead;
-    public Text health_text;
-    public GameObject canvas; 
+    public GameObject canvas;
+    public GameObject HealthBar;
 
     public int ID => PV.ViewID; 
     void Start()
     {
-        health_text.text = $"{health}"; 
         PV = GetComponent<PhotonView>(); 
     }
 
@@ -34,13 +33,6 @@ public class Chasseur_Class : MonoBehaviour
     {
         if (!PV.IsMine)
             canvas.SetActive(false); 
-
-        if (health <= 0)
-        {
-            health = 0; 
-            dead = true;
-            Destroy(this);
-        }
     }
 
     public void EnableBonus(string bonus)
@@ -79,8 +71,8 @@ public class Chasseur_Class : MonoBehaviour
     [PunRPC]
         void TakeDamage()
         {
-            health -= 3; 
-            health_text.text = $"{health}";
+            health -= 0.25f; 
+            HealthBar.GetComponent<HealthBarHUDTester>().Hurt(0.25f);
         }
 
     [PunRPC]
@@ -105,14 +97,15 @@ public class Chasseur_Class : MonoBehaviour
         if (Physics.Raycast(rayOrigin.position, rayOrigin.TransformDirection(Vector3.forward), out hit, 100))
         { 
             Debug.DrawRay(rayOrigin.position, rayOrigin.TransformDirection(Vector3.forward) * 100, Color.white);
-            Debug.Log("Did Hit"); 
+            Debug.Log("Did Hit");
+            if (hit.transform.tag == "Untagged")
+                EnableBonusScanner();
             this.GetComponent<Player_Shooting>().NotifyText($"The Player in front of u is a {hit.transform.tag}");
         }
         else 
         { 
-            Debug.DrawRay(rayOrigin.position, rayOrigin.TransformDirection(Vector3.forward) * 100, 
-                    Color.yellow); 
-            Debug.Log("Did not Hit");
+            this.GetComponent<Player_Shooting>().NotifyText($"You missed it !");
+            EnableBonusScanner();
         } 
 
     }
