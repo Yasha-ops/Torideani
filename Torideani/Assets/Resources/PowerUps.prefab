@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4492817497421737962}
   - component: {fileID: 9090514273363541440}
   - component: {fileID: 1023466882279637792}
+  - component: {fileID: 1266841047478938150}
   m_Layer: 0
   m_Name: PowerUps
   m_TagString: PowerUp
@@ -146,9 +147,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c81b90231501523b912e8eeb9ed2933, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bonusOfTheGame:
-  - Speed
+  itsPowerUpsChasseur: 
+  itsPowerUpsBandit: 
+  bonusOfTheGameChasseur:
   - Locked
+  - Speed
+  - Scanner
+  bonusOfTheGameBandit:
+  - Mini
+  - Locked
+  - Speed
   PV: {fileID: -8903335198789614790}
 --- !u!54 &1023466882279637792
 Rigidbody:
@@ -166,3 +174,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &1266841047478938150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86968321812030613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e295a6ea86bad79c9eff0ec967a082c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

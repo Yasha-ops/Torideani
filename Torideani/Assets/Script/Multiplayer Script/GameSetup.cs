@@ -15,6 +15,8 @@ public class GameSetup : MonoBehaviour
     public Transform[] spawnPointsTeamOne; 
     public Transform[] spawnPointsTeamTwo;
 
+    public TextMesh TextTimer;
+
     public float timer = 0.0f;
 
     public GameObject[] spawnPowerUps;
@@ -23,6 +25,17 @@ public class GameSetup : MonoBehaviour
 
     public GameObject PowerUps;
 
+    public float GameDuration = 300f;
+
+    public void CountDownTimer()
+    {
+        GameDuration -= Time.deltaTime;
+        TextTimer.text = "Time Left:" + Mathf.Round(GameDuration);
+        if(GameDuration< 0)
+        {
+            TextTimer.text = "GAME OVER!";
+        }
+    }
 
     public bool Finished()
     {
@@ -45,7 +58,7 @@ public class GameSetup : MonoBehaviour
 
     void Update()
     {
-
+        CountDownTimer();
         timer += Time.deltaTime;
         seconds = (int)(timer % 60);
         if ((int)timer % 100 == 0)
@@ -53,14 +66,16 @@ public class GameSetup : MonoBehaviour
             Debug.Log("Generating PowerUps!");
             GameObject pos = spawnPowerUps[rnd.Next(0, spawnPowerUps.Length-1)];
             RemovePowerUps();
-            pos.gameObject.SetActive(true);
+            PhotonNetwork.Instantiate(PowerUps.name, pos.transform.position , Quaternion.identity);
             timer = timer + 1.0f  ;
         }
     }
 
     private void RemovePowerUps()
     {
-        GameObject[] powerups = GameObject.FindGameObjectsWithTag("PowerUp"); 
+        GameObject[] powerups = GameObject.FindGameObjectsWithTag("PowerUp");
+        if (powerups.Length == 0)
+            return;
         foreach (var power in powerups)
         {
             power.GetComponent<PowerUp_Class>().Remove();

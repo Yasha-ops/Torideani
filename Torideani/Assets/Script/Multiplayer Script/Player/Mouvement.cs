@@ -121,19 +121,16 @@ public class Mouvement : MonoBehaviourPun
 
     private void BasicRotation()
     {
-        if (!Input.GetKey("x") && !Input.GetKey("v") && !Input.GetButton("Fire2"))
-        {
-            float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-            float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
-            xRotation -= mouseY;
-            xRotation = Mathf.Clamp(xRotation, -45f, 45f);
+        xRotation -= mouseY;
+        xRotation = Mathf.Clamp(xRotation, -45f, 45f);
 
-            //yRotation += mouseX;
+        //yRotation += mouseX;
 
-            transform.Rotate(Vector3.up * mouseX);
-            //playerBody.Rotate(Vector3.left * mouseY);
-        }
+        transform.Rotate(Vector3.up * mouseX);
+        //playerBody.Rotate(Vector3.left * mouseY); 
     }
 
 
