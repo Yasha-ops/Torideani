@@ -10,18 +10,15 @@ public class PowerUp_Class : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public string itsPowerUpsChasseur; 
-    public string itsPowerUpsBandit;
-    public string[] bonusOfTheGameChasseur;
-    public string[] bonusOfTheGameBandit;
+    public string itsPowerUps; 
+    public string[] bonusOfTheGame;
     private Random rnd = new Random();
     public PhotonView PV;
 
 
     void Start()
     {
-        itsPowerUpsBandit = bonusOfTheGameBandit[rnd.Next(0, bonusOfTheGameBandit.Length-1)];
-        itsPowerUpsChasseur = bonusOfTheGameChasseur[rnd.Next(0, bonusOfTheGameChasseur.Length-1)];
+        itsPowerUps = bonusOfTheGame[rnd.Next(0, bonusOfTheGame.Length-1)];
     }
 
     public void Remove()
@@ -35,6 +32,5 @@ public class PowerUp_Class : MonoBehaviour
         void RPC_Remove()
         {
             this.gameObject.SetActive(false);
-            Destroy(this);
         }
 }

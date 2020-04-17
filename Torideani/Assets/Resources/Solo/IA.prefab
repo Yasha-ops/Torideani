@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6074190331594393901}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6358085222682455764}
@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 480058811225382820}
   - component: {fileID: 5370802135656787456}
   - component: {fileID: 8728943351207213756}
+  - component: {fileID: 2338279828495121727}
   m_Layer: 0
   m_Name: IA
   m_TagString: PNJ
@@ -101,8 +102,18 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 256
-  speed: 1
   gravity: -9.81
+  speed: 3
+  destinations: []
+  "estArriv\xE9e": 0
+  waitTime: 0
+  StartWatiTime: 0
+  StoppingDistance: 0
+  waitTimeAnim: 0
+  waitTimeStop: 0
+  coolDownAnim: 0
+  coolDownStop: 0
+  coolDownJump: 0
 --- !u!95 &8728943351207213756
 Animator:
   serializedVersion: 3
@@ -122,6 +133,28 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!195 &2338279828495121727
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7864923373261338284}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 4
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1001 &4292777945198284276
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -139,7 +172,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4143052088534468, guid: 7aad5b0274fd2894eafec31a58e26a32, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4143052088534468, guid: 7aad5b0274fd2894eafec31a58e26a32, type: 3}
       propertyPath: m_LocalPosition.z

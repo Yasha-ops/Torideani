@@ -50,8 +50,5 @@ MonoBehaviour:
   - RPC_EnableBonusSpeed
   - RPC_Remove
   - RPC_Debug
-  - RPC_EnableBonusVisible
-  - RPC_EnableBonusMini
-  - RPC_EnableBonusScanner
   DisableAutoOpenWizard: 1
   ShowSettings: 1

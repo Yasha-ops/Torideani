@@ -57,19 +57,10 @@ public class Bandit_Class : MonoBehaviour
             case "Speed":
                 PV.RPC("RPC_EnableBonusSpeed", RpcTarget.All);
                 Debug.Log("The Bonus Speed is enabled !");
-                break;
-            case "Mini": 
-                PV.RPC("RPC_EnableBonusMini", RpcTarget.All);
-                Debug.Log("The Bonus Mini is enabled !");
-                break;
+                break; 
         }
     }
 
-
-    IEnumerator BonusWaiter()
-    {
-        yield return new WaitForSeconds(10.0f);
-    }
 
     [PunRPC]
         void TakeDamage()
@@ -82,24 +73,12 @@ public class Bandit_Class : MonoBehaviour
         void  RPC_EnableBonusLocked()
         {
             this.gameObject.GetComponent<Mouvement>().enabled = false;
-            StartCoroutine (BonusWaiter());
-            this.gameObject.GetComponent<Mouvement>().enabled = true;
         }
 
     [PunRPC]
         void RPC_EnableBonusSpeed()
         {
-            this.gameObject.GetComponent<Mouvement>().speed = 150;
-            StartCoroutine (BonusWaiter());
-            this.gameObject.GetComponent<Mouvement>().speed = 100;
-        }
-
-    [PunRPC]
-        void RPC_EnableBonusMini()
-        {
-            this.gameObject.transform.localScale = new Vector3(0.25f, 0.25f , 0.25f);
-            StartCoroutine (BonusWaiter());
-            this.gameObject.transform.localScale = new Vector3(1.0f , 1.0f , 1.0f);
+            this.gameObject.GetComponent<Mouvement>().speed = 200;
         }
 
     public void Hitted(int ennemi_damage)
