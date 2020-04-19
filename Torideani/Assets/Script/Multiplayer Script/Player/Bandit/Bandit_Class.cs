@@ -16,9 +16,8 @@ public class Bandit_Class : MonoBehaviour
     private bool dead;
     public string current_bonus; 
 
-
-    public Text healthtext;
     public GameObject canvas; 
+    public GameObject HealthBar;
 
 
     public bool Dead => dead;
@@ -26,13 +25,11 @@ public class Bandit_Class : MonoBehaviour
 
     void Start()
     {
-        healthtext.text = $"{health}";
         PV = GetComponent<PhotonView>(); 
     }
 
     private void Update()
     {
-        healthtext.text = $"{health}";
 
         if (!PV.IsMine)
         {
@@ -75,31 +72,31 @@ public class Bandit_Class : MonoBehaviour
         void TakeDamage()
         {
             health -= 3;
-            healthtext.text = $"{health}";
+            HealthBar.GetComponent<HealthBarHUDTester>().Hurt(0.25f);
         }
 
     [PunRPC]
         void  RPC_EnableBonusLocked()
         {
             this.gameObject.GetComponent<Mouvement>().enabled = false;
-            StartCoroutine (BonusWaiter());
-            this.gameObject.GetComponent<Mouvement>().enabled = true;
+            //StartCoroutine (BonusWaiter());
+            //this.gameObject.GetComponent<Mouvement>().enabled = true;
         }
 
     [PunRPC]
         void RPC_EnableBonusSpeed()
         {
             this.gameObject.GetComponent<Mouvement>().speed = 150;
-            StartCoroutine (BonusWaiter());
-            this.gameObject.GetComponent<Mouvement>().speed = 100;
+            //StartCoroutine (BonusWaiter());
+            //this.gameObject.GetComponent<Mouvement>().speed = 100;
         }
 
     [PunRPC]
         void RPC_EnableBonusMini()
         {
             this.gameObject.transform.localScale = new Vector3(0.25f, 0.25f , 0.25f);
-            StartCoroutine (BonusWaiter());
-            this.gameObject.transform.localScale = new Vector3(1.0f , 1.0f , 1.0f);
+            //StartCoroutine (BonusWaiter());
+            //this.gameObject.transform.localScale = new Vector3(1.0f , 1.0f , 1.0f);
         }
 
     public void Hitted(int ennemi_damage)

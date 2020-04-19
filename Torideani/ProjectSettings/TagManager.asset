@@ -9,6 +9,7 @@ TagManager:
   - Avatar
   - PNJ
   - PowerUp
+  - Zombie
   layers:
   - Default
   - TransparentFX

@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 8728943351207213756}
   m_Layer: 0
   m_Name: IA
-  m_TagString: PNJ
+  m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,8 +101,18 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 256
-  speed: 1
   gravity: -9.81
+  speed: 1
+  destinations: []
+  "estArriv\xE9e": 0
+  waitTime: 0
+  StartWatiTime: 0
+  StoppingDistance: 0
+  waitTimeAnim: 0
+  waitTimeStop: 0
+  coolDownAnim: 0
+  coolDownStop: 0
+  coolDownJump: 0
 --- !u!95 &8728943351207213756
 Animator:
   serializedVersion: 3
@@ -113,7 +123,7 @@ Animator:
   m_GameObject: {fileID: 7864923373261338284}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 4837235d67e136e4b883adb2bafc73e8, type: 3}
-  m_Controller: {fileID: 9100000, guid: 58ce2c54810672b4cbe3b8801f119101, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

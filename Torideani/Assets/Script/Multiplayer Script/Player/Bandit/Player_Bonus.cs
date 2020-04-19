@@ -37,7 +37,8 @@ public class Player_Bonus : MonoBehaviour
                 Invoke("Disapear", 5);
             }
             else
-            { 
+            {
+                Debug.Log("The Key F has been pressed and u have a bonus !");
                 Applying_Bonus(this.gameObject.GetComponent<Bandit_Class>().current_bonus);
                 info.text = $"The {this.GetComponent<Chasseur_Class>().current_bonus} bonus is applied";
                 this.GetComponent<Bandit_Class>().current_bonus = ""; // Reinitialise les bonus
@@ -62,6 +63,7 @@ public class Player_Bonus : MonoBehaviour
     {
         if (bonus == "Mini") // Applique le bonus Mini a soit meme
         {
+            Debug.Log("I know that ur bonus is a Mini");
             this.GetComponent<Bandit_Class>().EnableBonus(bonus);
             return;
         }
