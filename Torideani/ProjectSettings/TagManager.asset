@@ -10,6 +10,9 @@ TagManager:
   - PNJ
   - PowerUp
   - Zombie
+  - Tete
+  - Buste
+  - Jambes
   layers:
   - Default
   - TransparentFX

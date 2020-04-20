@@ -31,6 +31,7 @@ public class Mouvement_Solo : MonoBehaviourPun
         {
             this.gameObject.GetComponent<Solo_Class>().TakeInput();
             Anim.SetTrigger("shoot");
+            this.gameObject.GetComponent<Solo_Class>().feu.Play();
         }
         if (Input.GetKey("m"))
         {

@@ -11,10 +11,11 @@ public class Bandit_Class : MonoBehaviour
     private PhotonView PV; 
     public GameObject me; 
 
-    public int health;
+    public float health;
     public int damage;
     private bool dead;
     public string current_bonus; 
+    public ParticleSystem blood;
 
     public GameObject canvas; 
     public GameObject HealthBar;
@@ -71,8 +72,9 @@ public class Bandit_Class : MonoBehaviour
     [PunRPC]
         void TakeDamage()
         {
-            health -= 3;
+            health -= 0.25f;
             HealthBar.GetComponent<HealthBarHUDTester>().Hurt(0.25f);
+            blood.Play();
         }
 
     [PunRPC]
