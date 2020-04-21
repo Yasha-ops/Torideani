@@ -10,14 +10,19 @@ public class IA_Zombie : MonoBehaviour
     public bool isGrounded;
     private Animator Anim;
 
+    private int Hp;
+
     public float groundDistance = 0f;
     public LayerMask groundMask;
     private float gravity = -9.81f;
 
     // variables pour destination
-    public Transform destination;
+    public GameObject joueurSolo;
+    private Transform destination;
     public bool proche;
     public float speed;
+    private bool death;
+    public bool Death => death;
 
     // variables pour l'attaque
     public float timebeforAttaque;
@@ -28,7 +33,9 @@ public class IA_Zombie : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        death = false;
+        destination = joueurSolo.transform;
+        Hp = 10;
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
         agent.SetDestination(destination.position);
         Anim = GetComponent<Animator>();
@@ -38,18 +45,24 @@ public class IA_Zombie : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // if (Hp > 0) {    }
-        animAttaque -= Time.deltaTime;
-        timebeforAttaque -= Time.deltaTime;
-
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
-        if (animAttaque <= 0f)
-             move(agent);
-        Animation(agent);
-        Hit(agent);
+        if (Hp > 0)
+        {
+            animAttaque -= Time.deltaTime;
+            timebeforAttaque -= Time.deltaTime;
 
+            if (animAttaque <= 0f)
+                move(agent);
+            Animation(agent);
+        }
+        else
+        {
+            death = true;
+            Hit(agent);
+        }
 
     }
+
     private void move(NavMeshAgent agent)
     {
         agent.destination = destination.position;
@@ -88,7 +101,7 @@ public class IA_Zombie : MonoBehaviour
 
     }
 
-   
+
 
     // julien
     public void attaqueAnim()
@@ -102,13 +115,13 @@ public class IA_Zombie : MonoBehaviour
                 Anim.SetTrigger("attack1");
                 animAttaque = 4f;
             }
-               
+
             if (x == 1)
             {
                 Anim.SetTrigger("attack3");
                 animAttaque = 4f;
             }
-                
+
             if (x == 2)
             {
                 Anim.SetTrigger("attack2");
@@ -121,22 +134,15 @@ public class IA_Zombie : MonoBehaviour
     // yassine
     public void attaqueVie()
     {
-
         // enleve la vie du joueur
-        
+        joueurSolo.GetComponent<Solo_Class>().TakeDamage();
     }
 
     public void Hit(NavMeshAgent agent)
     {
-
         // enleve la vie du zombie
-
-        //if (Hp <= 0)
-        {
-            agent.speed = 0f;
-            Anim.SetTrigger("death");
-        }
-
+        agent.speed = 0f;
+        Anim.SetBool("Death", true);
     }
 
     private void Animation(NavMeshAgent agent)
@@ -150,5 +156,11 @@ public class IA_Zombie : MonoBehaviour
             Anim.SetBool("Ground", false);
         }
         Anim.SetFloat("Speed", agent.speed);
+    }
+
+    public void TakeDamage(float damage)
+    {
+        Hp -= (int)damage;
+        Debug.Log($"I am a Zombie and i have {Hp} health points");
     }
 }

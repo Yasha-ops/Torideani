@@ -13,10 +13,14 @@ public class Solo_Class : MonoBehaviour
     public Transform rayOrigin;
     public ParticleSystem feu; 
     public Text Score_Text;
+
+    public GameObject HealthBar;
     void Start()
     {
+        HealthBar.GetComponent<HealthBarHUDTester>().Hurt(0.25f);
         health = 20;
         ammo = 120;
+        damage = 2.0f;
     }
 
     public void TakeInput()
@@ -38,23 +42,23 @@ public class Solo_Class : MonoBehaviour
             Debug.DrawRay(rayOrigin.position, rayOrigin.TransformDirection(Vector3.forward) * 100, Color.white);
             Debug.Log("Did Hit"); 
             Debug.Log(hit.transform.tag);
-            if (hit.transform.tag == "Tete")
+            if (hit.transform.tag == "Zombie" && !hit.transform.gameObject.GetComponent<IA_Zombie>().Death)
             {
                 Debug.DrawRay(rayOrigin.position, rayOrigin.TransformDirection(Vector3.forward) * 100, 
-                        Color.red); 
+                        Color.red);
                 score += 100;
                 Debug.Log($"U have {score}");
                 Score_Text.text = $"U have {score}";
-                hit.transform.gameObject.GetComponent<AI_Class>().TakeDamage(damage);
+                hit.transform.gameObject.GetComponent<IA_Zombie>().TakeDamage(damage);
             }
-            if (hit.transform.tag == "Buste")
+            /*if (hit.transform.tag == "Buste")
             {
                 Debug.DrawRay(rayOrigin.position, rayOrigin.TransformDirection(Vector3.forward) * 100, 
                         Color.red); 
                 score += 50;
                 Debug.Log($"U have {score}");
                 Score_Text.text = $"U have {score}";
-                hit.transform.gameObject.GetComponent<AI_Class>().TakeDamage(damage);
+                hit.transform.gameObject.GetComponent<IA_Zombie>().TakeDamage(damage);
             }
             if (hit.transform.tag == "Jambe")
             {
@@ -63,8 +67,8 @@ public class Solo_Class : MonoBehaviour
                 score += 25;
                 Debug.Log($"U have {score}");
                 Score_Text.text = $"U have {score}";
-                hit.transform.gameObject.GetComponent<AI_Class>().TakeDamage(damage);
-            }
+                hit.transform.gameObject.GetComponent<IA_Zombie>().TakeDamage(damage);
+            }*/
 
         }
         else 
@@ -80,5 +84,7 @@ public class Solo_Class : MonoBehaviour
     public void TakeDamage()
     {
         health -= 0.25f;
+        Debug.Log($"Aie, im losing health points {health}");
+        HealthBar.GetComponent<HealthBarHUDTester>().Hurt(0.25f);
     }
 }

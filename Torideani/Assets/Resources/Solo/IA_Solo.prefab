@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1469301449394944750}
   - component: {fileID: 738385754104543021}
   - component: {fileID: 6318222382861133719}
-  - component: {fileID: 2734719433768433842}
+  - component: {fileID: 3709571478050729392}
   m_Layer: 0
   m_Name: IA_Solo
   m_TagString: Zombie
@@ -94,7 +94,7 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &2734719433768433842
+--- !u!114 &3709571478050729392
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -106,16 +106,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edd3b3df6943fa241b28b0c8dae52470, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundCheck: {fileID: 515081059057062667}
+  groundCheck: {fileID: 0}
   isGrounded: 0
   groundDistance: 0
   groundMask:
     serializedVersion: 2
     m_Bits: 0
-  destination: {fileID: 2141412228997052193, guid: f75f5652202195877a63ac05b7320610,
-    type: 3}
+  destination: {fileID: 0}
   proche: 0
-  speed: 1
+  speed: 0
   timebeforAttaque: 0
   animAttaque: 0
   attaque: 0
@@ -126,10 +125,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2185636294993034388}
     m_Modifications:
-    - target: {fileID: 1964704263138806, guid: e3d9a5b7a19f9684d9b63308cdfa95bd, type: 3}
-      propertyPath: m_Name
-      value: Character_Gunman_01
-      objectReference: {fileID: 0}
     - target: {fileID: 4201403797357164, guid: e3d9a5b7a19f9684d9b63308cdfa95bd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -173,6 +168,10 @@ PrefabInstance:
     - target: {fileID: 4201403797357164, guid: e3d9a5b7a19f9684d9b63308cdfa95bd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1964704263138806, guid: e3d9a5b7a19f9684d9b63308cdfa95bd, type: 3}
+      propertyPath: m_Name
+      value: Character_Gunman_01
       objectReference: {fileID: 0}
     - target: {fileID: 95082879787689830, guid: e3d9a5b7a19f9684d9b63308cdfa95bd,
         type: 3}
