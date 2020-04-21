@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Photon.Pun;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(CharacterController))]
 
@@ -17,11 +18,44 @@ public class Mouvement : MonoBehaviourPun
     public GameObject cameraParent; 
     private Animator Anim;
     public bool bonus_locked = false;
-    public bool bonus_jump; 
+    public bool bonus_jump;
+
+    // ringMenus
+    private Vector2 Mouseposition;
+    private Vector2 fromVectore2M = new Vector2(0.5f, 1.0f);
+    private Vector2 centercirce = new Vector2(0.5f, 0.5f);
+    private Vector2 toVector2M;
+    private bool RingAnimation;
+    private bool RingSong;
+    private float angle;
+
+
+    //ringMenu
+    public List<MenuButton> buttonsMenu = new List<MenuButton>();
+    private int menuItemsMenu;
+    private int curMenuItemMenu;
+    private int OldMenueItemMenu;
+    public GameObject ringMenuUIMenu;
+
+    //ringAnimation
+    public List<MenuButton> buttonsAnimation = new List<MenuButton>();
+    private int menuItemsAnimation;
+    private int curMenuItemAnimation;
+    private int OldMenueItemAnimation;
+    public GameObject ringMenuUIAnimation;
+
+    //ringSong
+    public List<MenuButton> buttonsSong = new List<MenuButton>();
+    private int menuItemsSong;
+    private int curMenuItemSong;
+    private int OldMenueItemSong;
+    public GameObject ringMenuUISong; 
+    public AudioClip[] bruitage;
+    private AudioSource audioSource;
 
 
 
-#endregion
+    #endregion
 
     private void Start()
     {
@@ -31,6 +65,9 @@ public class Mouvement : MonoBehaviourPun
             Anim = GetComponent<Animator>();
             controller = GetComponent<CharacterController>();
             Cursor.lockState = CursorLockMode.Locked;
+            startRingMenu();
+            startRingAnimation();
+            startRingSong();
         }
     }
 
@@ -41,6 +78,13 @@ public class Mouvement : MonoBehaviourPun
             TakeInput();
             BasicRotation();
             Anim.SetFloat("Direction", Input.GetAxis("Horizontal"));
+            if (this.gameObject.tag == "Bandit")
+            {   
+                updateMenuAnimation();
+                updateSong(); 
+                updateMenu();
+            }
+            
         }
     }
 #region Constantes
@@ -113,24 +157,23 @@ public class Mouvement : MonoBehaviourPun
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
-
-
-
-
     }
 
     private void BasicRotation()
     {
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        if (this.gameObject.tag != "Bandit" || (!Input.GetKey("x") && !Input.GetButton("Fire2")))
+        {
+            float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+            float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
-        xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -45f, 45f);
+            xRotation -= mouseY;
+            xRotation = Mathf.Clamp(xRotation, -45f, 45f);
 
-        //yRotation += mouseX;
+            //yRotation += mouseX;
 
-        transform.Rotate(Vector3.up * mouseX);
-        //playerBody.Rotate(Vector3.left * mouseY); 
+            transform.Rotate(Vector3.up * mouseX);
+            //playerBody.Rotate(Vector3.left * mouseY); 
+        }
     }
 
 
@@ -151,4 +194,283 @@ public class Mouvement : MonoBehaviourPun
                     break; 
             }
         }
+
+    private void startRingMenu()
+    {
+        RingAnimation = false;
+        RingSong = false;
+        menuItemsMenu = buttonsMenu.Count;
+        foreach (MenuButton button in buttonsMenu)
+        {
+            button.sceneimage.color = button.normalColor;
+        }
+        curMenuItemMenu = 0;
+        OldMenueItemMenu = 0;
+        ringMenuUIMenu.SetActive(false);
+    }
+
+    private void startRingAnimation()
+    {
+        menuItemsAnimation = buttonsAnimation.Count;
+        foreach (MenuButton button in buttonsAnimation)
+        {
+            button.sceneimage.color = button.normalColor;
+        }
+        curMenuItemAnimation = 0;
+        OldMenueItemAnimation = 0;
+        ringMenuUIAnimation.SetActive(false);
+    }
+
+    private void startRingSong()
+    {
+        audioSource = GetComponent<AudioSource>();
+        menuItemsSong = buttonsSong.Count;
+        foreach (MenuButton button in buttonsSong)
+        {
+            button.sceneimage.color = button.normalColor;
+        }
+        curMenuItemSong = 0;
+        OldMenueItemSong = 0;
+        ringMenuUISong.SetActive(false);
+    }
+
+    private void updateMenu()
+    {
+        if (!Input.GetKey("x"))
+        {
+            ringMenuUIMenu.SetActive(false);
+            RingSong = false;
+            RingAnimation = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        else if (!RingAnimation && !RingSong)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            ringMenuUIMenu.SetActive(true);
+            GetCurrentMenuItemMenu();
+            if (Input.GetButtonDown("Fire1"))
+                ButtonAcionMenu();
+        }
+        else if (RingAnimation || RingSong)
+        {
+            ringMenuUIMenu.SetActive(false);
+        }
+    }
+
+    private void updateMenuAnimation()
+    {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            setfalse();
+        }
+        if (RingAnimation)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            ringMenuUIAnimation.SetActive(true);
+            GetCurrentMenuItemAnimation();
+            if (Input.GetButtonDown("Fire1"))
+                ButtonAcionAnimation();
+        }
+        else
+        {
+            ringMenuUIAnimation.SetActive(false);
+        }
+
+    }
+
+    private void updateSong()
+    {
+        if (RingSong)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            ringMenuUISong.SetActive(true);
+            GetCurrentMenuItemSong();
+            if (Input.GetButtonDown("Fire1"))
+                ButtonAcionSong();
+        }
+        else
+        {
+            ringMenuUISong.SetActive(false);
+        }
+    }
+
+    private void updateAngle()
+    {
+        Mouseposition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+
+        toVector2M = new Vector2(Mouseposition.x / Screen.width, Mouseposition.y / Screen.height);
+
+        angle = (Mathf.Atan2(fromVectore2M.y - centercirce.y, fromVectore2M.x - centercirce.x) - Mathf.Atan2(toVector2M.y - centercirce.y, toVector2M.x - centercirce.x)) * Mathf.Rad2Deg;
+
+        if (angle < 0)
+            angle += 360;
+    }
+
+    public void GetCurrentMenuItemMenu()
+    {
+        updateAngle();
+
+        curMenuItemMenu = (int)(angle / (360 / menuItemsMenu));
+
+        if (curMenuItemMenu != OldMenueItemMenu)
+        {
+            buttonsMenu[OldMenueItemMenu].sceneimage.color = buttonsMenu[OldMenueItemMenu].normalColor;
+            OldMenueItemMenu = curMenuItemMenu;
+            buttonsMenu[curMenuItemMenu].sceneimage.color = buttonsMenu[curMenuItemMenu].HighlitedColor;
+        }
+    }
+
+    public void GetCurrentMenuItemAnimation()
+    {
+        updateAngle();
+
+        curMenuItemAnimation = (int)(angle / (360 / menuItemsAnimation));
+
+        if (curMenuItemAnimation != OldMenueItemAnimation)
+        {
+            buttonsAnimation[OldMenueItemAnimation].sceneimage.color = buttonsAnimation[OldMenueItemAnimation].normalColor;
+            OldMenueItemAnimation = curMenuItemAnimation;
+            buttonsAnimation[curMenuItemAnimation].sceneimage.color = buttonsAnimation[curMenuItemAnimation].HighlitedColor;
+        }
+    }
+
+    public void GetCurrentMenuItemSong()
+    {
+        updateAngle();
+
+        curMenuItemSong = (int)(angle / (360 / menuItemsSong));
+
+        if (curMenuItemSong != OldMenueItemSong)
+        {
+            buttonsSong[OldMenueItemSong].sceneimage.color = buttonsSong[OldMenueItemSong].normalColor;
+            OldMenueItemSong = curMenuItemSong;
+            buttonsSong[curMenuItemSong].sceneimage.color = buttonsSong[curMenuItemSong].HighlitedColor;
+        }
+    }
+
+    public void ButtonAcionMenu()
+    {
+        buttonsMenu[curMenuItemMenu].sceneimage.color = buttonsMenu[curMenuItemMenu].PressedColor;
+        if (curMenuItemMenu == 0)
+        {
+            RingAnimation = true;
+        }
+        if (curMenuItemMenu == 1)
+        {
+            RingSong = true;
+        }
+
+    }
+
+    public void ButtonAcionAnimation()
+    {
+        buttonsAnimation[curMenuItemAnimation].sceneimage.color = buttonsAnimation[curMenuItemAnimation].PressedColor;
+        if (curMenuItemAnimation == 0)
+        {
+            setfalse();
+            Anim.SetTrigger("enter");
+            Anim.SetBool("swimming", true);
+        }
+        if (curMenuItemAnimation == 1)
+        {
+            setfalse();
+            Anim.SetTrigger("enter");
+            Anim.SetBool("belly", true);
+        }
+        if (curMenuItemAnimation == 2)
+        {
+            setfalse();
+            Anim.SetTrigger("enter");
+            Anim.SetBool("breakdance", true);
+        }
+        if (curMenuItemAnimation == 3)
+        {
+            setfalse();
+            Anim.SetTrigger("enter");
+            Anim.SetBool("jazz", true);
+        }
+        if (curMenuItemAnimation == 4)
+        {
+            setfalse();
+            Anim.SetTrigger("enter");
+            Anim.SetBool("hiphop", true);
+        }
+        if (curMenuItemAnimation == 5)
+        {
+            setfalse();
+            Anim.SetTrigger("enter");
+            Anim.SetBool("swing", true);
+        }
+        if (curMenuItemAnimation == 6)
+        {
+            setfalse();
+            Anim.SetTrigger("enter");
+            Anim.SetBool("sittingyell", true);
+        }
+        if (curMenuItemAnimation == 7)
+        {
+            setfalse();
+            Anim.SetTrigger("enter");
+            Anim.SetBool("lay", true);
+        }
+    }
+
+    public void ButtonAcionSong()
+    {
+        buttonsSong[curMenuItemSong].sceneimage.color = buttonsSong[curMenuItemSong].PressedColor;
+        if (curMenuItemSong == 0)
+        {
+            audioSource.PlayOneShot(bruitage[0]);
+        }
+        if (curMenuItemSong == 1)
+        {
+            audioSource.PlayOneShot(bruitage[1]);
+        }
+        if (curMenuItemSong == 2)
+        {
+            audioSource.PlayOneShot(bruitage[2]);
+        }
+        if (curMenuItemSong == 3)
+        {
+            audioSource.PlayOneShot(bruitage[3]);
+        }
+        if (curMenuItemSong == 4)
+        {
+            audioSource.PlayOneShot(bruitage[4]);
+        }
+        if (curMenuItemSong == 5)
+        {
+            audioSource.PlayOneShot(bruitage[5]);
+        }
+        if (curMenuItemSong == 6)
+        {
+            audioSource.PlayOneShot(bruitage[6]);
+        }
+        if (curMenuItemSong == 7)
+        {
+            audioSource.PlayOneShot(bruitage[UnityEngine.Random.Range(0, bruitage.Length)]);
+        }
+    }
+
+    public void setfalse()
+    {
+        Anim.SetBool("swing", false);
+        Anim.SetBool("belly", false);
+        Anim.SetBool("swimming", false);
+        Anim.SetBool("breakdance", false);
+        Anim.SetBool("jazz", false);
+        Anim.SetBool("hiphop", false);
+        Anim.SetBool("sittingyell", false);
+        Anim.SetBool("lay", false);
+    }
+
+    [System.Serializable]
+    public class MenuButton
+    {
+        public string name;
+        public Image sceneimage;
+        public Color normalColor = Color.white;
+        public Color HighlitedColor = Color.grey;
+        public Color PressedColor = Color.gray;
+    }
 }

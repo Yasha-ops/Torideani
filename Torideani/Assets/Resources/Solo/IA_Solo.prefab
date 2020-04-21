@@ -63,7 +63,7 @@ Animator:
   m_GameObject: {fileID: 1091009174365755479}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 4837235d67e136e4b883adb2bafc73e8, type: 3}
-  m_Controller: {fileID: 9100000, guid: 483dc37c06fda504798f3c7087734bec, type: 2}
+  m_Controller: {fileID: 9100000, guid: e7579149a4a6cc648a48e08cfb34a302, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -112,9 +112,11 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 0
-  destination: {fileID: 0}
+  destination: {fileID: 2141412228997052193, guid: f75f5652202195877a63ac05b7320610,
+    type: 3}
   proche: 0
-  speed: 0
+  speed: 1
+  timebeforAttaque: 0
   animAttaque: 0
   attaque: 0
 --- !u!1001 &516509163795681639
@@ -176,7 +178,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 9100000, guid: e7579149a4a6cc648a48e08cfb34a302, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3d9a5b7a19f9684d9b63308cdfa95bd, type: 3}
 --- !u!4 &515081059057062667 stripped

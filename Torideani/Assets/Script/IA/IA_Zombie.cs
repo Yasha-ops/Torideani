@@ -8,6 +8,7 @@ public class IA_Zombie : MonoBehaviour
     // je sais pas a quoi ca sert mais ils sont la
     public Transform groundCheck;
     public bool isGrounded;
+    private Animator Anim;
 
     public float groundDistance = 0f;
     public LayerMask groundMask;
@@ -19,6 +20,7 @@ public class IA_Zombie : MonoBehaviour
     public float speed;
 
     // variables pour l'attaque
+    public float timebeforAttaque;
     public float animAttaque;
     public bool attaque;
 
@@ -29,41 +31,54 @@ public class IA_Zombie : MonoBehaviour
 
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
         agent.SetDestination(destination.position);
+        Anim = GetComponent<Animator>();
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        // if (Hp > 0) {    }
+        animAttaque -= Time.deltaTime;
+        timebeforAttaque -= Time.deltaTime;
+
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
-        move(agent);
-        StopAnim(agent);
+        if (animAttaque <= 0f)
+             move(agent);
+        Animation(agent);
+        Hit(agent);
+
 
     }
     private void move(NavMeshAgent agent)
     {
+        agent.destination = destination.position;
+
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
 
-        if (Vector3.Distance(agent.transform.position, agent.destination) < 0.2f)
+        if (Vector3.Distance(agent.transform.position, agent.destination) < 2f)
         {
             proche = true;
+            if (timebeforAttaque < 0f)
+                timebeforAttaque = 2f;
         }
         else
         {
             proche = false;
+            attaque = false;
+            agent.speed = speed;
         }
 
 
-        if (proche)
+        if (proche && timebeforAttaque < 1f)
         {
-            // attaqueAnim();
+            attaqueAnim();
             if (animAttaque > 0f && attaque)
             {
-                animAttaque -= Time.deltaTime;
                 agent.speed = 0f;
             }
-            else if (animAttaque < 0f && attaque)
+            else if (timebeforAttaque < 1f && attaque)
             {
                 attaqueVie();
                 attaque = false;
@@ -73,15 +88,7 @@ public class IA_Zombie : MonoBehaviour
 
     }
 
-    public void StopAnim(NavMeshAgent agent)
-    {
-        if (proche == false)
-        {
-            // Stop l'animation
-            agent.speed = speed;
-            agent.destination = destination.position;
-        }
-    }
+   
 
     // julien
     public void attaqueAnim()
@@ -89,8 +96,24 @@ public class IA_Zombie : MonoBehaviour
 
         if (animAttaque <= 0f && attaque == false)
         {
-            // lance l'anim d'attaque
-            // animAttaque = durée de l'anim
+            int x = Random.Range(0, 3);
+            if (x == 0)
+            { 
+                Anim.SetTrigger("attack1");
+                animAttaque = 4f;
+            }
+               
+            if (x == 1)
+            {
+                Anim.SetTrigger("attack3");
+                animAttaque = 4f;
+            }
+                
+            if (x == 2)
+            {
+                Anim.SetTrigger("attack2");
+                animAttaque = 4f;
+            } 
             attaque = true;
         }
     }
@@ -100,6 +123,32 @@ public class IA_Zombie : MonoBehaviour
     {
 
         // enleve la vie du joueur
+        
+    }
 
+    public void Hit(NavMeshAgent agent)
+    {
+
+        // enleve la vie du zombie
+
+        //if (Hp <= 0)
+        {
+            agent.speed = 0f;
+            Anim.SetTrigger("death");
+        }
+
+    }
+
+    private void Animation(NavMeshAgent agent)
+    {
+        if (!isGrounded)
+        {
+            Anim.SetBool("Ground", true);
+        }
+        else
+        {
+            Anim.SetBool("Ground", false);
+        }
+        Anim.SetFloat("Speed", agent.speed);
     }
 }

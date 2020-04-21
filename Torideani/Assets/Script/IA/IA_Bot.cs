@@ -69,7 +69,7 @@ public class IA_Bot : MonoBehaviour
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
 
-        if (Vector3.Distance(agent.transform.position, agent.destination) < 0.2f)
+        if (Vector3.Distance(agent.transform.position, agent.destination) < 0.4f)
         {
             estArrivée = true;
         }
