@@ -23,16 +23,31 @@ public class Chasseur_Class : MonoBehaviour
     public GameObject canvas;
     public GameObject HealthBar;
 
+    public AudioSource source;
+    public Text GameOver;
+
     public int ID => PV.ViewID; 
     void Start()
     {
-        PV = GetComponent<PhotonView>(); 
+        PV = GetComponent<PhotonView>();
+        PV.RPC("RPC_IncreassNumber", RpcTarget.All, true);
     }
 
     private void Update()
     {
         if (!PV.IsMine)
-            canvas.SetActive(false); 
+            canvas.SetActive(false);
+        if (health <= 0)
+        {
+            PV.RPC("RPC_IncreassNumber", RpcTarget.All, false);
+            dead = true;
+            this.gameObject.SetActive(false);
+        }
+    }
+
+    public void PlaySound()
+    {
+        source.Play(0);
     }
 
     public void EnableBonus(string bonus)
@@ -89,6 +104,19 @@ public class Chasseur_Class : MonoBehaviour
             this.gameObject.GetComponent<Mouvement>().speed = 200;
             //StartCoroutine (BonusWaiter());
             //this.gameObject.GetComponent<Mouvement>().speed = 100;
+        }
+
+    [PunRPC]
+        void RPC_IncreassNumber(bool act)
+        {
+            if (act)
+            {
+                GameSetup.GS.NbrChasseurs++;
+            }
+            else
+            {
+                GameSetup.GS.NbrChasseurs--;
+            }
         }
 
     public void EnableBonusScanner()

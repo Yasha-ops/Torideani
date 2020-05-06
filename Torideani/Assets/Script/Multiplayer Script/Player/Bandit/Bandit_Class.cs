@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Photon.Pun;
 using UnityEngine;
-using UnityEngine.UI; 
+using UnityEngine.UI;
 
 public class Bandit_Class : MonoBehaviour
 {
@@ -20,6 +20,7 @@ public class Bandit_Class : MonoBehaviour
     public GameObject canvas; 
     public GameObject HealthBar;
 
+    public Text GameOver;
 
     public bool Dead => dead;
 
@@ -27,6 +28,7 @@ public class Bandit_Class : MonoBehaviour
     void Start()
     {
         PV = GetComponent<PhotonView>(); 
+        PV.RPC("RPC_IncreassNumber", RpcTarget.All, true);
     }
 
     private void Update()
@@ -40,6 +42,7 @@ public class Bandit_Class : MonoBehaviour
         {
             health = 0; 
             dead = true;
+            PV.RPC("RPC_IncreassNumber", RpcTarget.All, false);
             me.SetActive(false);
         }
     }
@@ -99,6 +102,19 @@ public class Bandit_Class : MonoBehaviour
             this.gameObject.transform.localScale = new Vector3(0.25f, 0.25f , 0.25f);
             //StartCoroutine (BonusWaiter());
             //this.gameObject.transform.localScale = new Vector3(1.0f , 1.0f , 1.0f);
+        }
+
+    [PunRPC]
+        void RPC_IncreassNumber(bool act)
+        {
+            if (act)
+            {
+                GameSetup.GS.NbrBandit++;
+            }
+            else
+            {
+                GameSetup.GS.NbrBandit--;
+            }
         }
 
     public void Hitted(int ennemi_damage)

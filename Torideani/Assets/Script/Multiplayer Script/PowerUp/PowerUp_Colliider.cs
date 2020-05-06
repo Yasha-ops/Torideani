@@ -11,6 +11,7 @@ public class PowerUp_Colliider : MonoBehaviour
         {
             Debug.Log($"Collision with a {col.gameObject.tag} is detected !");
             col.gameObject.GetComponent<Chasseur_Class>().current_bonus = this.gameObject.GetComponent<PowerUp_Class>().itsPowerUpsChasseur;
+            col.gameObject.GetComponent<Chasseur_Class>().PlaySound();
             this.GetComponent<PowerUp_Class>().Remove();
             col.gameObject.GetComponent<Player_Shooting>().NotifyText($"You got a new {this.GetComponent<PowerUp_Class>().itsPowerUpsChasseur} bonus");
         }

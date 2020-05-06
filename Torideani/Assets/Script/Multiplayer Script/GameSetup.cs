@@ -21,6 +21,10 @@ public class GameSetup : MonoBehaviour
 
     public GameObject[] spawnPowerUps;
     private Random rnd = new Random();
+
+    public int NbrChasseurs = 1;
+    public int NbrBandit = 1;
+
     private int seconds;
 
     public GameObject PowerUps;
@@ -33,34 +37,44 @@ public class GameSetup : MonoBehaviour
         TextTimer.text = "Time Left:" + Mathf.Round(GameDuration);
         if(GameDuration< 0)
         {
-            TextTimer.text = "GAME OVER!";
+            Finished(true);
         }
     }
 
-    public bool Finished()
+    public bool Finished(bool shortcut)
     {
-        bool exist_ch = false;
-        bool exist_ba = false;
-        GameObject[] bandits = GameObject.FindGameObjectsWithTag("Bandit");
-        GameObject[] chasseurs = GameObject.FindGameObjectsWithTag("Chasseur");
-        foreach (var ban in bandits)
+        GameObject[] banditList;
+        GameObject[] chasseursList;
+        banditList = GameObject.FindGameObjectsWithTag("Bandit");
+        chasseursList = GameObject.FindGameObjectsWithTag("Chasseur");
+
+        Debug.Log("NbrChasseurs " + NbrChasseurs + "NbrBandit " + NbrBandit);
+        if (NbrChasseurs == 0 || shortcut)
         {
-            if (ban.active)
-                exist_ba = true;
+            foreach(GameObject bandit in banditList)
+                bandit.GetComponent<Bandit_Class>().GameOver.text = "You won !";
+            TextTimer.text = "GAME OVER!";
         }
-        foreach (var cha in chasseurs)
+        if (NbrBandit == 0)
         {
-            if (cha.active)
-                exist_ch = true;
+            foreach(GameObject chasseurs in chasseursList)
+                chasseurs.GetComponent<Chasseur_Class>().GameOver.text = "You won !";
+            TextTimer.text = "GAME OVER!";
         }
-        return (!exist_ch || !exist_ba); 
+        return (NbrChasseurs == 0) || (NbrBandit == 0);
     }
 
     void Update()
     {
+        //if (Finished(false))
+        //{
+        //    Debug.Log("The game is over !");
+        //    return;
+        //}
         CountDownTimer();
         timer += Time.deltaTime;
         seconds = (int)(timer % 60);
+
         if ((int)timer % 100 == 0)
         {
             Debug.Log("Generating PowerUps!");
