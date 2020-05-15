@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class PlayerInputName : MonoBehaviour
 {
-    [SerializeField] private TMP_InputField nameInputField = null;
-    [SerializeField] private Button continueButton = null;
+    [SerializeField] private InputField nameInputField = null;
+    [SerializeField] private Button continueButton = null; //test
 
     private const string PlayerPrefsNameKey = "PlayerName";
 

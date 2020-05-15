@@ -1,4 +1,14 @@
 Base path: '/home/yassine/Unity/Hub/Editor/2019.2.5f1/Editor/Data', plugins path '/home/yassine/Unity/Hub/Editor/2019.2.5f1/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
-
-Quitting shader compiler process
+Cmd: disassembleShader
+  api=15 insize=2752 outsize=2752 ok=1
+Cmd: disassembleShader
+  api=15 insize=3024 outsize=3024 ok=1
+Cmd: disassembleShader
+  api=15 insize=3210 outsize=3210 ok=1
+Cmd: disassembleShader
+  api=18 insize=0 outsize=1 ok=1
+Cmd: disassembleShader
+  api=15 insize=0 outsize=57 ok=1
+Cmd: disassembleShader
+  api=18 insize=0 outsize=1 ok=1
