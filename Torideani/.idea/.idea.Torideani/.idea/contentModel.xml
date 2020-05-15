@@ -1,11 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="$USER_HOME$/.Rider2019.3/system/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/.Rider2019.3/system/resharper-host/local/Transient/ReSharperHost/v193/SolutionCaches/_Torideani.139654841.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/.cache/JetBrains/Rider2020.1/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/.cache/JetBrains/Rider2020.1/resharper-host/local/Transient/ReSharperHost/v201/SolutionCaches/_Torideani.139654841.00" t="ExcludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="HealthHeartSystem" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="HealthBarController.cs" t="Include" />
+            <e p="HealthBarHUDTester.cs" t="Include" />
+            <e p="PlayerStats.cs" t="Include" />
+          </e>
+          <e p="readme.txt" t="Include" />
+        </e>
+        <e p="PSD Logo Templates" t="Include">
+          <e p="Fonts" t="Include">
+            <e p="Baloo" t="Include">
+              <e p="OFL.txt" t="Include" />
+            </e>
+            <e p="Changa_One" t="Include">
+              <e p="OFL.txt" t="Include" />
+            </e>
+            <e p="Lilita_One" t="Include">
+              <e p="OFL.txt" t="Include" />
+            </e>
+            <e p="Passion_One" t="Include">
+              <e p="OFL.txt" t="Include" />
+            </e>
+          </e>
+          <e p="Sample" t="Include">
+            <e p="IconPreview.cs" t="Include" />
+          </e>
+        </e>
         <e p="Photon" t="Include">
           <e p="PhotonLibs" t="Include">
             <e p="Photon3Unity3D.xml" t="Include" />
@@ -314,29 +341,104 @@
             <e p="readme.txt" t="Include" />
           </e>
         </e>
+        <e p="PolygonWestern" t="Include">
+          <e p="Materials" t="Include">
+            <e p="Misc" t="Include">
+              <e p="NewUnlitShader.shader" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Samples" t="Include">
+          <e p="Cinemachine" t="Include">
+            <e p="2.5.0" t="Include">
+              <e p="Cinemachine Example Scenes" t="Include">
+                <e p="Scenes" t="Include">
+                  <e p="OverTheShoulderAim" t="Include">
+                    <e p="ActivateOnKeypress.cs" t="Include" />
+                  </e>
+                  <e p="Scripting" t="Include">
+                    <e p="ScriptingExample.cs" t="Include" />
+                  </e>
+                  <e p="Trigger volumes" t="Include">
+                    <e p="GenericTrigger.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="Shared" t="Include">
+                  <e p="Models" t="Include">
+                    <e p="UnityCharacter" t="Include">
+                      <e p="Scripts" t="Include">
+                        <e p="CharacterMovement.cs" t="Include" />
+                        <e p="CharacterMovement2D.cs" t="Include" />
+                      </e>
+                    </e>
+                  </e>
+                  <e p="Scripts" t="Include">
+                    <e p="ActivateCamOnPlay.cs" t="Include" />
+                    <e p="ActivateCameraWithDistance.cs" t="Include" />
+                    <e p="ExampleHelpWindow.cs" t="Include" />
+                    <e p="MixingCameraBlend.cs" t="Include" />
+                    <e p="PlayerMove.cs" t="Include" />
+                    <e p="PlayerMoveOnSphere.cs" t="Include" />
+                    <e p="PlayerMovePhysics.cs" t="Include" />
+                  </e>
+                </e>
+              </e>
+            </e>
+          </e>
+        </e>
         <e p="Script" t="Include">
           <e p="IA" t="Include">
-            <e p="IA.cs" t="Include" />
+            <e p="IA_Bot.cs" t="Include" />
+            <e p="IA_Zombie.cs" t="Include" />
           </e>
           <e p="MainMenu" t="Include">
-            <e p="Main_Menu_Script.cs" t="Include" />
-            <e p="Move_Camera_MainMenu.cs" t="Include" />
-            <e p="Parallax.cs" t="Include" />
+            <e p="Ancien" t="Include">
+              <e p="Main_Menu_Script.cs" t="Include" />
+              <e p="Move_Camera_MainMenu.cs" t="Include" />
+              <e p="Parallax.cs" t="Include" />
+            </e>
+            <e p="BackMultiplayer.cs" t="Include" />
+            <e p="CanvasManager.cs" t="Include" />
+            <e p="MenuMultiplayer.cs" t="Include" />
+            <e p="Ouverture.cs" t="Include" />
+            <e p="Ouverture2.cs" t="Include" />
+            <e p="Ouverture3.cs" t="Include" />
+            <e p="PlaySoloButton.cs" t="Include" />
           </e>
           <e p="Multiplayer Script" t="Include">
             <e p="Count_Down.cs" t="Include" />
             <e p="GameSetup.cs" t="Include" />
-            <e p="Mouvement.cs" t="Include" />
-            <e p="PayerShooting.cs" t="Include" />
-            <e p="Player_Class.cs" t="Include" />
-            <e p="Player_Spawner.cs" t="Include" />
+            <e p="Player" t="Include">
+              <e p="Bandit" t="Include">
+                <e p="Bandit_Class.cs" t="Include" />
+                <e p="Player_Bonus.cs" t="Include" />
+                <e p="camMov.cs" t="Include" />
+              </e>
+              <e p="Chasseur" t="Include">
+                <e p="Chasseur_Class.cs" t="Include" />
+                <e p="Player_Shooting.cs" t="Include" />
+              </e>
+              <e p="Mouvement.cs" t="Include" />
+              <e p="Player_CameraMouvement.cs" t="Include" />
+              <e p="Player_Spawner.cs" t="Include" />
+            </e>
+            <e p="PowerUp" t="Include">
+              <e p="PowerUp_Class.cs" t="Include" />
+              <e p="PowerUp_Colliider.cs" t="Include" />
+            </e>
           </e>
           <e p="Networking" t="Include">
             <e p="MainMenu.cs" t="Include" />
             <e p="PlayerInputName.cs" t="Include" />
           </e>
           <e p="Solo Script" t="Include">
-            <e p="Camera_mov.cs" t="Include" />
+            <e p="AI" t="Include">
+              <e p="SoloAI_Class.cs" t="Include" />
+            </e>
+            <e p="Player" t="Include">
+              <e p="Mouvement_Solo.cs" t="Include" />
+              <e p="Solo_Class.cs" t="Include" />
+            </e>
           </e>
         </e>
         <e p="TextMesh Pro" t="Include">

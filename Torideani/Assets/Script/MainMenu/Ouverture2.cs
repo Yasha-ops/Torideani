@@ -1,12 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+using Cinemachine;
 
 public class Ouverture2 : MonoBehaviour
 {
     public GameObject door;
+    public GameObject canvas;
     private bool isOpen = false;
-    // Start is called before the first frame update
+    public CinemachineVirtualCamera currentCamera;
+    private CinemachineTrackedDolly cinemachineTrackedDolly;
+
+
+    void Start()
+    {
+        cinemachineTrackedDolly = currentCamera.GetCinemachineComponent<CinemachineTrackedDolly> ();
+    }
     public void OpenDoor()
     {
         float test = 0f;
@@ -20,17 +30,23 @@ public class Ouverture2 : MonoBehaviour
 
     void Update()
     {
-        if (transform.position.x > 5.0f && transform.position.y > 1f && transform.position.z < -14f)
+        Debug.Log(cinemachineTrackedDolly.m_PathPosition);
+        if (cinemachineTrackedDolly.m_PathPosition == 10 )
         {
-            Debug.Log("Openning the door !");
-            OpenDoor();
+            canvas.gameObject.SetActive(true);
         }
         else
         {
-            Debug.Log($"My coordonates are  : {transform.position.x} X , {transform.position.y} Y, {transform.position.z}");
-
-            if (isOpen)
-                CloseDoor();
+            if (transform.position.x > 5.0f && transform.position.y > 1f && transform.position.z < -14f)
+            {
+                Debug.Log("Openning the door !");
+                OpenDoor();
+            }
+            else
+            {
+                if (isOpen)
+                    CloseDoor();
+            }
         }
     }
 

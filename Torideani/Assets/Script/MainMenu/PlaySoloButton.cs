@@ -1,14 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Playables;
 
-public class BackMultiplayer: MonoBehaviour
+public class PlaySoloButton : MonoBehaviour
 {
-    public GameObject transition;
+    // Start is called before the first frame update
     public AudioClip[] adClips;
     AudioSource adSource;
-    public GameObject canvas;
 
     void Start()
     {
@@ -20,19 +18,7 @@ public class BackMultiplayer: MonoBehaviour
         Debug.Log("A mouse click has been detected !");
         adSource.clip = adClips[1];
         adSource.Play();
-        try
-        {
-            this.GetComponent<Ouverture>().CloseDoor();
-        }
-        catch
-        {
-        }
-
-        try{
-            canvas.gameObject.SetActive(false);
-        }catch{
-        }
-        transition.gameObject.SetActive(false);
+        this.GetComponent<Ouverture3>().OpenDoor();
 
     }
 
@@ -41,4 +27,5 @@ public class BackMultiplayer: MonoBehaviour
         adSource.clip = adClips[0];
         adSource.Play();
     }
+
 }
