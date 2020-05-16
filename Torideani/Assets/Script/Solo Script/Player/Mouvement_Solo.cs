@@ -21,22 +21,31 @@ public class Mouvement_Solo : MonoBehaviourPun
     public float jumpHeight = 2f;
     private Vector3 velocity;
     public CharacterController controller;
+    public bool valide = true;
 
     private void Update()
     {
-        BasicRotation();
-        Cursor.lockState = CursorLockMode.Locked;
-        TakeInput();
-        if (Input.GetMouseButtonDown(1))
+        if (valide)
         {
-            this.gameObject.GetComponent<Solo_Class>().TakeInput();
-            Anim.SetTrigger("shoot");
-            this.gameObject.GetComponent<Solo_Class>().feu.Play();
+            BasicRotation();
+            Cursor.lockState = CursorLockMode.Locked;
+            TakeInput();
+            if (Input.GetMouseButtonDown(1))
+            {
+                this.gameObject.GetComponent<Solo_Class>().TakeInput();
+                Anim.SetTrigger("shoot");
+                this.gameObject.GetComponent<Solo_Class>().feu.Play();
+            }
+            if (Input.GetKey("m"))
+            {
+                SceneManager.LoadScene("MainMenu");
+            }
         }
-        if (Input.GetKey("m"))
-        {
-            SceneManager.LoadScene("MainMenu");
-        }
+    }
+
+    public void Avancer()
+    {
+        
     }
 
     private void Start()
@@ -52,10 +61,10 @@ public class Mouvement_Solo : MonoBehaviourPun
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
         xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -45f, 45f);
+        //xRotation = Mathf.Clamp(xRotation, -45f, 45f);
 
         yRotation += mouseX;
-        yRotation = Mathf.Clamp(yRotation, -20f, 20f);
+        //yRotation = Mathf.Clamp(yRotation, -20f, 20f);
 
         //transform.Rotate(Vector3.left * mouseY);
         transform.Rotate(Vector3.up * mouseX);

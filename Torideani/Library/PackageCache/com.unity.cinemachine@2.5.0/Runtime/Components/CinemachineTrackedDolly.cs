@@ -26,7 +26,7 @@ namespace Cinemachine
         /// <summary>The position along the path at which the camera will be placed.
         /// This can be animated directly, or set automatically by the Auto-Dolly feature
         /// to get as close as possible to the Follow target.</summary>
-        [Tooltip("The position along the path at which the camera will be placed.  This can be animated directly, or set automatically by the Auto-Dolly feature to get as close as possible to the Follow target.  The value is interpreted according to the Position Units setting. Zebi")]
+        [Tooltip("The position along the path at which the camera will be placed.  This can be animated directly, or set automatically by the Auto-Dolly feature to get as close as possible to the Follow target.  The value is interpreted according to the Position Units setting.")]
         public float m_PathPosition;
 
         /// <summary>How to interpret the Path Position</summary>

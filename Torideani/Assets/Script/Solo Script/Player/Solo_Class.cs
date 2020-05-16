@@ -13,6 +13,7 @@ public class Solo_Class : MonoBehaviour
     public Transform rayOrigin;
     public ParticleSystem feu; 
     public Text Score_Text;
+    public ParticleSystem blood;
 
     public GameObject HealthBar;
     void Start()
@@ -84,6 +85,7 @@ public class Solo_Class : MonoBehaviour
     public void TakeDamage()
     {
         health -= 0.25f;
+        blood.Play();
         Debug.Log($"Aie, im losing health points {health}");
         HealthBar.GetComponent<HealthBarHUDTester>().Hurt(0.25f);
     }
