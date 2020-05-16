@@ -5,11 +5,17 @@ using Photon.Pun;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class Mouvement_Solo : MonoBehaviourPun
 {
+    private const float Y_ANGLE_MIN = -15.0f;
+    private const float Y_ANGLE_MAX = 15.0f;
     private float xRotation = 0f;
     private float yRotation = 0f;
+    public float currentY = 0.0f;
     private float mouseSensitivity = 100f;
+    public Transform camTransform;
+
     public Transform effect;
     public Transform groundCheck;
     private Animator Anim;
@@ -21,31 +27,27 @@ public class Mouvement_Solo : MonoBehaviourPun
     public float jumpHeight = 2f;
     private Vector3 velocity;
     public CharacterController controller;
-    public bool valide = true;
+
+    public Vector3 ground;
+
 
     private void Update()
     {
-        if (valide)
-        {
-            BasicRotation();
-            Cursor.lockState = CursorLockMode.Locked;
-            TakeInput();
-            if (Input.GetMouseButtonDown(1))
-            {
-                this.gameObject.GetComponent<Solo_Class>().TakeInput();
-                Anim.SetTrigger("shoot");
-                this.gameObject.GetComponent<Solo_Class>().feu.Play();
-            }
-            if (Input.GetKey("m"))
-            {
-                SceneManager.LoadScene("MainMenu");
-            }
-        }
-    }
+        TakeInput();
+        BasicRotation();
+        Cursor.lockState = CursorLockMode.Locked;
+        Anim.SetFloat("direction", Input.GetAxis("Horizontal"));
 
-    public void Avancer()
-    {
-        
+        if (Input.GetMouseButtonDown(1))
+        {
+            this.gameObject.GetComponent<Solo_Class>().TakeInput();
+            Anim.SetTrigger("shoot");
+            this.gameObject.GetComponent<Solo_Class>().feu.Play();
+        }
+        if (Input.GetKey("m"))
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
     }
 
     private void Start()
@@ -57,29 +59,39 @@ public class Mouvement_Solo : MonoBehaviourPun
 
     private void BasicRotation()
     {
+
+        currentY -= Input.GetAxis("Mouse Y");
+        currentY = Mathf.Clamp(currentY, Y_ANGLE_MIN, Y_ANGLE_MAX);
+
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
         xRotation -= mouseY;
-        //xRotation = Mathf.Clamp(xRotation, -45f, 45f);
+        xRotation = Mathf.Clamp(xRotation, -45f, 45f);
 
         yRotation += mouseX;
-        //yRotation = Mathf.Clamp(yRotation, -20f, 20f);
+        yRotation = Mathf.Clamp(yRotation, -20f, 20f);
 
-        //transform.Rotate(Vector3.left * mouseY);
+
         transform.Rotate(Vector3.up * mouseX);
+
+        camTransform.localRotation = Quaternion.Euler(currentY, 0, 0);
+
+
+
     }
 
 
     private void TakeInput()
     {
+        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
         if (isGrounded)
         {
-            //Anim.SetBool("Ground", true);
+            Anim.SetBool("Ground", true);
         }
         else
         {
-            //Anim.SetBool("Ground", false);
+            Anim.SetBool("Ground", false);
         }
 
         if (Input.GetButton("Cancel") || Input.GetKey("escape"))
@@ -89,7 +101,7 @@ public class Mouvement_Solo : MonoBehaviourPun
             MainMenu.Disconect();
             SceneManager.LoadScene("MainMenu");
         }
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+
         if (isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
@@ -100,7 +112,7 @@ public class Mouvement_Solo : MonoBehaviourPun
 
         if (isGrounded && Input.GetButtonDown("Jump"))
         {
-            //Anim.SetTrigger("Jumpstart");
+            Anim.SetTrigger("Jumpstart");
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
 
         }
@@ -109,15 +121,15 @@ public class Mouvement_Solo : MonoBehaviourPun
 
         if (Input.GetButton("Fire1"))
         {
-            move = transform.right * x  + transform.forward * z ;
-            //Anim.SetFloat("Speed", z);
-            //Anim.SetBool("Fire1", true);
+            move = transform.right * x + transform.forward * z;
+            Anim.SetFloat("Speed", z);
+            Anim.SetBool("Fire1", true);
         }
         else
         {
-            move = transform.right * x /2+ transform.forward * z /2;
-            //Anim.SetFloat("Speed", z/2);
-            //Anim.SetBool("Fire1", false); 
+            move = transform.right * x / 2 + transform.forward * z / 2;
+            Anim.SetFloat("Speed", z / 2);
+            Anim.SetBool("Fire1", false);
         }
 
 

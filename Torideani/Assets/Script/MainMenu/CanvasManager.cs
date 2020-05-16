@@ -1,21 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class CanvasManager : MonoBehaviour
 {
     public GameObject canvas;
-    
+    public CinemachineVirtualCamera currentCamera;
+    private CinemachineTrackedDolly cinemachineTrackedDolly;
+void Start()
+    {
+        cinemachineTrackedDolly = currentCamera.GetCinemachineComponent<CinemachineTrackedDolly>();
+    }
     void Update()
     {
-
-        if (transform.position == new Vector3(17.32976f, 4.283929f, -12.19154f))
+        Debug.Log(cinemachineTrackedDolly.m_PathPosition);
+        if (cinemachineTrackedDolly.m_PathPosition == 7)
         {
             canvas.gameObject.SetActive(true);
         }
         else
         {
-            Debug.Log($"My coordonates are  : {transform.position.x} X , {transform.position.y} Y, {transform.position.z}");
             canvas.gameObject.SetActive(false);
         }
     }
