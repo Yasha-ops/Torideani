@@ -10,10 +10,18 @@ public class Player_Shooting : MonoBehaviour
     public Transform rayOrigin;
     public Text info;
 
+    public GameObject gunfire;
+    public GameObject gun;
+    public ParticleSystem fire;
+
+    private Animator Anim;
+
     void Start()
     {
         PV = GetComponent<PhotonView>();
-        avatarSetup = GetComponent<Chasseur_Class>(); 
+        avatarSetup = GetComponent<Chasseur_Class>();
+        Anim = GetComponent<Animator>();
+        gun.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -31,6 +39,10 @@ public class Player_Shooting : MonoBehaviour
         if (Input.GetKey(KeyCode.E))
         {
             PV= PhotonView.Get(this);
+            Anim.SetTrigger("shoot");
+            gunfire.gameObject.SetActive(false);
+            gun.gameObject.SetActive(true);
+            fire.Play();
             RPC_Shooting();
         }
         if (Input.GetKeyDown(KeyCode.F))
