@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Photon.Pun;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using Cinemachine;
 
 public class Mouvement_Solo : MonoBehaviourPun
 {
@@ -15,6 +15,12 @@ public class Mouvement_Solo : MonoBehaviourPun
     public float currentY = 0.0f;
     private float mouseSensitivity = 100f;
     public Transform camTransform;
+
+    public AudioSource audio;
+    public AudioClip[] clips;
+
+    private float fireDuration = 1.70f;
+    private float currentFireDuration = 0f;
 
     public Transform effect;
     public Transform groundCheck;
@@ -28,7 +34,15 @@ public class Mouvement_Solo : MonoBehaviourPun
     private Vector3 velocity;
     public CharacterController controller;
 
+    public float ShakeDuration = 0.3f;          // Time the Camera Shake effect will last
+    public float ShakeAmplitude = 1.2f;         // Cinemachine Noise Profile Parameter
+    public float ShakeFrequency = 2.0f;         // Cinemachine Noise Profile Parameter
+    private float ShakeElapsedTime = 0f;
+
     public Vector3 ground;
+
+    public CinemachineVirtualCamera VirtualCamera;
+    private CinemachineBasicMultiChannelPerlin virtualCameraNoise;
 
     public GameObject cameraVise;
 
@@ -38,14 +52,18 @@ public class Mouvement_Solo : MonoBehaviourPun
         BasicRotation();
         Cursor.lockState = CursorLockMode.Locked;
         Anim.SetFloat("direction", Input.GetAxis("Horizontal"));
-
-        if (Input.GetButtonDown("Fire1")) // Tirer
+        currentFireDuration -= Time.deltaTime;
+        if (Input.GetButtonDown("Fire1") && currentFireDuration <= 0) // Tirer
         {
             if (!this.GetComponent<Solo_Class>().isShootPossible)
                 return;
             this.gameObject.GetComponent<Solo_Class>().TakeInput();
             Anim.SetTrigger("shoot");
+            ShakeElapsedTime = ShakeDuration;
+            audio.clip = clips[0];
+            audio.Play();
             this.gameObject.GetComponent<Solo_Class>().feu.Play();
+            currentFireDuration = fireDuration;
         }
         if (Input.GetMouseButton(1)) // Viser
         {
@@ -62,13 +80,33 @@ public class Mouvement_Solo : MonoBehaviourPun
         {
             SceneManager.LoadScene("MainMenu");
         }
+
+        if (VirtualCamera != null && virtualCameraNoise != null)
+        {
+            // If Camera Shake effect is still playing
+            if (ShakeElapsedTime > 0)
+            {
+                // Set Cinemachine Camera Noise parameters
+                virtualCameraNoise.m_AmplitudeGain = ShakeAmplitude;
+                virtualCameraNoise.m_FrequencyGain = ShakeFrequency;
+
+                // Update Shake Timer
+                ShakeElapsedTime -= Time.deltaTime;
+            }
+            else
+            {
+                // If Camera Shake effect is over, reset variables
+                virtualCameraNoise.m_AmplitudeGain = 0f;
+                ShakeElapsedTime = 0f;
+            }
+        }
     }
 
     private void Start()
     {
         Anim = GetComponent<Animator>();
         Cursor.lockState = CursorLockMode.Locked;
-
+        virtualCameraNoise = VirtualCamera.GetCinemachineComponent<Cinemachine.CinemachineBasicMultiChannelPerlin>();
     }
 
     private void BasicRotation()

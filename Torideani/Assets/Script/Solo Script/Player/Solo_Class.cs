@@ -7,17 +7,30 @@ using UnityEngine.UI;
 public class Solo_Class : MonoBehaviour
 {
     private float health;
+    public float Health
+    {
+        get {return health;}
+        set {health = value;
+        if (health > 30)
+            health = 30;}
+    }
     private int ammo;
     public int Ammo
     {
         get {return ammo ;}
-        set {ammo = value;}
+        set {ammo = value;
+        if (ammo > 1000)
+            ammo = 1000;}
     }
     private float damage;
     public float Damage
     {
         get{return damage;}
-        set{damage = value;}
+        set{
+            damage = value;
+            if (damage > 10f)
+                damage =10f;
+            }
     }
     private int score;
     public int Score
@@ -29,22 +42,40 @@ public class Solo_Class : MonoBehaviour
     public int money;
     public Transform rayOrigin;
     public ParticleSystem feu; 
+    
     public Text Score_Text;
     public Text Ammo_Text;
     public Text Money_Text;
+    public Text CurrentAmmo_Text;
+
     public ParticleSystem blood;
     private float interval = 5.0f;
+    public float Interval
+    {
+        get {return interval;}
+        set {interval = value;}
+    }
     private float currentInterval;
     public int chargeurCapacity = 10;
+    public int ChargeurCapacity
+    {
+        get {return chargeurCapacity;}
+        set { chargeurCapacity = value;
+            if (chargeurCapacity > 50)
+                chargeurCapacity = 50;
+        }
+    }
     private int currentAmmoChargeur = 0;
     public bool isShootPossible = true;
+    private bool unefois = true;
+    public GameObject loading;
 
     public GameObject HealthBar;
     void Start()
     {
         currentInterval = interval;
-        HealthBar.GetComponent<HealthBarHUDTester>().Hurt(0.25f);
         health = 20;
+        CurrentAmmo_Text.text = $"{chargeurCapacity - currentAmmoChargeur} / {chargeurCapacity}";
         ammo = 400;
         damage = 2.0f;
     }
@@ -55,11 +86,24 @@ public class Solo_Class : MonoBehaviour
         {
             currentInterval -= Time.deltaTime;
             isShootPossible = false;
+            CurrentAmmo_Text.color = Color.red;
+            loading.SetActive(true);
+            if (unefois)
+            {
+                this.GetComponent<Mouvement_Solo>().audio.clip = this.GetComponent<Mouvement_Solo>().clips[1];
+                this.GetComponent<Mouvement_Solo>().audio.Play();
+                unefois = false;
+            }
+    
             if (currentInterval <= 0f)
             {
+                loading.SetActive(false);
+                CurrentAmmo_Text.color = Color.white;
+                CurrentAmmo_Text.text = $"{chargeurCapacity} / {chargeurCapacity}";
                 currentAmmoChargeur = 0;
                 isShootPossible = true;
                 currentInterval = interval;
+                unefois = true;
             }
         }
     }
@@ -75,6 +119,7 @@ public class Solo_Class : MonoBehaviour
             Money_Text.text = $"{money}";
             ammo--;
             currentAmmoChargeur++;
+            CurrentAmmo_Text.text = $"{chargeurCapacity - currentAmmoChargeur} / {chargeurCapacity}";
             Debug.Log(currentAmmoChargeur);
         }
     }
@@ -93,7 +138,7 @@ public class Solo_Class : MonoBehaviour
                 Debug.DrawRay(rayOrigin.position, rayOrigin.TransformDirection(Vector3.forward) * 100, 
                         Color.red);
                 score += 100;
-                Score_Text.text = $"Score : {score}";
+                Score_Text.text = $"{score}";
                 hit.transform.gameObject.GetComponent<IA_Zombie>().TakeDamage(damage);
             }
         }
