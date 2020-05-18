@@ -30,6 +30,7 @@ public class Mouvement_Solo : MonoBehaviourPun
 
     public Vector3 ground;
 
+    public GameObject cameraVise;
 
     private void Update()
     {
@@ -38,13 +39,26 @@ public class Mouvement_Solo : MonoBehaviourPun
         Cursor.lockState = CursorLockMode.Locked;
         Anim.SetFloat("direction", Input.GetAxis("Horizontal"));
 
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetButtonDown("Fire1")) // Tirer
         {
+            if (!this.GetComponent<Solo_Class>().isShootPossible)
+                return;
             this.gameObject.GetComponent<Solo_Class>().TakeInput();
             Anim.SetTrigger("shoot");
             this.gameObject.GetComponent<Solo_Class>().feu.Play();
         }
-        if (Input.GetKey("m"))
+        if (Input.GetMouseButton(1)) // Viser
+        {
+            cameraVise.gameObject.SetActive(true);
+            speed = 2f;
+        }
+
+        if (Input.GetMouseButtonUp(1))
+        {
+            speed = 6f;
+            cameraVise.gameObject.SetActive(false);
+        }
+        if (Input.GetKey(KeyCode.End))
         {
             SceneManager.LoadScene("MainMenu");
         }
@@ -77,8 +91,6 @@ public class Mouvement_Solo : MonoBehaviourPun
 
         camTransform.localRotation = Quaternion.Euler(currentY, 0, 0);
 
-
-
     }
 
 
@@ -96,7 +108,7 @@ public class Mouvement_Solo : MonoBehaviourPun
 
         if (Input.GetButton("Cancel") || Input.GetKey("escape"))
             Application.Quit();
-        if (Input.GetKey("m"))
+        if (Input.GetKey(KeyCode.End))
         {
             MainMenu.Disconect();
             SceneManager.LoadScene("MainMenu");
@@ -119,7 +131,7 @@ public class Mouvement_Solo : MonoBehaviourPun
 
         Vector3 move;
 
-        if (Input.GetButton("Fire1"))
+        if (Input.GetButton("Fire3")) // Courir
         {
             move = transform.right * x + transform.forward * z;
             Anim.SetFloat("Speed", z);

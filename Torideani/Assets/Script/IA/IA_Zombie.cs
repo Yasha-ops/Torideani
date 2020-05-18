@@ -10,7 +10,7 @@ public class IA_Zombie : MonoBehaviour
     public bool isGrounded;
     private Animator Anim;
 
-    private int Hp;
+    public int Hp;
 
     public float groundDistance = 0f;
     public LayerMask groundMask;
@@ -28,23 +28,27 @@ public class IA_Zombie : MonoBehaviour
     public float timebeforAttaque;
     public float animAttaque;
     public bool attaque;
-
+    public GameObject setup;
+    private bool unefois = true;
 
     // Start is called before the first frame update
     void Start()
     {
+        PlayerGetter();
         death = false;
-        destination = joueurSolo.transform;
         Hp = 10;
+        Anim = GetComponent<Animator>();
+        destination = joueurSolo.transform;
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
         agent.SetDestination(destination.position);
-        Anim = GetComponent<Animator>();
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (joueurSolo == null)
+            return;
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
         if (Hp > 0)
         {
@@ -61,6 +65,16 @@ public class IA_Zombie : MonoBehaviour
             Hit(agent);
         }
 
+    }
+
+    public void PlayerGetter()
+    { 
+        GameObject[] Players = GameObject.FindGameObjectsWithTag("Player");
+        foreach(GameObject playerTag in Players)
+        {
+            joueurSolo = playerTag;
+        }
+        Debug.Log("Done");
     }
 
     private void move(NavMeshAgent agent)
@@ -88,9 +102,7 @@ public class IA_Zombie : MonoBehaviour
         {
             attaqueAnim();
             if (animAttaque > 0f && attaque)
-            {
                 agent.speed = 0f;
-            }
             else if (timebeforAttaque < 1f && attaque)
             {
                 attaqueVie();
@@ -107,28 +119,27 @@ public class IA_Zombie : MonoBehaviour
     public void attaqueAnim()
     {
 
-        if (animAttaque <= 0f && attaque == false)
+        if (! (animAttaque <= 0f && attaque == false))
+            return;
+        int x = Random.Range(0, 3);
+        switch (x)
         {
-            int x = Random.Range(0, 3);
-            if (x == 0)
-            { 
+            case 0:
                 Anim.SetTrigger("attack1");
                 animAttaque = 4f;
-            }
-
-            if (x == 1)
-            {
+                break;
+            case 1:
                 Anim.SetTrigger("attack3");
                 animAttaque = 4f;
-            }
-
-            if (x == 2)
-            {
+                break;
+            case 2:
                 Anim.SetTrigger("attack2");
                 animAttaque = 4f;
-            } 
-            attaque = true;
+                break;
+            default:
+                break;
         }
+        attaque = true;
     }
 
     // yassine
@@ -143,24 +154,38 @@ public class IA_Zombie : MonoBehaviour
         // enleve la vie du zombie
         agent.speed = 0f;
         Anim.SetBool("Death", true);
+        if (unefois)
+        {
+            joueurSolo.GetComponent<Solo_Class>().money += 25;
+            if(Random.Range (0, 100) < 50)
+            {
+                if (Random.Range (1,2) == 1) // Augmente les munitions
+                    joueurSolo.GetComponent<Solo_Class>().Ammo += 100;
+                else // Augmente les damages
+                    joueurSolo.GetComponent<Solo_Class>().Damage += 1.0f;
+            }
+            GameObject[] Setup = GameObject.FindGameObjectsWithTag("GameSetup");
+            foreach(GameObject once in Setup)
+            {
+                once.GetComponent<GameSetupSolo>().Spawn();
+                Debug.Log("The command is sent!");
+            }
+            unefois = false;
+        }
+
     }
 
     private void Animation(NavMeshAgent agent)
     {
         if (!isGrounded)
-        {
             Anim.SetBool("Ground", true);
-        }
         else
-        {
             Anim.SetBool("Ground", false);
-        }
         Anim.SetFloat("Speed", agent.speed);
     }
 
     public void TakeDamage(float damage)
     {
         Hp -= (int)damage;
-        Debug.Log($"I am a Zombie and i have {Hp} health points");
     }
 }

@@ -8,29 +8,74 @@ public class Solo_Class : MonoBehaviour
 {
     private float health;
     private int ammo;
+    public int Ammo
+    {
+        get {return ammo ;}
+        set {ammo = value;}
+    }
     private float damage;
+    public float Damage
+    {
+        get{return damage;}
+        set{damage = value;}
+    }
     private int score;
+    public int Score
+    {
+        get{return score;} 
+        set{score = value;}
+    }
+
+    public int money;
     public Transform rayOrigin;
     public ParticleSystem feu; 
     public Text Score_Text;
+    public Text Ammo_Text;
+    public Text Money_Text;
     public ParticleSystem blood;
+    private float interval = 5.0f;
+    private float currentInterval;
+    public int chargeurCapacity = 10;
+    private int currentAmmoChargeur = 0;
+    public bool isShootPossible = true;
 
     public GameObject HealthBar;
     void Start()
     {
+        currentInterval = interval;
         HealthBar.GetComponent<HealthBarHUDTester>().Hurt(0.25f);
         health = 20;
-        ammo = 120;
+        ammo = 400;
         damage = 2.0f;
+    }
+
+    void Update()
+    {
+        if (currentAmmoChargeur == chargeurCapacity)
+        {
+            currentInterval -= Time.deltaTime;
+            isShootPossible = false;
+            if (currentInterval <= 0f)
+            {
+                currentAmmoChargeur = 0;
+                isShootPossible = true;
+                currentInterval = interval;
+            }
+        }
     }
 
     public void TakeInput()
     {
+        if (!isShootPossible)
+            return;
         if (ammo > 0)
         {
-            Debug.Log($"U have {ammo} left");
             Shoots();
+            Ammo_Text.text = $"{ammo}";
+            Money_Text.text = $"{money}";
             ammo--;
+            currentAmmoChargeur++;
+            Debug.Log(currentAmmoChargeur);
         }
     }
 
@@ -48,35 +93,14 @@ public class Solo_Class : MonoBehaviour
                 Debug.DrawRay(rayOrigin.position, rayOrigin.TransformDirection(Vector3.forward) * 100, 
                         Color.red);
                 score += 100;
-                Debug.Log($"U have {score}");
-                Score_Text.text = $"U have {score}";
+                Score_Text.text = $"Score : {score}";
                 hit.transform.gameObject.GetComponent<IA_Zombie>().TakeDamage(damage);
             }
-            /*if (hit.transform.tag == "Buste")
-            {
-                Debug.DrawRay(rayOrigin.position, rayOrigin.TransformDirection(Vector3.forward) * 100, 
-                        Color.red); 
-                score += 50;
-                Debug.Log($"U have {score}");
-                Score_Text.text = $"U have {score}";
-                hit.transform.gameObject.GetComponent<IA_Zombie>().TakeDamage(damage);
-            }
-            if (hit.transform.tag == "Jambe")
-            {
-                Debug.DrawRay(rayOrigin.position, rayOrigin.TransformDirection(Vector3.forward) * 100, 
-                        Color.red); 
-                score += 25;
-                Debug.Log($"U have {score}");
-                Score_Text.text = $"U have {score}";
-                hit.transform.gameObject.GetComponent<IA_Zombie>().TakeDamage(damage);
-            }*/
-
         }
         else 
         { 
             Debug.DrawRay(rayOrigin.position, rayOrigin.TransformDirection(Vector3.forward) * 100, 
                     Color.yellow); 
-            Debug.Log("Did not Hit");
         } 
     }
 
@@ -84,9 +108,12 @@ public class Solo_Class : MonoBehaviour
 
     public void TakeDamage()
     {
+        if (health <= 0)
+        {
+            return;
+        }
         health -= 0.25f;
         blood.Play();
-        Debug.Log($"Aie, im losing health points {health}");
         HealthBar.GetComponent<HealthBarHUDTester>().Hurt(0.25f);
     }
 }

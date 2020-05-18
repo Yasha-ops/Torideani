@@ -111,13 +111,14 @@ MonoBehaviour:
   groundDistance: 0
   groundMask:
     serializedVersion: 2
-    m_Bits: 0
-  destination: {fileID: 0}
+    m_Bits: 256
+  joueurSolo: {fileID: 0}
   proche: 0
-  speed: 0
+  speed: 1
   timebeforAttaque: 0
   animAttaque: 0
   attaque: 0
+  agent: {fileID: 6318222382861133719}
 --- !u!1001 &516509163795681639
 PrefabInstance:
   m_ObjectHideFlags: 0
