@@ -47,6 +47,7 @@ public class Solo_Class : MonoBehaviour
     public Text Ammo_Text;
     public Text Money_Text;
     public Text CurrentAmmo_Text;
+    public Text Vague_Text;
 
     public ParticleSystem blood;
     private float interval = 5.0f;
@@ -77,7 +78,7 @@ public class Solo_Class : MonoBehaviour
         health = 20;
         CurrentAmmo_Text.text = $"{chargeurCapacity - currentAmmoChargeur} / {chargeurCapacity}";
         ammo = 400;
-        damage = 2.0f;
+        damage = 25.0f;
     }
 
     void Update()
@@ -151,14 +152,14 @@ public class Solo_Class : MonoBehaviour
 
 
 
-    public void TakeDamage()
+    public void TakeDamage(float damage)
     {
         if (health <= 0)
         {
             return;
         }
-        health -= 0.25f;
+        health -= damage;
         blood.Play();
-        HealthBar.GetComponent<HealthBarHUDTester>().Hurt(0.25f);
+        HealthBar.GetComponent<HealthBarHUDTester>().Hurt(damage);
     }
 }

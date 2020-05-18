@@ -21,8 +21,14 @@ public class IA_Zombie : MonoBehaviour
     private Transform destination;
     public bool proche;
     public float speed;
-    private bool death;
+    public bool death = false;
     public bool Death => death;
+    private float damage;
+    public float Damage
+    {
+        get {return damage;}
+        set {damage = value;}
+    }
 
     // variables pour l'attaque
     public float timebeforAttaque;
@@ -35,8 +41,7 @@ public class IA_Zombie : MonoBehaviour
     void Start()
     {
         PlayerGetter();
-        death = false;
-        Hp = 10;
+        Hp = 100;
         Anim = GetComponent<Animator>();
         destination = joueurSolo.transform;
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
@@ -61,6 +66,7 @@ public class IA_Zombie : MonoBehaviour
         }
         else
         {
+            Debug.Log("Mort");
             death = true;
             Hit(agent);
         }
@@ -146,7 +152,7 @@ public class IA_Zombie : MonoBehaviour
     public void attaqueVie()
     {
         // enleve la vie du joueur
-        joueurSolo.GetComponent<Solo_Class>().TakeDamage();
+        joueurSolo.GetComponent<Solo_Class>().TakeDamage(damage);
     }
 
     public void Hit(NavMeshAgent agent)
@@ -172,7 +178,7 @@ public class IA_Zombie : MonoBehaviour
             }
             unefois = false;
         }
-
+        death = true;
     }
 
     private void Animation(NavMeshAgent agent)

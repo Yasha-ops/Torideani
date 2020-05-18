@@ -26,11 +26,6 @@ public class AI_Class : MonoBehaviour
 
      private void OnTriggerEnter(Collider col)
     {
-        Debug.Log("Collider detected !");
-        if (col.gameObject.tag == "Player")
-        {
-            col.gameObject.GetComponent<Solo_Class>().TakeDamage();
-        }
     }
 
 }
