@@ -16,6 +16,17 @@ public class Player_Shooting : MonoBehaviour
 
     private Animator Anim;
 
+    public float interval = 5f;
+    public float currentInterval;
+    private int currentAmmoChargeur = 0;
+    private int chargeurCapacity = 10;
+    private bool unefois = true;
+    public Text Ammo_Text;
+    public GameObject loading;
+
+    public AudioClip[] clips;
+    public AudioSource audio;
+
     void Start()
     {
         PV = GetComponent<PhotonView>();
@@ -29,6 +40,30 @@ public class Player_Shooting : MonoBehaviour
     {
         if (PV.IsMine)
         {
+            if (currentAmmoChargeur == chargeurCapacity)
+            {
+                currentInterval -= Time.deltaTime;
+                this.GetComponent<Mouvement>().isShootPossible = false;
+                Ammo_Text.color = Color.red;
+                loading.SetActive(true);
+                if (unefois)
+                {
+                    audio.clip = clips[1];
+                    audio.Play();
+                    unefois = false;
+                }
+
+                if (currentInterval <= 0f)
+                {
+                    loading.SetActive(false);
+                    Ammo_Text.color = Color.white;
+                    Ammo_Text.text = $"{chargeurCapacity} / {chargeurCapacity}";
+                    currentAmmoChargeur = 0;
+                    this.GetComponent<Mouvement>().isShootPossible = true;
+                    currentInterval = interval;
+                    unefois = true;
+                }
+            }
             InputKey();
         }
     }
@@ -36,8 +71,10 @@ public class Player_Shooting : MonoBehaviour
 
     public void InputKey() // Att les inputs du chasseur
     {
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && this.GetComponent<Mouvement>().isShootPossible)
         {
+            currentAmmoChargeur++;
+            Ammo_Text.text = $"{chargeurCapacity - currentAmmoChargeur} / {chargeurCapacity}";
             PV= PhotonView.Get(this);
             Anim.SetTrigger("shoot");
             gunfire.gameObject.SetActive(false);

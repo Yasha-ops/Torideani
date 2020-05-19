@@ -17,7 +17,6 @@ public class BackMultiplayer: MonoBehaviour
 
     void OnMouseDown()
     {
-        Debug.Log("A mouse click has been detected !");
         adSource.clip = adClips[1];
         adSource.Play();
         try

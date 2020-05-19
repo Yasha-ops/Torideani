@@ -16,7 +16,6 @@ public class MenuMultiplayer: MonoBehaviour
 
     void OnMouseDown()
     {
-        Debug.Log("A mouse click has been detected !");
         adSource.clip = adClips[1];
         adSource.Play();
         try
@@ -25,7 +24,6 @@ public class MenuMultiplayer: MonoBehaviour
         }
         catch
         {
-            Debug.Log("It seems that ur trying something else !");
         }
         transition.gameObject.SetActive(true);
 

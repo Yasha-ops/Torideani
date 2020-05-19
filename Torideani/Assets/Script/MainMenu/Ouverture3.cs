@@ -11,7 +11,6 @@ public class Ouverture3 : MonoBehaviour
     
     void Update()
     {
-        Debug.Log(door.transform.rotation.y);
         if (Convert.ToInt32(door.transform.rotation.y * 100f) != 99  && acivate)
         {
             door.transform.Rotate(- Vector3.up * speed * Time.deltaTime);

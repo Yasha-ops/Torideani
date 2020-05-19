@@ -532,6 +532,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: df1b6f98b1e11b54a814d34403a9a3db, type: 3}
   - {fileID: 8300000, guid: bc853351f4d4e5b48a29484661935572, type: 3}
   - {fileID: 8300000, guid: 7096a9c2cac554f4f8228a856d71d0ca, type: 3}
+  isShootPossible: 1
+  Aim: {fileID: 0}
+  CamerePosition: {fileID: 0}
   speed: 6
   gravity: -9.81
   jumpHeight: 2
@@ -689,6 +692,7 @@ MonoBehaviour:
   blood: {fileID: 179957677010508640}
   canvas: {fileID: 3564114324254096317}
   HealthBar: {fileID: 2502276411322371761}
+  GameOver: {fileID: 0}
 --- !u!114 &3909966899304578309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1264,14 +1268,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4020902049608052601}
     m_Modifications:
-    - target: {fileID: 166404, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
-      propertyPath: m_Name
-      value: BloodSplat_FX
-      objectReference: {fileID: 0}
-    - target: {fileID: 19808544, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
-      propertyPath: playOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 499110, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.018
@@ -1314,6 +1310,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 499110, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 166404, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
+      propertyPath: m_Name
+      value: BloodSplat_FX
+      objectReference: {fileID: 0}
+    - target: {fileID: 19808544, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
+      propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

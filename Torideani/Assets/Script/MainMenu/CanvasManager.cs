@@ -14,7 +14,6 @@ void Start()
     }
     void Update()
     {
-        Debug.Log(cinemachineTrackedDolly.m_PathPosition);
         if (cinemachineTrackedDolly.m_PathPosition == 7)
         {
             canvas.gameObject.SetActive(true);

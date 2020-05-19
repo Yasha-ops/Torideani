@@ -1379,7 +1379,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1292915559713813515}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.57, y: -0.0807645, z: 1.5319265}
+  m_LocalPosition: {x: 5.57, y: -0.02, z: 1.5319265}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8863732624222590060}
@@ -1459,6 +1459,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundCheck: {fileID: 4990213007907925557}
   isGrounded: 1
+  Hp: 0
   groundDistance: 0
   groundMask:
     serializedVersion: 2
@@ -1466,9 +1467,11 @@ MonoBehaviour:
   joueurSolo: {fileID: 0}
   proche: 0
   speed: 1
+  death: 0
   timebeforAttaque: 0
   animAttaque: 0
   attaque: 0
+  setup: {fileID: 0}
 --- !u!54 &2221770819583760931
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6230,7 +6233,7 @@ GameObject:
   - component: {fileID: 1475573059842359847}
   m_Layer: 0
   m_Name: Zombie_Biker_Male_01
-  m_TagString: Zombie
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -31,6 +31,8 @@ public class GameSetup : MonoBehaviour
 
     public float GameDuration = 300f;
 
+    public GameObject CameraAim;
+
     public void CountDownTimer()
     {
         GameDuration -= Time.deltaTime;

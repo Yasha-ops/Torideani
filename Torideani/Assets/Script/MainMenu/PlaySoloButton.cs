@@ -15,7 +15,6 @@ public class PlaySoloButton : MonoBehaviour
 
     void OnMouseDown()
     {
-        Debug.Log("A mouse click has been detected !");
         adSource.clip = adClips[1];
         adSource.Play();
         this.GetComponent<Ouverture3>().OpenDoor();

@@ -777,6 +777,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: df1b6f98b1e11b54a814d34403a9a3db, type: 3}
   - {fileID: 8300000, guid: bc853351f4d4e5b48a29484661935572, type: 3}
   - {fileID: 8300000, guid: 7096a9c2cac554f4f8228a856d71d0ca, type: 3}
+  isShootPossible: 1
+  Aim: {fileID: 0}
+  CamerePosition: {fileID: 0}
   speed: 6
   gravity: -9.81
   jumpHeight: 2
@@ -934,6 +937,7 @@ MonoBehaviour:
   blood: {fileID: 8648529001384536875}
   canvas: {fileID: 5407889512043596790}
   HealthBar: {fileID: 6396016234639736570}
+  GameOver: {fileID: 0}
 --- !u!114 &5492166057042185550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1943,10 +1947,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5600213902662541106}
     m_Modifications:
-    - target: {fileID: 1819260798650952, guid: 96256c2234452c641863ebbc421be660, type: 3}
-      propertyPath: m_Name
-      value: Character_SaloonGirl_01
-      objectReference: {fileID: 0}
     - target: {fileID: 4701152194719968, guid: 96256c2234452c641863ebbc421be660, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1991,6 +1991,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1819260798650952, guid: 96256c2234452c641863ebbc421be660, type: 3}
+      propertyPath: m_Name
+      value: Character_SaloonGirl_01
+      objectReference: {fileID: 0}
     - target: {fileID: 95303602547711434, guid: 96256c2234452c641863ebbc421be660,
         type: 3}
       propertyPath: m_Controller
@@ -2011,14 +2015,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5600213902662541106}
     m_Modifications:
-    - target: {fileID: 166404, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
-      propertyPath: m_Name
-      value: BloodSplat_FX
-      objectReference: {fileID: 0}
-    - target: {fileID: 19808544, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
-      propertyPath: playOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 499110, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.018
@@ -2061,6 +2057,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 499110, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 166404, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
+      propertyPath: m_Name
+      value: BloodSplat_FX
+      objectReference: {fileID: 0}
+    - target: {fileID: 19808544, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
+      propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

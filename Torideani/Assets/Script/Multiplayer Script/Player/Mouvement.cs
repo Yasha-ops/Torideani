@@ -53,7 +53,9 @@ public class Mouvement : MonoBehaviourPun
     public AudioClip[] bruitage;
     private AudioSource audioSource;
 
-
+    public bool isShootPossible = true;
+    public GameObject Aim;
+    public GameObject CamerePosition;
 
     #endregion
 
@@ -61,7 +63,7 @@ public class Mouvement : MonoBehaviourPun
     {
         if (photonView.IsMine)
         {
-            cameraParent.SetActive(true);
+            //cameraParent.SetActive(true);
             Anim = GetComponent<Animator>();
             controller = GetComponent<CharacterController>();
             Cursor.lockState = CursorLockMode.Locked;
@@ -78,13 +80,17 @@ public class Mouvement : MonoBehaviourPun
             TakeInput();
             BasicRotation();
             Anim.SetFloat("Direction", Input.GetAxis("Horizontal"));
+            if (this.gameObject.tag == "Chasseur")
+            {
+                GameObject yt = GameObject.FindWithTag("GameSetup");
+                yt.GetComponent<GameSetup>().CameraAim.gameObject.SetActive(Input.GetButton("Fire2"));
+            }
             if (this.gameObject.tag == "Bandit")
-            {   
+            {
                 updateMenuAnimation();
                 updateSong(); 
                 updateMenu();
             }
-            
         }
     }
 #region Constantes
@@ -104,15 +110,7 @@ public class Mouvement : MonoBehaviourPun
 
     private void TakeInput()
     {
-        if (isGrounded)
-        {
-            Anim.SetBool("Ground", true);
-        }
-        else
-        {
-            Anim.SetBool("Ground", false);
-        }
-
+        Anim.SetBool("Ground", isGrounded);
         if (Input.GetButton("Cancel") || Input.GetKey("escape"))
             Application.Quit();
         if (Input.GetKey("m"))
@@ -133,7 +131,6 @@ public class Mouvement : MonoBehaviourPun
         {
             Anim.SetTrigger("Jumpstart");
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-
         }
 
         Vector3 move;
@@ -180,7 +177,6 @@ public class Mouvement : MonoBehaviourPun
     public void ChangeBonusValue(string bonuus)
     {
         photonView.RPC("RPC_BONUS", RpcTarget.All ,bonuus);
-        Debug.Log("You are currently locked !");
     }
 
 
@@ -312,26 +308,23 @@ public class Mouvement : MonoBehaviourPun
 
         curMenuItemMenu = (int)(angle / (360 / menuItemsMenu));
 
-        if (curMenuItemMenu != OldMenueItemMenu)
-        {
-            buttonsMenu[OldMenueItemMenu].sceneimage.color = buttonsMenu[OldMenueItemMenu].normalColor;
-            OldMenueItemMenu = curMenuItemMenu;
-            buttonsMenu[curMenuItemMenu].sceneimage.color = buttonsMenu[curMenuItemMenu].HighlitedColor;
-        }
+        if (curMenuItemMenu == OldMenueItemMenu)
+            return;
+        buttonsMenu[OldMenueItemMenu].sceneimage.color = buttonsMenu[OldMenueItemMenu].normalColor;
+        OldMenueItemMenu = curMenuItemMenu;
+        buttonsMenu[curMenuItemMenu].sceneimage.color = buttonsMenu[curMenuItemMenu].HighlitedColor;
     }
 
     public void GetCurrentMenuItemAnimation()
     {
         updateAngle();
-
         curMenuItemAnimation = (int)(angle / (360 / menuItemsAnimation));
 
-        if (curMenuItemAnimation != OldMenueItemAnimation)
-        {
-            buttonsAnimation[OldMenueItemAnimation].sceneimage.color = buttonsAnimation[OldMenueItemAnimation].normalColor;
-            OldMenueItemAnimation = curMenuItemAnimation;
-            buttonsAnimation[curMenuItemAnimation].sceneimage.color = buttonsAnimation[curMenuItemAnimation].HighlitedColor;
-        }
+        if (curMenuItemAnimation == OldMenueItemAnimation)
+            return;
+        buttonsAnimation[OldMenueItemAnimation].sceneimage.color = buttonsAnimation[OldMenueItemAnimation].normalColor;
+        OldMenueItemAnimation = curMenuItemAnimation;
+        buttonsAnimation[curMenuItemAnimation].sceneimage.color = buttonsAnimation[curMenuItemAnimation].HighlitedColor;
     }
 
     public void GetCurrentMenuItemSong()
@@ -340,12 +333,11 @@ public class Mouvement : MonoBehaviourPun
 
         curMenuItemSong = (int)(angle / (360 / menuItemsSong));
 
-        if (curMenuItemSong != OldMenueItemSong)
-        {
-            buttonsSong[OldMenueItemSong].sceneimage.color = buttonsSong[OldMenueItemSong].normalColor;
-            OldMenueItemSong = curMenuItemSong;
-            buttonsSong[curMenuItemSong].sceneimage.color = buttonsSong[curMenuItemSong].HighlitedColor;
-        }
+        if (curMenuItemSong == OldMenueItemSong)
+            return;
+        buttonsSong[OldMenueItemSong].sceneimage.color = buttonsSong[OldMenueItemSong].normalColor;
+        OldMenueItemSong = curMenuItemSong;
+        buttonsSong[curMenuItemSong].sceneimage.color = buttonsSong[curMenuItemSong].HighlitedColor;
     }
 
     public void ButtonAcionMenu()
@@ -359,58 +351,43 @@ public class Mouvement : MonoBehaviourPun
         {
             RingSong = true;
         }
-
     }
 
-    public void ButtonAcionAnimation()
+    public void ButtonAcionAnimation() // On peut remplacer ca par une liste !
     {
         buttonsAnimation[curMenuItemAnimation].sceneimage.color = buttonsAnimation[curMenuItemAnimation].PressedColor;
+        setfalse();
+        Anim.SetTrigger("enter");
         if (curMenuItemAnimation == 0)
         {
-            setfalse();
-            Anim.SetTrigger("enter");
             Anim.SetBool("swimming", true);
         }
         if (curMenuItemAnimation == 1)
         {
-            setfalse();
-            Anim.SetTrigger("enter");
             Anim.SetBool("belly", true);
         }
         if (curMenuItemAnimation == 2)
         {
-            setfalse();
-            Anim.SetTrigger("enter");
             Anim.SetBool("breakdance", true);
         }
         if (curMenuItemAnimation == 3)
         {
-            setfalse();
-            Anim.SetTrigger("enter");
             Anim.SetBool("jazz", true);
         }
         if (curMenuItemAnimation == 4)
         {
-            setfalse();
-            Anim.SetTrigger("enter");
             Anim.SetBool("hiphop", true);
         }
         if (curMenuItemAnimation == 5)
         {
-            setfalse();
-            Anim.SetTrigger("enter");
             Anim.SetBool("swing", true);
         }
         if (curMenuItemAnimation == 6)
         {
-            setfalse();
-            Anim.SetTrigger("enter");
             Anim.SetBool("sittingyell", true);
         }
         if (curMenuItemAnimation == 7)
         {
-            setfalse();
-            Anim.SetTrigger("enter");
             Anim.SetBool("lay", true);
         }
     }
@@ -418,35 +395,11 @@ public class Mouvement : MonoBehaviourPun
     public void ButtonAcionSong()
     {
         buttonsSong[curMenuItemSong].sceneimage.color = buttonsSong[curMenuItemSong].PressedColor;
-        if (curMenuItemSong == 0)
+        if (curMenuItemSong != 7)
         {
-            audioSource.PlayOneShot(bruitage[0]);
+            audioSource.PlayOneShot(bruitage[curMenuItemSong]);
         }
-        if (curMenuItemSong == 1)
-        {
-            audioSource.PlayOneShot(bruitage[1]);
-        }
-        if (curMenuItemSong == 2)
-        {
-            audioSource.PlayOneShot(bruitage[2]);
-        }
-        if (curMenuItemSong == 3)
-        {
-            audioSource.PlayOneShot(bruitage[3]);
-        }
-        if (curMenuItemSong == 4)
-        {
-            audioSource.PlayOneShot(bruitage[4]);
-        }
-        if (curMenuItemSong == 5)
-        {
-            audioSource.PlayOneShot(bruitage[5]);
-        }
-        if (curMenuItemSong == 6)
-        {
-            audioSource.PlayOneShot(bruitage[6]);
-        }
-        if (curMenuItemSong == 7)
+        else
         {
             audioSource.PlayOneShot(bruitage[UnityEngine.Random.Range(0, bruitage.Length)]);
         }

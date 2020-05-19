@@ -30,7 +30,6 @@ public class Ouverture2 : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(cinemachineTrackedDolly.m_PathPosition);
         if (cinemachineTrackedDolly.m_PathPosition == 10 )
         {
             canvas.gameObject.SetActive(true);
@@ -39,7 +38,6 @@ public class Ouverture2 : MonoBehaviour
         {
             if (transform.position.x > 5.0f && transform.position.y > 1f && transform.position.z < -14f)
             {
-                Debug.Log("Openning the door !");
                 OpenDoor();
             }
             else
