@@ -8,8 +8,8 @@ using Cinemachine;
 
 public class Mouvement_Solo : MonoBehaviourPun
 {
-    private const float Y_ANGLE_MIN = -15.0f;
-    private const float Y_ANGLE_MAX = 15.0f;
+    private const float Y_ANGLE_MIN = -3.0f;
+    private const float Y_ANGLE_MAX = 3.0f;
     private float xRotation = 0f;
     private float yRotation = 0f;
     public float currentY = 0.0f;
@@ -45,14 +45,19 @@ public class Mouvement_Solo : MonoBehaviourPun
     private CinemachineBasicMultiChannelPerlin virtualCameraNoise;
 
     public GameObject cameraVise;
+    public Transform gun;
 
     private void Update()
     {
         TakeInput();
         BasicRotation();
         Cursor.lockState = CursorLockMode.Locked;
-        Anim.SetFloat("direction", Input.GetAxis("Horizontal"));
+
+        Anim.SetFloat("direction", Input.GetAxis("Horizontal")); 
+        Anim.SetBool("Ground", isGrounded);
+
         currentFireDuration -= Time.deltaTime;
+
         if (Input.GetButtonDown("Fire1") && currentFireDuration <= 0) // Tirer
         {
             if (!this.GetComponent<Solo_Class>().isShootPossible)
@@ -67,12 +72,14 @@ public class Mouvement_Solo : MonoBehaviourPun
         }
         if (Input.GetMouseButton(1)) // Viser
         {
+            Anim.SetBool("aim", true);
             cameraVise.gameObject.SetActive(true);
             speed = 2f;
         }
 
         if (Input.GetMouseButtonUp(1))
         {
+            Anim.SetBool("aim", false);
             speed = 6f;
             cameraVise.gameObject.SetActive(false);
         }
@@ -127,7 +134,14 @@ public class Mouvement_Solo : MonoBehaviourPun
 
         transform.Rotate(Vector3.up * mouseX);
 
-        camTransform.localRotation = Quaternion.Euler(currentY, 0, 0);
+        if (Input.GetMouseButton(1)) // Viser
+        {
+            gun.localRotation = Quaternion.Euler(1, 241 - currentY, 272);
+        }
+        else
+        {
+            gun.localRotation = Quaternion.Euler(1, 241, 272);
+        }
 
     }
 
@@ -135,14 +149,7 @@ public class Mouvement_Solo : MonoBehaviourPun
     private void TakeInput()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-        if (isGrounded)
-        {
-            Anim.SetBool("Ground", true);
-        }
-        else
-        {
-            Anim.SetBool("Ground", false);
-        }
+        
 
         if (Input.GetButton("Cancel") || Input.GetKey("escape"))
             Application.Quit();
@@ -172,13 +179,13 @@ public class Mouvement_Solo : MonoBehaviourPun
         if (Input.GetButton("Fire3")) // Courir
         {
             move = transform.right * x + transform.forward * z;
-            Anim.SetFloat("Speed", z);
+            Anim.SetFloat("Speed", z * speed / 6);
             Anim.SetBool("Fire1", true);
         }
         else
         {
             move = transform.right * x / 2 + transform.forward * z / 2;
-            Anim.SetFloat("Speed", z / 2);
+            Anim.SetFloat("Speed", z * speed / 12);
             Anim.SetBool("Fire1", false);
         }
 

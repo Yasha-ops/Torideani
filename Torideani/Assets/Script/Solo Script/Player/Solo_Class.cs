@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class Solo_Class : MonoBehaviour
 {
     private float health;
+    private Animator Anim;
     public float Health
     {
         get {return health;}
@@ -50,7 +51,8 @@ public class Solo_Class : MonoBehaviour
     public Text Vague_Text;
 
     public ParticleSystem blood;
-    private float interval = 5.0f;
+    private float interval = 3.0f;
+    private bool recharge;
     public float Interval
     {
         get {return interval;}
@@ -74,51 +76,66 @@ public class Solo_Class : MonoBehaviour
     public GameObject HealthBar;
     void Start()
     {
+        Anim = GetComponent<Animator>();
         currentInterval = interval;
         health = 20;
         CurrentAmmo_Text.text = $"{chargeurCapacity - currentAmmoChargeur} / {chargeurCapacity}";
         ammo = 400;
-        damage = 25.0f;
+        damage = 250.0f;
     }
 
     void Update()
     {
-        if (currentAmmoChargeur == chargeurCapacity)
+        if (currentAmmoChargeur == chargeurCapacity )
         {
-            currentInterval -= Time.deltaTime;
-            isShootPossible = false;
             CurrentAmmo_Text.color = Color.red;
-            loading.SetActive(true);
-            if (unefois)
-            {
-                this.GetComponent<Mouvement_Solo>().audio.clip = this.GetComponent<Mouvement_Solo>().clips[1];
-                this.GetComponent<Mouvement_Solo>().audio.Play();
-                unefois = false;
-            }
-    
-            if (currentInterval <= 0f)
-            {
-                loading.SetActive(false);
-                CurrentAmmo_Text.color = Color.white;
-                CurrentAmmo_Text.text = $"{chargeurCapacity} / {chargeurCapacity}";
-                currentAmmoChargeur = 0;
-                isShootPossible = true;
-                currentInterval = interval;
-                unefois = true;
-            }
+            Recharge();
         }
+        if (Input.GetKeyDown("r") || recharge)
+        {
+            recharge = true;
+            Recharge();
+        }
+
     }
 
-    public void TakeInput()
+    public void Recharge()
+    {
+        currentInterval -= Time.deltaTime;
+        isShootPossible = false;
+        loading.SetActive(true);
+        if (unefois)
+        {
+            Anim.SetTrigger("reload");
+            this.GetComponent<Mouvement_Solo>().audio.clip = this.GetComponent<Mouvement_Solo>().clips[1];
+            this.GetComponent<Mouvement_Solo>().audio.Play();
+            unefois = false;
+        }
+
+        if (currentInterval <= 0f)
+        {
+            loading.SetActive(false);
+            CurrentAmmo_Text.color = Color.white;
+            CurrentAmmo_Text.text = $"{chargeurCapacity} / {chargeurCapacity}";
+            currentAmmoChargeur = 0;
+            isShootPossible = true;
+            currentInterval = interval;
+            unefois = true;
+            recharge = false;
+        }
+
+    }
+    
+        public void TakeInput()
     {
         if (!isShootPossible)
             return;
         if (ammo > 0)
         {
             Shoots();
+            ammo--;
             Ammo_Text.text = $"{ammo}";
             Money_Text.text = $"{money}";
-            ammo--;
             currentAmmoChargeur++;
             CurrentAmmo_Text.text = $"{chargeurCapacity - currentAmmoChargeur} / {chargeurCapacity}";
             Debug.Log(currentAmmoChargeur);
@@ -138,7 +155,7 @@ public class Solo_Class : MonoBehaviour
             {
                 Debug.DrawRay(rayOrigin.position, rayOrigin.TransformDirection(Vector3.forward) * 100, 
                         Color.red);
-                score += 100;
+                score += 10;
                 Score_Text.text = $"{score}";
                 hit.transform.gameObject.GetComponent<IA_Zombie>().TakeDamage(damage);
             }

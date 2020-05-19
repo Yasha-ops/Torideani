@@ -5,16 +5,17 @@ using UnityEngine.AI;
 
 public class IA_Zombie : MonoBehaviour
 {
-    // je sais pas a quoi ca sert mais ils sont la
-    public Transform groundCheck;
-    public bool isGrounded;
-    private Animator Anim;
+ 
+   
 
     public int Hp;
 
-    public float groundDistance = 0f;
-    public LayerMask groundMask;
-    private float gravity = -9.81f;
+    private Animator Anim;
+    private Vector3 velocity = new Vector3(0, 0.001f, 0);
+    public float deathTime = 6f;
+    public Transform IA_transform;
+    public ParticleSystem blood;
+
 
     // variables pour destination
     public GameObject joueurSolo;
@@ -22,6 +23,7 @@ public class IA_Zombie : MonoBehaviour
     public bool proche;
     public float speed;
     public bool death = false;
+    public bool anime;
     public bool Death => death;
     private float damage;
     public float Damage
@@ -60,13 +62,14 @@ public class IA_Zombie : MonoBehaviour
             animAttaque -= Time.deltaTime;
             timebeforAttaque -= Time.deltaTime;
 
-            if (animAttaque <= 0f)
-                move(agent);
+           
+            move(agent);
             Animation(agent);
         }
         else
         {
             Debug.Log("Mort");
+            deathTime -= Time.deltaTime;
             death = true;
             Hit(agent);
         }
@@ -87,14 +90,17 @@ public class IA_Zombie : MonoBehaviour
     {
         agent.destination = destination.position;
 
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
-
-        if (Vector3.Distance(agent.transform.position, agent.destination) < 2f)
+        if (Vector3.Distance(agent.transform.position, agent.destination) < 1.5f)
         {
             proche = true;
             if (timebeforAttaque < 0f)
-                timebeforAttaque = 2f;
+            {
+                timebeforAttaque = 4f;
+                anime = true;
+            }
+
+            agent.speed = 0f;
         }
         else
         {
@@ -104,18 +110,18 @@ public class IA_Zombie : MonoBehaviour
         }
 
 
-        if (proche && timebeforAttaque < 1f)
+        if (proche && timebeforAttaque < 3f && anime)
         {
             attaqueAnim();
-            if (animAttaque > 0f && attaque)
-                agent.speed = 0f;
-            else if (timebeforAttaque < 1f && attaque)
-            {
-                attaqueVie();
-                attaque = false;
-            }
+            anime = false;
 
         }
+        else if (proche && animAttaque < 0f && attaque)
+        {
+              attaqueVie();
+              attaque = false;
+        }
+
 
     }
 
@@ -125,22 +131,22 @@ public class IA_Zombie : MonoBehaviour
     public void attaqueAnim()
     {
 
-        if (! (animAttaque <= 0f && attaque == false))
+        if (attaque)
             return;
         int x = Random.Range(0, 3);
         switch (x)
         {
             case 0:
                 Anim.SetTrigger("attack1");
-                animAttaque = 4f;
+                animAttaque = 1.2f;
                 break;
             case 1:
                 Anim.SetTrigger("attack3");
-                animAttaque = 4f;
+                animAttaque = 0.5f;
                 break;
             case 2:
                 Anim.SetTrigger("attack2");
-                animAttaque = 4f;
+                animAttaque = 1.2f;
                 break;
             default:
                 break;
@@ -158,10 +164,14 @@ public class IA_Zombie : MonoBehaviour
     public void Hit(NavMeshAgent agent)
     {
         // enleve la vie du zombie
+        if (deathTime < 0)
+            gameObject.SetActive(false);
         agent.speed = 0f;
-        Anim.SetBool("Death", true);
+        IA_transform.position -= velocity;
+        velocity += velocity * 0.014f;
         if (unefois)
         {
+            Anim.SetTrigger("Death");
             joueurSolo.GetComponent<Solo_Class>().money += 25;
             if(Random.Range (0, 100) < 50)
             {
@@ -183,15 +193,12 @@ public class IA_Zombie : MonoBehaviour
 
     private void Animation(NavMeshAgent agent)
     {
-        if (!isGrounded)
-            Anim.SetBool("Ground", true);
-        else
-            Anim.SetBool("Ground", false);
         Anim.SetFloat("Speed", agent.speed);
     }
 
     public void TakeDamage(float damage)
     {
+        blood.Play();
         Hp -= (int)damage;
     }
 }

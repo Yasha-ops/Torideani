@@ -16,11 +16,14 @@ public class GameSetupSolo : MonoBehaviour
     private bool att = false;
     private bool unefois = true;
     public int RoundNumber;
- 
+    public float VagueWait = 10f;
+    private float currentWait = 0f;
+
 
     void Start()
     {
         RoundNumber = 1;
+        currentWait = VagueWait;
         GenerateObject(package[0], 6);
     }
 
@@ -43,9 +46,14 @@ public class GameSetupSolo : MonoBehaviour
         }
         if (nbr == 0) // Le round n'est pas encore fini
         {
-            nbr = 1;
-            unefois = false;
-            GO(ZombieNumber(RoundNumber));
+            currentWait -= Time.deltaTime;
+            if (currentWait <= 0)
+            {
+                currentWait = VagueWait;
+                nbr = 1;
+                unefois = false;
+                GO(ZombieNumber(RoundNumber));
+            }
         }
     }
 
