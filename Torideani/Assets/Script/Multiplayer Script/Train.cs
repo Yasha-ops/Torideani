@@ -9,6 +9,6 @@ public class Train : MonoBehaviour
     
     void Update()
     {
-         transform.position = Vector3.MoveTowards(Time.deltaTime * speed, transform.position.y, transform.position.z);
+         //transform.position = Vector3.MoveTowards(Time.deltaTime * speed, transform.position.y, transform.position.z);
     }
 }
