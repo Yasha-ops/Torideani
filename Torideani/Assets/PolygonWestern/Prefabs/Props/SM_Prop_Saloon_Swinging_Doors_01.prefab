@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 33047255925862434}
   - component: {fileID: 23629885713461320}
   - component: {fileID: 64287257012388826}
-  m_Layer: 0
+  - component: {fileID: -4665895554809741974}
+  m_Layer: 8
   m_Name: SM_Prop_Saloon_Swinging_Doors_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4039600164946144
 Transform:
@@ -93,3 +94,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: b52a255610f9fa944b2abd969aede17b, type: 3}
+--- !u!208 &-4665895554809741974
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1457287901023406}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.33200002, y: 0.69200003, z: 0.040000003}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.31500003, y: 0, z: 0}
+  m_TimeToStationary: 0.5

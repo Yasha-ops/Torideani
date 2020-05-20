@@ -742,6 +742,7 @@ GameObject:
   - component: {fileID: 5973272078457104067}
   - component: {fileID: 6012654895037482953}
   - component: {fileID: 5951358894635697763}
+  - component: {fileID: 257515440051784701}
   m_Layer: 20
   m_Name: Horse3
   m_TagString: Player
@@ -900,6 +901,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!208 &257515440051784701
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6031616817484666207}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &6031652676477931649
 GameObject:
   m_ObjectHideFlags: 0

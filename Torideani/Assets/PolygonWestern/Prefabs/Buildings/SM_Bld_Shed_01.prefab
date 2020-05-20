@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 33489829303676078}
   - component: {fileID: 23918712378610614}
   - component: {fileID: 64867489366465484}
-  m_Layer: 0
+  - component: {fileID: 173091384048198357}
+  m_Layer: 8
   m_Name: SM_Bld_Shed_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4772525557527396
 Transform:
@@ -93,3 +94,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: d884cddc73a4ac240b3a4f281c11a219, type: 3}
+--- !u!208 &173091384048198357
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125750765718790}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 2.753, y: 2.305, z: 3.233}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 1.5990001, z: 0}
+  m_TimeToStationary: 0.5

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4334152792826070}
   - component: {fileID: 33266472840892288}
   - component: {fileID: 23394667888857818}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Env_Tree_Stump_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}

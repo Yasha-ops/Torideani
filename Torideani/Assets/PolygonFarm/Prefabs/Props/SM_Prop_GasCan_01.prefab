@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 33948357253019754}
   - component: {fileID: 23679323853340750}
   - component: {fileID: 8903751323523500386}
-  m_Layer: 0
+  - component: {fileID: -7575687754128051578}
+  m_Layer: 8
   m_Name: SM_Prop_GasCan_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,3 +94,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 40888848fa8a88141a5a33775d6e3b77, type: 3}
+--- !u!208 &-7575687754128051578
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650363897259482}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.224, y: 0.28, z: 0.074}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.28, z: 0}
+  m_TimeToStationary: 0.5

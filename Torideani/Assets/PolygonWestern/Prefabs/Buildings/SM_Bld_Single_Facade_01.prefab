@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 33722233537699770}
   - component: {fileID: 23392080140141878}
   - component: {fileID: 64071476717385618}
-  m_Layer: 0
+  - component: {fileID: 3411235302953786496}
+  m_Layer: 8
   m_Name: SM_Bld_Single_Facade_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,3 +94,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 5378c733a0321e441b456c5d7de4c5c5, type: 3}
+--- !u!208 &3411235302953786496
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295386282484084}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 2.7470002, y: 1.2540001, z: 0.21400002}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 4.254, z: -0.066}
+  m_TimeToStationary: 0.5

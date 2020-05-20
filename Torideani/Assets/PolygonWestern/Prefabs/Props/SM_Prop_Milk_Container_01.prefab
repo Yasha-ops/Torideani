@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 33557539789461170}
   - component: {fileID: 23632087265823182}
   - component: {fileID: 64177022271578266}
-  m_Layer: 0
+  - component: {fileID: -443673165671457097}
+  m_Layer: 8
   m_Name: SM_Prop_Milk_Container_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4707029914767858
 Transform:
@@ -93,3 +94,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: aeaa6fa694beb6b4290aef6ae39fcedf, type: 3}
+--- !u!208 &-443673165671457097
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1773980324640446}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.187, y: 0.326, z: 0.187}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.326, z: 0}
+  m_TimeToStationary: 0.5

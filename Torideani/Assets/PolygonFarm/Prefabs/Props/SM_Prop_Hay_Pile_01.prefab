@@ -13,12 +13,13 @@ GameObject:
   - component: {fileID: 23017266333920050}
   - component: {fileID: 9001922469623984357}
   - component: {fileID: -2243203181673657507}
-  m_Layer: 0
+  - component: {fileID: -1490012537803096447}
+  m_Layer: 8
   m_Name: SM_Prop_Hay_Pile_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4883184303132288
 Transform:
@@ -108,3 +109,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 6f5cacaa9c9e12e46b12d25a11ae624d, type: 3}
+--- !u!208 &-1490012537803096447
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524912998565480}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.235, y: 0.551, z: 1.32}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.551, z: 0}
+  m_TimeToStationary: 0.5

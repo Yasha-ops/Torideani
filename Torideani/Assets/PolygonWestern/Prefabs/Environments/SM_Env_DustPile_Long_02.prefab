@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 33089618512186102}
   - component: {fileID: 23478625255160336}
   - component: {fileID: 64991522947883280}
-  m_Layer: 0
+  - component: {fileID: -1321638426532325258}
+  m_Layer: 8
   m_Name: SM_Env_DustPile_Long_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4741452115087458
 Transform:
@@ -93,3 +94,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 9fef79d94945c9749bba6bc9e348ca1b, type: 3}
+--- !u!208 &-1321638426532325258
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1724842721159300}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 2.973, y: 0.448, z: 0.99300003}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.17400001, z: 0}
+  m_TimeToStationary: 0.5

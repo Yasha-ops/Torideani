@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 33208020212661382}
   - component: {fileID: 23592618175208496}
   - component: {fileID: 1262407703886095247}
-  m_Layer: 0
+  - component: {fileID: -8521257952446327989}
+  m_Layer: 8
   m_Name: SM_Prop_Fence_Fancy_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4807274677493104
 Transform:
@@ -93,3 +94,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 365fb72eba378064e84e9f6d6e3ba20a, type: 3}
+--- !u!208 &-8521257952446327989
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074158097585824}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.25, y: 0.57900006, z: 0.048}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -1.25, y: 0.628, z: 0.082}
+  m_TimeToStationary: 0.5

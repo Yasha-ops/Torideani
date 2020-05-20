@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 33715295612872982}
   - component: {fileID: 23500716982492788}
   - component: {fileID: 8908341428596998509}
-  m_Layer: 0
+  - component: {fileID: 7413374563438586505}
+  m_Layer: 8
   m_Name: SM_Prop_Tool_Pitchfork_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,3 +94,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 23c05df51205de544abcfd1b6a609e78, type: 3}
+--- !u!208 &7413374563438586505
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1682383683704824}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.147, y: 0.754, z: 0.041}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: -0.725, z: 0.004}
+  m_TimeToStationary: 0.5

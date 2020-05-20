@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 33668426159191228}
   - component: {fileID: 23724546501361084}
   - component: {fileID: 4428920178477790460}
-  m_Layer: 0
+  - component: {fileID: -9055051512195320695}
+  m_Layer: 8
   m_Name: SM_Prop_Fence_Wood_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4852697815458076
 Transform:
@@ -93,3 +94,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: dfd0726c561fee644962c53da260d9de, type: 3}
+--- !u!208 &-9055051512195320695
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731819059591772}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.251, y: 0.541, z: 0.025}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -1.25, y: 0.657, z: 0}
+  m_TimeToStationary: 0.5

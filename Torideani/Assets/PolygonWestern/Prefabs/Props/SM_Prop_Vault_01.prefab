@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 33354424630322576}
   - component: {fileID: 23595973255880578}
   - component: {fileID: 64112465001061100}
-  m_Layer: 0
+  - component: {fileID: -7279540346334592660}
+  m_Layer: 8
   m_Name: SM_Prop_Vault_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4965853785228066
 Transform:
@@ -94,6 +95,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 8197efeb75895a447bcff31f37c837b1, type: 3}
+--- !u!208 &-7279540346334592660
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1537505870750680}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.40800002, y: 0.61800003, z: 0.36400002}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.61800003, z: -0.036000002}
+  m_TimeToStationary: 0.5
 --- !u!1 &1709656664792186
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,12 +122,12 @@ GameObject:
   - component: {fileID: 4147344419672520}
   - component: {fileID: 33456136579715756}
   - component: {fileID: 23378529752630018}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Prop_Vault_Door_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4147344419672520
 Transform:

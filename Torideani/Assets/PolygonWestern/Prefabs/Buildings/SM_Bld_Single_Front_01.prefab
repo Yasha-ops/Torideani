@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 33711424508800674}
   - component: {fileID: 23201556709478306}
   - component: {fileID: 64429375901654202}
-  m_Layer: 0
+  - component: {fileID: -5018727369957452700}
+  m_Layer: 8
   m_Name: SM_Bld_Single_Front_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4305719068944996
 Transform:
@@ -95,6 +96,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 7f87cd548156e204baf471c1abc0c545, type: 3}
+--- !u!208 &-5018727369957452700
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1100142145352980}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 2.502, y: 1.5000001, z: 0.117000006}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 1.5000001, z: -0.044000003}
+  m_TimeToStationary: 0.5
 --- !u!1 &1138650871029824
 GameObject:
   m_ObjectHideFlags: 0
@@ -106,12 +123,12 @@ GameObject:
   - component: {fileID: 4065336531496548}
   - component: {fileID: 33082722247458036}
   - component: {fileID: 23991202995182186}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Building_Single_FrontDoor_Window_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4065336531496548
 Transform:
@@ -184,12 +201,12 @@ GameObject:
   - component: {fileID: 4129757716377190}
   - component: {fileID: 33075149070342710}
   - component: {fileID: 23617442587258772}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Building_Single_Front_Window_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4129757716377190
 Transform:
@@ -262,12 +279,12 @@ GameObject:
   - component: {fileID: 4457072714350898}
   - component: {fileID: 33124571465765532}
   - component: {fileID: 23636789165233808}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Building_Single_FrontDoor_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4457072714350898
 Transform:

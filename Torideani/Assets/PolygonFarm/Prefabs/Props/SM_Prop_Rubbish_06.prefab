@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 33879975339976652}
   - component: {fileID: 23292379303242590}
   - component: {fileID: 3785502024838500621}
-  m_Layer: 0
+  - component: {fileID: -1205333675955361022}
+  m_Layer: 8
   m_Name: SM_Prop_Rubbish_06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,3 +94,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 978ad5ceaa83f654d940555a0f6b45b4, type: 3}
+--- !u!208 &-1205333675955361022
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862000074841874}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.33900002, y: 0.30900002, z: 0.08800001}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.065000005, y: 0.296, z: -0.002}
+  m_TimeToStationary: 0.5

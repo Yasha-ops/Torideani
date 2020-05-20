@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 33120615322198254}
   - component: {fileID: 23317772366371636}
   - component: {fileID: 64886722760433992}
-  m_Layer: 0
+  - component: {fileID: 8941861706151176685}
+  m_Layer: 8
   m_Name: SM_Prop_Cash_Register_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,3 +94,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 9c02b7dd6d9281a4fb1745fdcf251f8f, type: 3}
+--- !u!208 &8941861706151176685
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422698500791382}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.18300001, y: 0.23600002, z: 0.21900001}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.23600002, z: 0.031000001}
+  m_TimeToStationary: 0.5

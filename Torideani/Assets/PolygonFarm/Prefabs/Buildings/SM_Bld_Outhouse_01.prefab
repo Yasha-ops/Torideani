@@ -13,12 +13,13 @@ GameObject:
   - component: {fileID: 23835403302741804}
   - component: {fileID: 117610683032923892}
   - component: {fileID: 5419059051680932057}
-  m_Layer: 0
+  - component: {fileID: 3997748773725424693}
+  m_Layer: 8
   m_Name: SM_Bld_Outhouse_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4139741094790214
 Transform:
@@ -109,6 +110,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: fcde6383b3e7d534f923f5d2947daa15, type: 3}
+--- !u!208 &3997748773725424693
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641123231626756}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.934, y: 1.5920001, z: 1.194}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 1.5920001, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &1907879469744838
 GameObject:
   m_ObjectHideFlags: 0
@@ -120,12 +137,12 @@ GameObject:
   - component: {fileID: 4004459882257342}
   - component: {fileID: 33158544639057908}
   - component: {fileID: 23740204180069422}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Bld_Outhouse_Door_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4004459882257342
 Transform:

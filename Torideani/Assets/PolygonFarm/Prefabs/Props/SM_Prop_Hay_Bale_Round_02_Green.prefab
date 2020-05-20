@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 33076920978618670}
   - component: {fileID: 23083250769745866}
   - component: {fileID: -2765858471408322076}
-  m_Layer: 0
+  - component: {fileID: -4459633179975779627}
+  m_Layer: 8
   m_Name: SM_Prop_Hay_Bale_Round_02_Green
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4289147484250862
 Transform:
@@ -93,3 +94,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 87e0b50e74b065f46926d7f235ca49bf, type: 3}
+--- !u!208 &-4459633179975779627
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790786958049044}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.57100004, y: 0.606, z: 0.573}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5

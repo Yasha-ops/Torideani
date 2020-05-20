@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 33073293382914210}
   - component: {fileID: 23320697331151578}
   - component: {fileID: 64108361586327866}
-  m_Layer: 0
+  - component: {fileID: 4202090872397827071}
+  m_Layer: 8
   m_Name: SM_Prop_Coffin_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4204682416310886
 Transform:
@@ -94,6 +95,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 8ef720f53bf71744085e1292b4e6922b, type: 3}
+--- !u!208 &4202090872397827071
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088537799813982}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.47200003, y: 0.2, z: 1.102}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.2, z: 0.20300001}
+  m_TimeToStationary: 0.5
 --- !u!1 &1608131232078724
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,12 +122,12 @@ GameObject:
   - component: {fileID: 4040948834496962}
   - component: {fileID: 33758396776845476}
   - component: {fileID: 23478358923089026}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Prop_Coffin_Lid_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4040948834496962
 Transform:

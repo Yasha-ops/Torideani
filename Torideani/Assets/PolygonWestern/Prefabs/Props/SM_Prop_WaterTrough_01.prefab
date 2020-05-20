@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 4787894427320826}
   - component: {fileID: 33065884031975838}
   - component: {fileID: 23067722747079766}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Prop_WaterTrough_Water_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4787894427320826
 Transform:
@@ -90,12 +90,13 @@ GameObject:
   - component: {fileID: 33071323786575840}
   - component: {fileID: 23748715025909514}
   - component: {fileID: 64478015376485666}
-  m_Layer: 0
+  - component: {fileID: 4987086930542915756}
+  m_Layer: 8
   m_Name: SM_Prop_WaterTrough_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4625166433595518
 Transform:
@@ -172,3 +173,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 4a17ba37dd757bf4d8446aad4ef40659, type: 3}
+--- !u!208 &4987086930542915756
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884051474872934}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.014, y: 0.33, z: 0.36}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.002, y: 0.32700002, z: -0.004}
+  m_TimeToStationary: 0.5

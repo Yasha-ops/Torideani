@@ -93,7 +93,7 @@ NavMeshAgent:
   m_Height: 2
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 0
 --- !u!114 &3709571478050729392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,19 +106,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edd3b3df6943fa241b28b0c8dae52470, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundCheck: {fileID: 0}
-  isGrounded: 0
-  groundDistance: 0
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 256
+  Hp: 0
+  deathTime: 6
+  IA_transform: {fileID: 0}
+  blood: {fileID: 0}
   joueurSolo: {fileID: 0}
   proche: 0
   speed: 1
+  death: 0
+  anime: 0
   timebeforAttaque: 0
   animAttaque: 0
   attaque: 0
-  agent: {fileID: 6318222382861133719}
+  setup: {fileID: 0}
 --- !u!1001 &516509163795681639
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 33173296650624908}
   - component: {fileID: 23101386888520956}
   - component: {fileID: 7735698833291197982}
-  m_Layer: 0
+  - component: {fileID: 2669460355648190466}
+  m_Layer: 8
   m_Name: SM_Bld_Shelter_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4955040831850352
 Transform:
@@ -93,3 +94,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: d221feb8b79f400469f0ea3df3b66eed, type: 3}
+--- !u!208 &2669460355648190466
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269772399169626}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 2.466, y: 1.8050001, z: 1.7990001}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 1.8050001, z: 0}
+  m_TimeToStationary: 0.5

@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 33610546819895908}
   - component: {fileID: 23806907756162566}
   - component: {fileID: 64211525498944970}
-  m_Layer: 0
+  - component: {fileID: 4223344028572116788}
+  m_Layer: 8
   m_Name: SM_Bld_Single_Deck_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4139191411207932
 Transform:
@@ -93,3 +94,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 037e1116f9272434e885bfbe6ba3f192, type: 3}
+--- !u!208 &4223344028572116788
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165539068493994}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 2.575, y: 0.753, z: 1.0120001}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.186, z: 0.95600003}
+  m_TimeToStationary: 0.5

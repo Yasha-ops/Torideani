@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 23374305754528276}
   - component: {fileID: 7356766889887824834}
   - component: {fileID: -2302825243197178348}
-  m_Layer: 0
+  - component: {fileID: -524794284889138042}
+  m_Layer: 8
   m_Name: SM_Prop_Tool_Axe_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,3 +109,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: fbd987385e40b654db3857859d8e2560, type: 3}
+--- !u!208 &-524794284889138042
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309244834713454}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.034, y: 0.514, z: 0.133}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: -0.158, z: 0.045}
+  m_TimeToStationary: 0.5

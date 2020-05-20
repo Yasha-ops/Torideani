@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 33308850422525766}
   - component: {fileID: 23296493302677146}
   - component: {fileID: 64084316809271724}
-  m_Layer: 0
+  - component: {fileID: 3471469184358695563}
+  m_Layer: 8
   m_Name: SM_Bld_Single_Balcony_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4077960623006826
 Transform:
@@ -93,3 +94,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: e0cd0326d95addc4891bbfcee2f46914, type: 3}
+--- !u!208 &3471469184358695563
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458488487575790}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 2.6190002, y: 2.2770002, z: 0.99300003}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 1.7110001, z: 1.0040001}
+  m_TimeToStationary: 0.5

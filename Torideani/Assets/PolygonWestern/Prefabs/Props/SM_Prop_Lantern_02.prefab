@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 33301718547072936}
   - component: {fileID: 23566799690583754}
   - component: {fileID: 64604268898494784}
-  m_Layer: 0
+  - component: {fileID: 5614936581875906419}
+  m_Layer: 8
   m_Name: SM_Prop_Lantern_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,6 +95,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: ecb9a67c18527fe4cb435680e2e01b8b, type: 3}
+--- !u!208 &5614936581875906419
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204956500679596}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.108, y: 0.106000006, z: 0.108}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.106000006, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &1375213663383584
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,7 +122,7 @@ GameObject:
   - component: {fileID: 4613757192557708}
   - component: {fileID: 33049960702828994}
   - component: {fileID: 23033279046216950}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Prop_Lantern_02_Glass
   m_TagString: Untagged
   m_Icon: {fileID: 0}

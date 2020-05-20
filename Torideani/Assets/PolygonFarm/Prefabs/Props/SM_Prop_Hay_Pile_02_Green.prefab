@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 33637112283949420}
   - component: {fileID: 23152277243919572}
   - component: {fileID: 8454700657396300446}
-  m_Layer: 0
+  - component: {fileID: -8538362898302947417}
+  m_Layer: 8
   m_Name: SM_Prop_Hay_Pile_02_Green
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4063552784498140
 Transform:
@@ -93,3 +94,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 07ef744401c0f21459acf8c7dfb638c4, type: 3}
+--- !u!208 &-8538362898302947417
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1904649806208590}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.61800003, y: 0.27400002, z: 3.005}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.27400002, z: 0}
+  m_TimeToStationary: 0.5

@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 33877932095284646}
   - component: {fileID: 23075118388697934}
   - component: {fileID: 64129991728694932}
-  m_Layer: 0
+  - component: {fileID: 6937000918750596944}
+  m_Layer: 8
   m_Name: SM_Env_Butte_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,3 +94,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: d36b1838f61877b42b4d7b6abfb63baa, type: 3}
+--- !u!208 &6937000918750596944
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1599160869061814}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 2.348, y: 6.307, z: 2.7340002}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 6.307, z: 0}
+  m_TimeToStationary: 0.5

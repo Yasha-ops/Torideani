@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 33385991130459116}
   - component: {fileID: 23756554228545274}
   - component: {fileID: -5905176814228694465}
-  m_Layer: 0
+  - component: {fileID: -6077212407341784819}
+  m_Layer: 8
   m_Name: SM_Prop_LetterBox_Generic_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,6 +95,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: f0ce7e532e707d947a8921fdb80e81d3, type: 3}
+--- !u!208 &-6077212407341784819
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739547643717766}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.13100001, y: 0.57600003, z: 0.29900002}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.001, y: 0.57600003, z: 0.003}
+  m_TimeToStationary: 0.5
 --- !u!1 &1861568066633656
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,7 +122,7 @@ GameObject:
   - component: {fileID: 4839186582272910}
   - component: {fileID: 33176548782887738}
   - component: {fileID: 23068045689124562}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Prop_LetterBox_Generic_Flap_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

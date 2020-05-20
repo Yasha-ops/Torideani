@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 4577541399971736}
   - component: {fileID: 33312886222023978}
   - component: {fileID: 23671788858514734}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Bld_Large_BackDoor_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4577541399971736
 Transform:
@@ -25,13 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1390019373478466}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 4.3359756, y: 0.0448552, z: -8.043837}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4618890959360420}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!33 &33312886222023978
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -90,12 +90,13 @@ GameObject:
   - component: {fileID: 33124580682850086}
   - component: {fileID: 23951256608651918}
   - component: {fileID: 64868771323685922}
-  m_Layer: 0
+  - component: {fileID: -9012924833557472894}
+  m_Layer: 8
   m_Name: SM_Bld_Large_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4618890959360420
 Transform:
@@ -173,6 +174,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: fa579352358ad7a41b98d636af80f0ee, type: 3}
+--- !u!208 &-9012924833557472894
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774579626545542}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 5.0950003, y: 3.7890003, z: 4.0950003}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 3.121, z: -4}
+  m_TimeToStationary: 0.5
 --- !u!1 &1835271617749434
 GameObject:
   m_ObjectHideFlags: 0
@@ -184,12 +201,12 @@ GameObject:
   - component: {fileID: 4243123287755400}
   - component: {fileID: 33460087218335974}
   - component: {fileID: 23067275059589720}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Bld_Large_BackDoor_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4243123287755400
 Transform:
@@ -198,13 +215,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1835271617749434}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -4.335976, y: 3.044855, z: -8.043837}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4618890959360420}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!33 &33460087218335974
 MeshFilter:
   m_ObjectHideFlags: 0

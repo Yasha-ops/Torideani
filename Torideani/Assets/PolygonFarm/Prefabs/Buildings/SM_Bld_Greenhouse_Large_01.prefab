@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 4256343847605670}
   - component: {fileID: 33028962423103628}
   - component: {fileID: 23432747189162558}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Bld_Greenhouse_Large_Door_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4256343847605670
 Transform:
@@ -90,12 +90,12 @@ GameObject:
   - component: {fileID: 4002993521400074}
   - component: {fileID: 33256658848296048}
   - component: {fileID: 23904925637049492}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Bld_Greenhouse_Large_Door_02_Glass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4002993521400074
 Transform:
@@ -168,12 +168,12 @@ GameObject:
   - component: {fileID: 4937145563124648}
   - component: {fileID: 33286420173056390}
   - component: {fileID: 23521450916567096}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Bld_Greenhouse_Large_Door_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4937145563124648
 Transform:
@@ -247,12 +247,12 @@ GameObject:
   - component: {fileID: 4700207709763884}
   - component: {fileID: 33040277363274960}
   - component: {fileID: 23375734459513762}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Bld_Greenhouse_Large_01_Glass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4700207709763884
 Transform:
@@ -325,12 +325,12 @@ GameObject:
   - component: {fileID: 4864134455709092}
   - component: {fileID: 33950134228783662}
   - component: {fileID: 23355682727532240}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Bld_Greenhouse_Large_Door_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4864134455709092
 Transform:
@@ -404,12 +404,12 @@ GameObject:
   - component: {fileID: 4947750476595278}
   - component: {fileID: 33678883157106066}
   - component: {fileID: 23068851911666962}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Bld_Greenhouse_Large_Door_01_Glass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4947750476595278
 Transform:
@@ -482,12 +482,12 @@ GameObject:
   - component: {fileID: 4860696772494682}
   - component: {fileID: 33476542422215398}
   - component: {fileID: 23501302785275628}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Bld_Greenhouse_Large_Door_03_Glass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4860696772494682
 Transform:
@@ -560,12 +560,12 @@ GameObject:
   - component: {fileID: 4322696389583846}
   - component: {fileID: 33341315564794964}
   - component: {fileID: 23305411250952108}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Bld_Greenhouse_Large_Door_04_Glass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4322696389583846
 Transform:
@@ -639,12 +639,13 @@ GameObject:
   - component: {fileID: 33078700625317256}
   - component: {fileID: 23882992369190092}
   - component: {fileID: -2113103410765276493}
-  m_Layer: 0
+  - component: {fileID: -1623174882179192672}
+  m_Layer: 8
   m_Name: SM_Bld_Greenhouse_Large_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4082123152994934
 Transform:
@@ -725,6 +726,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 9c162c399018a4b4e827d187b04fa3b2, type: 3}
+--- !u!208 &-1623174882179192672
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1750395351432862}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 6.4340005, y: 3.387, z: 16.079}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 2.9610002, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &1762793716821098
 GameObject:
   m_ObjectHideFlags: 0
@@ -736,12 +753,12 @@ GameObject:
   - component: {fileID: 4354157069936472}
   - component: {fileID: 33405099523621010}
   - component: {fileID: 23101375679589468}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Bld_Greenhouse_Large_Door_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4354157069936472
 Transform:

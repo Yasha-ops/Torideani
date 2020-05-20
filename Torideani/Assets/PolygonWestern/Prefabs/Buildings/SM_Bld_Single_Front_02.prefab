@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 4715719279228956}
   - component: {fileID: 33769681587940890}
   - component: {fileID: 23927537393050434}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Building_Single_FrontDoor_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4715719279228956
 Transform:
@@ -90,12 +90,12 @@ GameObject:
   - component: {fileID: 4748172847601790}
   - component: {fileID: 33431355810084198}
   - component: {fileID: 23624390906797508}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Building_Single_Front_Window_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4748172847601790
 Transform:
@@ -168,12 +168,12 @@ GameObject:
   - component: {fileID: 4200108619441042}
   - component: {fileID: 33777211570588926}
   - component: {fileID: 23518152081800818}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Building_Single_FrontDoor_Window_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4200108619441042
 Transform:
@@ -247,12 +247,13 @@ GameObject:
   - component: {fileID: 33101171374660184}
   - component: {fileID: 23860106575509252}
   - component: {fileID: 64271312150380204}
-  m_Layer: 0
+  - component: {fileID: 3171605242044404438}
+  m_Layer: 8
   m_Name: SM_Bld_Single_Front_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4118687759124258
 Transform:
@@ -330,3 +331,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 30d7ce72ebe404c43be72759b81f411e, type: 3}
+--- !u!208 &3171605242044404438
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847065983705350}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 2.502, y: 1.5000001, z: 0.117000006}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 1.5000001, z: -0.044000003}
+  m_TimeToStationary: 0.5

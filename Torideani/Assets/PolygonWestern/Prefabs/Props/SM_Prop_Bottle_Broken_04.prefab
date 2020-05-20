@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 33039872428235442}
   - component: {fileID: 23198908489920318}
   - component: {fileID: 64705004331082168}
-  m_Layer: 0
+  - component: {fileID: 1263093875939361444}
+  m_Layer: 8
   m_Name: SM_Prop_Bottle_Broken_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,3 +94,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 02c241ee54fa3b74bb76131a27e54f16, type: 3}
+--- !u!208 &1263093875939361444
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1281844855269296}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.052, y: 0.07300001, z: 0.052}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.07300001, z: 0}
+  m_TimeToStationary: 0.5

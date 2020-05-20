@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4254591022034980}
   - component: {fileID: 33392243836723456}
   - component: {fileID: 23844135664346516}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Bld_TowerClock_Arm_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,8 @@ GameObject:
   - component: {fileID: 33336768097731308}
   - component: {fileID: 23562186826475610}
   - component: {fileID: 64011284559100688}
-  m_Layer: 0
+  - component: {fileID: 2917251973511460849}
+  m_Layer: 8
   m_Name: SM_Bld_TowerClock_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,6 +174,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 1d9ee671a6eac4e4ab78897f753be32d, type: 3}
+--- !u!208 &2917251973511460849
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1487189518413670}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.58500004, y: 0.58500004, z: 0.064}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0.064}
+  m_TimeToStationary: 0.5
 --- !u!1 &1635484324099098
 GameObject:
   m_ObjectHideFlags: 0
@@ -184,7 +201,7 @@ GameObject:
   - component: {fileID: 4068648117301680}
   - component: {fileID: 33852295582050790}
   - component: {fileID: 23707985475637830}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Bld_TowerClock_Arm_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

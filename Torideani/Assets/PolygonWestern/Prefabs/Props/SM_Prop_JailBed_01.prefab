@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 33623243875495674}
   - component: {fileID: 23590122172390574}
   - component: {fileID: 64597742514196342}
-  m_Layer: 0
+  - component: {fileID: -3056990533260086447}
+  m_Layer: 8
   m_Name: SM_Prop_JailBed_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4939721150434748
 Transform:
@@ -93,3 +94,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 32b6049b7f71d654cb3fe41f2a2eb925, type: 3}
+--- !u!208 &-3056990533260086447
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354124900613700}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.92600006, y: 0.264, z: 0.3}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.264, z: 0}
+  m_TimeToStationary: 0.5

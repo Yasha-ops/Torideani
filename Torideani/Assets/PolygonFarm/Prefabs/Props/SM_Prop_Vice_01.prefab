@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 33872897850492688}
   - component: {fileID: 23719449293078748}
   - component: {fileID: 3482301557328639741}
-  m_Layer: 0
+  - component: {fileID: -247206056315185300}
+  m_Layer: 8
   m_Name: SM_Prop_Vice_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,6 +95,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 45af74b488a934d4096f73339a6cbe46, type: 3}
+--- !u!208 &-247206056315185300
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550799875703364}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.14, y: 0.22200002, z: 0.098000005}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: -0.022000002, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &1554875348017138
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,7 +122,7 @@ GameObject:
   - component: {fileID: 4996976557641196}
   - component: {fileID: 33799691840421436}
   - component: {fileID: 23608114483552548}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Prop_Vice_Handle_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -183,7 +200,7 @@ GameObject:
   - component: {fileID: 4789467590097768}
   - component: {fileID: 33948596428613548}
   - component: {fileID: 23873754958609440}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Prop_Vice_Slide_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

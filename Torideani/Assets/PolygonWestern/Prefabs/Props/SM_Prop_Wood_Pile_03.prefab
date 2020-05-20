@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 33773863712237206}
   - component: {fileID: 23923040314082888}
   - component: {fileID: 64972006941278134}
-  m_Layer: 0
+  - component: {fileID: 8552440409817114246}
+  m_Layer: 8
   m_Name: SM_Prop_Wood_Pile_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4337175151192406
 Transform:
@@ -93,3 +94,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 3e2f1344937a6bf4c9c17c46dc56f13e, type: 3}
+--- !u!208 &8552440409817114246
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1062009250693190}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.409, y: 0.30900002, z: 0.661}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.017, y: 0.30900002, z: 0}
+  m_TimeToStationary: 0.5

@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 4255079855141148}
   - component: {fileID: 33569920930130706}
   - component: {fileID: 23436914962154940}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Bld_TrainStation_Glass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4255079855141148
 Transform:
@@ -90,12 +90,13 @@ GameObject:
   - component: {fileID: 33051738827993482}
   - component: {fileID: 23119004966801664}
   - component: {fileID: 64147180227541730}
-  m_Layer: 0
+  - component: {fileID: -3751181729963110396}
+  m_Layer: 8
   m_Name: SM_Bld_TrainStation_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4161801630874658
 Transform:
@@ -176,6 +177,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 86dc5dbfc3d7c2347bde608d51a7d2dc, type: 3}
+--- !u!208 &-3751181729963110396
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130908925558842}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 5.163, y: 2.6880002, z: 2.989}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 2.4510002, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &1382526711075020
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,12 +204,12 @@ GameObject:
   - component: {fileID: 4183020792385120}
   - component: {fileID: 33389335685086838}
   - component: {fileID: 23225266018996386}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Bld_TrainStation_Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4183020792385120
 Transform:
@@ -265,12 +282,12 @@ GameObject:
   - component: {fileID: 4575565177199794}
   - component: {fileID: 33893309915941074}
   - component: {fileID: 23160925526035870}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Bld_TrainStation_Door_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4575565177199794
 Transform:
@@ -279,13 +296,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1474529350561778}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 4.1190825, y: 0.17358646, z: 2.5361364}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4161801630874658}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!33 &33893309915941074
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -343,12 +360,12 @@ GameObject:
   - component: {fileID: 4322567674408918}
   - component: {fileID: 33174222999547550}
   - component: {fileID: 23965196903733722}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Bld_TrainStation_Door_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4322567674408918
 Transform:
@@ -357,13 +374,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1637420154135332}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -4.1190825, y: 0.17358646, z: -2.4317644}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4161801630874658}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!33 &33174222999547550
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -421,12 +438,12 @@ GameObject:
   - component: {fileID: 4946893437145814}
   - component: {fileID: 33129602188558518}
   - component: {fileID: 23904885056481558}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Bld_TrainStation_Cover
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4946893437145814
 Transform:

@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 33029869021723552}
   - component: {fileID: 23088050317117520}
   - component: {fileID: 64512831293513294}
-  m_Layer: 0
+  - component: {fileID: 6712886485118089528}
+  m_Layer: 8
   m_Name: SM_Bld_FencePost_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4135142269120432
 Transform:
@@ -93,3 +94,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 6745590f5ffb6d04891aca48b9c79115, type: 3}
+--- !u!208 &6712886485118089528
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042935260251988}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.087000005, y: 0.61200005, z: 0.07300001}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.006, y: 0.61200005, z: 0}
+  m_TimeToStationary: 0.5

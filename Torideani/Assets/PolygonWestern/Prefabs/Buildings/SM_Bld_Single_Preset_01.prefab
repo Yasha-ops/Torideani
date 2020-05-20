@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 4037099631064778}
   - component: {fileID: 33891324181939176}
   - component: {fileID: 23279448883299156}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Building_Single_Front_Window_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4037099631064778
 Transform:
@@ -89,12 +89,12 @@ GameObject:
   - component: {fileID: 4499823574987522}
   - component: {fileID: 33713032389725172}
   - component: {fileID: 23918451457845502}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Bld_Single_Facade_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4499823574987522
 Transform:
@@ -168,12 +168,12 @@ GameObject:
   - component: {fileID: 4034729446374430}
   - component: {fileID: 33024197650977830}
   - component: {fileID: 23563702648649656}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Building_Single_FrontDoor_Window_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4034729446374430
 Transform:
@@ -246,12 +246,12 @@ GameObject:
   - component: {fileID: 4739134160285376}
   - component: {fileID: 33269554342689740}
   - component: {fileID: 23248962499924502}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Building_Single_FrontDoor_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4739134160285376
 Transform:
@@ -325,12 +325,12 @@ GameObject:
   - component: {fileID: 4173918724552046}
   - component: {fileID: 33672647491093706}
   - component: {fileID: 23668117690309432}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Bld_Single_Front_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4173918724552046
 Transform:
@@ -405,12 +405,12 @@ GameObject:
   - component: {fileID: 4899726734249418}
   - component: {fileID: 33859110895330614}
   - component: {fileID: 23657014628603908}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Bld_Single_Roof_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4899726734249418
 Transform:
@@ -484,12 +484,13 @@ GameObject:
   - component: {fileID: 33072162295597100}
   - component: {fileID: 23810345582661446}
   - component: {fileID: 64261146025898600}
-  m_Layer: 0
+  - component: {fileID: 2198404551972873226}
+  m_Layer: 8
   m_Name: SM_Bld_Single_Preset_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4142486256722658
 Transform:
@@ -571,6 +572,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 02ea0c911820d9a45b561266d486e0ef, type: 3}
+--- !u!208 &2198404551972873226
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589003166222630}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 2.595, y: 2.289, z: 4.0950003}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 1.621, z: -4.056}
+  m_TimeToStationary: 0.5
 --- !u!1 &1632639134954948
 GameObject:
   m_ObjectHideFlags: 0
@@ -582,12 +599,12 @@ GameObject:
   - component: {fileID: 4430585382302888}
   - component: {fileID: 33413859876585466}
   - component: {fileID: 23184410876501080}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Bld_Single_DeckCover_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4430585382302888
 Transform:
@@ -660,12 +677,12 @@ GameObject:
   - component: {fileID: 4558540583619210}
   - component: {fileID: 33307508347319100}
   - component: {fileID: 23592064015409312}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Bld_Sign_19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4558540583619210
 Transform:
@@ -738,12 +755,12 @@ GameObject:
   - component: {fileID: 4916128195824104}
   - component: {fileID: 33439145800942582}
   - component: {fileID: 23788042639886340}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Bld_Single_Deck_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4916128195824104
 Transform:
@@ -816,12 +833,12 @@ GameObject:
   - component: {fileID: 4310077284542388}
   - component: {fileID: 33156082560389282}
   - component: {fileID: 23958082638928564}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Bld_DeckSteps_01 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4310077284542388
 Transform:

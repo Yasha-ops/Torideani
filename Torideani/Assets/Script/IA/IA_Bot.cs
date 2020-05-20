@@ -13,7 +13,7 @@ public class IA_Bot : MonoBehaviour
     public float groundDistance = 0f;
     public LayerMask groundMask;
     public float gravity = -9.81f;
-    public float speed = 4f;
+    private float speed = 2f;
 
 
 
@@ -23,7 +23,7 @@ public class IA_Bot : MonoBehaviour
     public bool estArrivée;
     public float waitTime;
     public float StartWatiTime;
-    public float StoppingDistance;
+    private float StoppingDistance = 1f;
 
     // variables pour l'aleatoire
     public float waitTimeAnim;
@@ -32,7 +32,6 @@ public class IA_Bot : MonoBehaviour
     // variables pour l'attente entre les actions
     public float coolDownAnim;
     public float coolDownStop;
-    public float coolDownJump;
 
 
     // Start is called before the first frame update
@@ -42,6 +41,8 @@ public class IA_Bot : MonoBehaviour
         Anim = GetComponent<Animator>();
         controller = GetComponent<CharacterController>();
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
+        agent.stoppingDistance = StoppingDistance;
+        agent.speed = speed;
         agent.SetDestination(destinations[Random.Range(0, destinations.Length)].position);
 
     }
@@ -57,7 +58,6 @@ public class IA_Bot : MonoBehaviour
         RandomAnimation(agent);
         StopWhenAnim(agent);
 
-        coolDownJump -= Time.deltaTime;
         coolDownStop -= Time.deltaTime;
         coolDownAnim -= Time.deltaTime;
         waitTimeAnim -= Time.deltaTime;
@@ -69,9 +69,12 @@ public class IA_Bot : MonoBehaviour
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
 
-        if (Vector3.Distance(agent.transform.position, agent.destination) < 0.4f)
+        if (Vector3.Distance(agent.transform.position, agent.destination) < StoppingDistance)
         {
             estArrivée = true;
+            StoppingDistance = Random.Range(0.4f, 5f);
+            agent.stoppingDistance = StoppingDistance;
+
         }
 
 
@@ -92,7 +95,6 @@ public class IA_Bot : MonoBehaviour
             }
         }
     }
-
 
 
 
@@ -161,10 +163,7 @@ public class IA_Bot : MonoBehaviour
             agent.speed = 0f;
     }
 
-    /*private void RandomJump(NavMeshAgent agent)
-    {
-        // faire des saut aleatoires
-    }*/
+
 
     private void animation(NavMeshAgent agent)
     {

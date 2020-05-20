@@ -13,12 +13,13 @@ GameObject:
   - component: {fileID: 23658099100676894}
   - component: {fileID: 4370117208084503177}
   - component: {fileID: -8715306141199208438}
-  m_Layer: 0
+  - component: {fileID: 195771702609424411}
+  m_Layer: 8
   m_Name: SM_Bld_Barn_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4422828779368080
 Transform:
@@ -114,6 +115,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 3f93fa56eb3693b40aea1047a55d15b5, type: 3}
+--- !u!208 &195771702609424411
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1427016662113696}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 6.747, y: 4.5530005, z: 7.0790005}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 4.5530005, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &1668543662975604
 GameObject:
   m_ObjectHideFlags: 0
@@ -125,12 +142,12 @@ GameObject:
   - component: {fileID: 4503283023834746}
   - component: {fileID: 33087933260077964}
   - component: {fileID: 23264867737937722}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Bld_Barn_01_Door_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4503283023834746
 Transform:
@@ -139,13 +156,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1668543662975604}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.8266516, y: -0.000011608123, z: 0.9491305}
+  m_LocalRotation: {x: 0, y: 0.86602545, z: 0, w: 0.49999994}
+  m_LocalPosition: {x: -6.427, y: -0.000011563301, z: 2.076}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4422828779368080}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 120, z: 0}
 --- !u!33 &33087933260077964
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -203,12 +220,12 @@ GameObject:
   - component: {fileID: 4595586617119064}
   - component: {fileID: 33955274156320874}
   - component: {fileID: 23083574866787730}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Bld_Barn_01_Shutter_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4595586617119064
 Transform:
@@ -281,12 +298,12 @@ GameObject:
   - component: {fileID: 4047040205907560}
   - component: {fileID: 33308380278667500}
   - component: {fileID: 23674020131933848}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Bld_Barn_01_Door_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4047040205907560
 Transform:
@@ -295,13 +312,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1932742277392558}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.8309684, y: -0.000011608123, z: 0.9491305}
+  m_LocalRotation: {x: 0, y: -0.86602545, z: 0, w: 0.49999994}
+  m_LocalPosition: {x: 6.343, y: -0.000011608123, z: 2.069}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4422828779368080}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -120, z: 0}
 --- !u!33 &33308380278667500
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -359,12 +376,12 @@ GameObject:
   - component: {fileID: 4228059414328360}
   - component: {fileID: 33624302656613428}
   - component: {fileID: 23371492588210070}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Bld_Barn_01_Door_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4228059414328360
 Transform:
@@ -373,13 +390,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1937548780348638}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.8266516, y: -0.000011608123, z: -0.94508284}
+  m_LocalRotation: {x: 0, y: -0.86602545, z: 0, w: 0.49999994}
+  m_LocalPosition: {x: -6.465, y: -0.000011608123, z: -2.095}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4422828779368080}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -120, z: 0}
 --- !u!33 &33624302656613428
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -437,12 +454,12 @@ GameObject:
   - component: {fileID: 4289489100104654}
   - component: {fileID: 33443563495608276}
   - component: {fileID: 23097138139906022}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Bld_Barn_01_Door_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4289489100104654
 Transform:
@@ -451,13 +468,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1977957806117260}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.8309684, y: -0.000011608123, z: -0.94508284}
+  m_LocalRotation: {x: 0, y: 0.86602545, z: 0, w: 0.49999994}
+  m_LocalPosition: {x: 6.422, y: -0.000011608123, z: -2.178}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4422828779368080}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 120, z: 0}
 --- !u!33 &33443563495608276
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -515,12 +532,12 @@ GameObject:
   - component: {fileID: 4408870272471518}
   - component: {fileID: 33682473533216616}
   - component: {fileID: 23567840484656084}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Bld_Barn_01_Shutter_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4408870272471518
 Transform:

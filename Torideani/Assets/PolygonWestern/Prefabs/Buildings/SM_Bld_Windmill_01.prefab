@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 33258838804869190}
   - component: {fileID: 23137428224038248}
   - component: {fileID: 64524627580427018}
-  m_Layer: 0
+  - component: {fileID: -7093674908792472106}
+  m_Layer: 8
   m_Name: SM_Bld_Windmill_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4930613211711304
 Transform:
@@ -94,6 +95,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 0816b9bcf94733446a3b48e589e8bb19, type: 3}
+--- !u!208 &-7093674908792472106
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248118887984246}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.4260001, y: 4.4810004, z: 1.531}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.035, y: 4.372, z: 0.07}
+  m_TimeToStationary: 0.5
 --- !u!1 &1308432063542622
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,12 +122,12 @@ GameObject:
   - component: {fileID: 4010307655491074}
   - component: {fileID: 33320794495551350}
   - component: {fileID: 23253220234274378}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Bld_WindmillTop_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4010307655491074
 Transform:
@@ -183,12 +200,12 @@ GameObject:
   - component: {fileID: 4781446906355816}
   - component: {fileID: 33586131418868886}
   - component: {fileID: 23297770817169534}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Bld_Windmill_Spin_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4781446906355816
 Transform:
