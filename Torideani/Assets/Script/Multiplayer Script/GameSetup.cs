@@ -6,6 +6,7 @@ using Photon.Realtime;
 using UnityEditor;
 using UnityEngine;
 using Random = System.Random;
+using UnityEngine.SceneManagement;
 
 public class GameSetup : MonoBehaviour
 {
@@ -98,7 +99,9 @@ public class GameSetup : MonoBehaviour
     void Update()
     {
         if (Finished())
-            return;
+        {
+            Invoke("DisconnectPlayer", 10);
+        }
 
         CountDownTimer();
         timer += Time.deltaTime;
@@ -127,6 +130,12 @@ public class GameSetup : MonoBehaviour
     }
 
 
+    public void DisconnectPlayer()
+    {
+        PhotonNetwork.Disconnect();
+        Cursor.lockState = CursorLockMode.None;
+        SceneManager.LoadScene("MainMenu");
+    }
 
     private void OnEnable()
     {

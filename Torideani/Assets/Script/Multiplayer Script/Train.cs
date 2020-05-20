@@ -27,7 +27,6 @@ public class Train : MonoBehaviour
     void Update()
     {
         acc += Time.deltaTime;
-        Debug.Log(acc);
         if (acc > gamesetup.GetComponent<GameSetup>().GameDuration - 60f && acc < gamesetup.GetComponent<GameSetup>().GameDuration + 45f)
         {
             if (smok)
@@ -63,7 +62,6 @@ public class Train : MonoBehaviour
         }
         else if (acc >= gamesetup.GetComponent<GameSetup>().GameDuration + 45f)
         {
-            Debug.Log("cas2");
             if (door1.position.x > 11.6f)
             {
                 door1.position -= new Vector3(doorspeed, 0, 0);

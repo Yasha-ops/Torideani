@@ -63,7 +63,6 @@ public class Player_Bonus : MonoBehaviour
     {
         if (bonus == "Mini") // Applique le bonus Mini a soit meme
         {
-            Debug.Log("I know that ur bonus is a Mini");
             this.GetComponent<Bandit_Class>().EnableBonus(bonus);
             return;
         }

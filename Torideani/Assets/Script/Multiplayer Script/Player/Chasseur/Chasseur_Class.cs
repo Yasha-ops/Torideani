@@ -56,26 +56,31 @@ public class Chasseur_Class : MonoBehaviour
         switch (bonus)
         {
             case "Locked":
-                PV.RPC("RPC_EnableBonusLocked", RpcTarget.All);
-                Debug.Log("The Bonus Locked is enabled !");
+                PV.RPC("RPC_EnableBonusLocked", RpcTarget.All , true);
+                Invoke("Disable1" , 10);
                 break;
             case "Speed":
-                PV.RPC("RPC_EnableBonusSpeed", RpcTarget.All);
-                Debug.Log("The Bonus Speed is enabled !");
+                PV.RPC("RPC_EnableBonusSpeed", RpcTarget.All, true);
+                Invoke("Disable2" , 10);
                 break;
             case "Scanner":
                 EnableBonusScanner();
-                Debug.Log("The Bonus Scanner is enabled !");
                 break;
 
         }
     }
 
-    IEnumerator BonusWaiter()
+    private void Disable1()
     {
-        yield return new WaitForSeconds(10.0f);
+        PV.RPC("RPC_EnableBonusLocked", RpcTarget.All , false);
+
     }
 
+    private void Disable2()
+    {
+        PV.RPC("RPC_EnableBonusSpeed", RpcTarget.All , false);
+
+    }
 
     public void Hitted(int ennemi_damage)
     {
@@ -92,19 +97,20 @@ public class Chasseur_Class : MonoBehaviour
         }
 
     [PunRPC]
-        void  RPC_EnableBonusLocked()
+        void  RPC_EnableBonusLocked(bool test)
         {
-            this.gameObject.GetComponent<Mouvement>().enabled = false;
+            this.gameObject.GetComponent<Mouvement>().enabled = test;
             //StartCoroutine (BonusWaiter());
             //this.gameObject.GetComponent<Mouvement>().enabled = true;
         }
 
     [PunRPC]
-        void RPC_EnableBonusSpeed()
+        void RPC_EnableBonusSpeed(bool test)
         {
-            this.gameObject.GetComponent<Mouvement>().speed = 200;
-            //StartCoroutine (BonusWaiter());
-            //this.gameObject.GetComponent<Mouvement>().speed = 100;
+            if (test)
+                this.gameObject.GetComponent<Mouvement>().speed = 12f;
+            else
+                this.gameObject.GetComponent<Mouvement>().speed = 6f;
         }
 
     [PunRPC]
