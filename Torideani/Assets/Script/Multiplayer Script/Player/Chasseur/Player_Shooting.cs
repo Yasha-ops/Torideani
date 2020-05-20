@@ -143,6 +143,8 @@ public class Player_Shooting : MonoBehaviour
             }
             if (hit.transform.tag == "Bandit")
             {
+                if (hit.transform.gameObject.GetComponent<Bandit_Class>().isInTrain)
+                    return;
                 hit.transform.gameObject.GetComponent<Bandit_Class>().Hitted(3);
             }
         }

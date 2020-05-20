@@ -21,7 +21,11 @@ public class Bandit_Class : MonoBehaviour
     public GameObject HealthBar;
 
     public Text GameOver;
+    public Text Info;
 
+    private int nbrCollision = 0;
+
+    public bool isInTrain = false;
     public bool Dead => dead;
 
 
@@ -52,25 +56,57 @@ public class Bandit_Class : MonoBehaviour
         switch (bonus)
         {
             case "Locked":
-                PV.RPC("RPC_EnableBonusLocked", RpcTarget.All);
-                Debug.Log("The Bonus Locked is enabled !");
+                PV.RPC("RPC_EnableBonusLocked", RpcTarget.All, true);
+                Invoke("Disable1",10);
                 break;
             case "Speed":
-                PV.RPC("RPC_EnableBonusSpeed", RpcTarget.All);
-                Debug.Log("The Bonus Speed is enabled !");
+                PV.RPC("RPC_EnableBonusSpeed", RpcTarget.All, true);
+                Invoke("Disable2",  10);
                 break;
             case "Mini": 
-                PV.RPC("RPC_EnableBonusMini", RpcTarget.All);
-                Debug.Log("The Bonus Mini is enabled !");
+                PV.RPC("RPC_EnableBonusMini", RpcTarget.All, true);
+                Invoke("Disable3",  10);
                 break;
         }
     }
 
-
-    IEnumerator BonusWaiter()
+    private void Disable1()
     {
-        yield return new WaitForSeconds(10.0f);
+        PV.RPC("RPC_EnableBonusLocked", RpcTarget.All , false);
+
     }
+
+    private void Disable2()
+    {
+        PV.RPC("RPC_EnableBonusSpeed", RpcTarget.All , false);
+
+    }
+
+    private void Disable3()
+    {
+        PV.RPC("RPC_EnableBonusMini", RpcTarget.All , false);
+
+    }
+
+    private void OnTriggerEnter(Collider col)
+    {
+        if (col.gameObject.tag == "Chasseur")
+        {
+            nbrCollision++;
+            if (nbrCollision > 3)
+            {
+                nbrCollision = 0;
+                current_bonus = "Mini";
+            }
+        }
+        if (col.gameObject.tag == "Arrived")
+        {
+            isInTrain = true;
+            this.GetComponent<Mouvement>().enabled = false;
+            GameOver.text = "YOU WON!";
+        }
+    }
+
 
     [PunRPC]
         void TakeDamage()
@@ -81,40 +117,36 @@ public class Bandit_Class : MonoBehaviour
         }
 
     [PunRPC]
-        void  RPC_EnableBonusLocked()
+        void  RPC_EnableBonusLocked(bool test)
         {
-            this.gameObject.GetComponent<Mouvement>().enabled = false;
-            //StartCoroutine (BonusWaiter());
-            //this.gameObject.GetComponent<Mouvement>().enabled = true;
+            this.gameObject.GetComponent<Mouvement>().enabled = test;
         }
 
     [PunRPC]
-        void RPC_EnableBonusSpeed()
+        void RPC_EnableBonusSpeed(bool test)
         {
-            this.gameObject.GetComponent<Mouvement>().speed = 150;
-            //StartCoroutine (BonusWaiter());
-            //this.gameObject.GetComponent<Mouvement>().speed = 100;
+            if (test)
+                this.gameObject.GetComponent<Mouvement>().speed = 10f;
+            else
+                this.gameObject.GetComponent<Mouvement>().speed = 6f;
         }
 
     [PunRPC]
-        void RPC_EnableBonusMini()
+        void RPC_EnableBonusMini(bool test)
         {
-            this.gameObject.transform.localScale = new Vector3(0.25f, 0.25f , 0.25f);
-            //StartCoroutine (BonusWaiter());
-            //this.gameObject.transform.localScale = new Vector3(1.0f , 1.0f , 1.0f);
+            if (test)
+                this.gameObject.transform.localScale = new Vector3(0.25f, 0.25f , 0.25f);
+            else
+                this.gameObject.transform.localScale = new Vector3(1.0f , 1.0f , 1.0f);
         }
 
     [PunRPC]
         void RPC_IncreassNumber(bool act)
         {
             if (act)
-            {
                 GameSetup.GS.NbrBandit++;
-            }
             else
-            {
                 GameSetup.GS.NbrBandit--;
-            }
         }
 
     public void Hitted(int ennemi_damage)

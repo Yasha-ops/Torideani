@@ -25,6 +25,7 @@ public class Chasseur_Class : MonoBehaviour
 
     public AudioSource source;
     public Text GameOver;
+    public Text Info;
 
     public int ID => PV.ViewID; 
     void Start()

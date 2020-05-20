@@ -16,6 +16,7 @@ TagManager:
   - GameSetup
   - FxTemporaire
   - AimCamera
+  - Arrived
   layers:
   - Default
   - TransparentFX

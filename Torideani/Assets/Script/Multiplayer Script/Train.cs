@@ -5,6 +5,7 @@ using System;
 
 public class Train : MonoBehaviour
 {
+    public GameObject gamesetup;
     public float speed = 0.25f;    
     public float doorspeed = 0.1f;
     public Transform door1;
@@ -19,16 +20,21 @@ public class Train : MonoBehaviour
     public ParticleSystem smook;
     private bool smok = true;
 
+    private float timeClose = 40f;
+    private bool isOpen = false;
+
+    private float acc;
     void Update()
     {
-        if (Time.deltaTime > 300f)
+        acc += Time.deltaTime;
+        Debug.Log(acc);
+        if (acc > gamesetup.GetComponent<GameSetup>().GameDuration - 60f && acc < gamesetup.GetComponent<GameSetup>().GameDuration + 45f)
         {
             if (smok)
             {
                 smook.Play();
                 smok = false;
             }
-                
             if (transform.position.x < -30f)
             { 
                 transform.position += new Vector3(speed, 0, 0);
@@ -54,9 +60,17 @@ public class Train : MonoBehaviour
                 door1_2.position += new Vector3(doorspeed, 0, 0);
                 door2_2.position -= new Vector3(doorspeed, 0, 0);
             }
-
         }
-        
-
+        else if (acc >= gamesetup.GetComponent<GameSetup>().GameDuration + 45f)
+        {
+            Debug.Log("cas2");
+            if (door1.position.x > 11.6f)
+            {
+                door1.position -= new Vector3(doorspeed, 0, 0);
+                door2.position += new Vector3(doorspeed, 0, 0);
+                door1_2.position -= new Vector3(doorspeed, 0, 0);
+                door2_2.position += new Vector3(doorspeed, 0, 0);
+            }
+        }
     }
 }

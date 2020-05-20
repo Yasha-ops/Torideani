@@ -40,7 +40,7 @@ public class Player_Bonus : MonoBehaviour
             {
                 Debug.Log("The Key F has been pressed and u have a bonus !");
                 Applying_Bonus(this.gameObject.GetComponent<Bandit_Class>().current_bonus);
-                info.text = $"The {this.GetComponent<Chasseur_Class>().current_bonus} bonus is applied";
+                info.text = $"The {this.GetComponent<Bandit_Class>().current_bonus} bonus is applied";
                 this.GetComponent<Bandit_Class>().current_bonus = ""; // Reinitialise les bonus
                 Invoke("Disapear", 5);
             }
