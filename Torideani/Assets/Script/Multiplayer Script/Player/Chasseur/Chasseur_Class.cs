@@ -22,6 +22,7 @@ public class Chasseur_Class : MonoBehaviour
     public bool Dead => dead;
     public GameObject canvas;
     public GameObject HealthBar;
+    public ParticleSystem blood;
 
     public AudioSource source;
     public Text GameOver;
@@ -86,6 +87,7 @@ public class Chasseur_Class : MonoBehaviour
     {
         PV.RPC("TakeDamage", RpcTarget.All); 
         Debug.Log($"Player shooted health : {health}");
+        blood.Play();
     }
 
 

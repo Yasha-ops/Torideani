@@ -81,7 +81,7 @@ public class Solo_Class : MonoBehaviour
         health = 20;
         CurrentAmmo_Text.text = $"{chargeurCapacity - currentAmmoChargeur} / {chargeurCapacity}";
         ammo = 400;
-        damage = 250.0f;
+        damage = 25.0f;
     }
 
     void Update()

@@ -5,9 +5,6 @@ using UnityEngine.AI;
 
 public class IA_Zombie : MonoBehaviour
 {
- 
-   
-
     public int Hp;
 
     private Animator Anim;
@@ -38,6 +35,7 @@ public class IA_Zombie : MonoBehaviour
     public bool attaque;
     public GameObject setup;
     private bool unefois = true;
+    private float wake = 3f;
 
     // Start is called before the first frame update
     void Start()
@@ -57,11 +55,15 @@ public class IA_Zombie : MonoBehaviour
         if (joueurSolo == null)
             return;
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
-        if (Hp > 0)
+        if (wake > 0f)
+        {
+            agent.speed = 0;
+            wake -= Time.deltaTime;
+        }
+        else if (Hp > 0)
         {
             animAttaque -= Time.deltaTime;
             timebeforAttaque -= Time.deltaTime;
-
            
             move(agent);
             Animation(agent);
@@ -198,6 +200,7 @@ public class IA_Zombie : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        Anim.SetTrigger("hit");
         blood.Play();
         Hp -= (int)damage;
     }

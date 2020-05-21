@@ -74,7 +74,7 @@ public class Mouvement_Solo : MonoBehaviourPun
         {
             Anim.SetBool("aim", true);
             cameraVise.gameObject.SetActive(true);
-            speed = 2f;
+            speed = 4f;
         }
 
         if (Input.GetMouseButtonUp(1))
@@ -153,7 +153,7 @@ public class Mouvement_Solo : MonoBehaviourPun
 
         if (Input.GetButton("Cancel") || Input.GetKey("escape"))
             Application.Quit();
-        if (Input.GetKey(KeyCode.End))
+        if (Input.GetKey("m"))
         {
             MainMenu.Disconect();
             SceneManager.LoadScene("MainMenu");

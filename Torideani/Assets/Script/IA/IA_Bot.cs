@@ -72,7 +72,7 @@ public class IA_Bot : MonoBehaviour
         if (Vector3.Distance(agent.transform.position, agent.destination) < StoppingDistance)
         {
             estArrivée = true;
-            StoppingDistance = Random.Range(0.4f, 5f);
+            StoppingDistance = Random.Range(0.4f, 10f);
             agent.stoppingDistance = StoppingDistance;
 
         }
@@ -184,28 +184,46 @@ public class IA_Bot : MonoBehaviour
     {
         Anim.SetTrigger("enter");
         int x = Random.Range(0, 4);
-        if (x == 0)
-            Anim.SetBool("belly", true);
-        if (x == 1)
-            Anim.SetBool("breakdance", true);
-        if (x == 2)
-            Anim.SetBool("sittingyell", true);
-        if (x == 3)
-            Anim.SetBool("lay", true);
+        switch (x)
+        {
+            case 0:
+                Anim.SetBool("belly", true);
+                break;
+            case 1:
+                Anim.SetBool("breakdance", true);
+                break;
+            case 2:
+                Anim.SetBool("sittingyell", true);
+                break;
+            case 3:
+                Anim.SetBool("lay", true);
+                break;
+            default:
+                break;
+        }
     }
 
     private void animWalk()
     {
         Anim.SetTrigger("enter");
         int x = Random.Range(0, 4);
-        if (x == 0)
-            Anim.SetBool("swing", true);
-        if (x == 1)
-            Anim.SetBool("swimming", true);
-        if (x == 2)
-            Anim.SetBool("jazz", true);
-        if (x == 3)
-            Anim.SetBool("hiphop", true);
+        switch (x)
+        {
+            case 0:
+                Anim.SetBool("swing", true);
+                break;
+            case 1:
+                Anim.SetBool("swimming", true);
+                break;
+            case 2:
+                Anim.SetBool("jazz", true);
+                break;
+            case 3:
+                Anim.SetBool("hiphop", true);
+                break;
+            default:
+                break;
+        }
     }
 
     private void noAnim()

@@ -16,8 +16,8 @@ GameObject:
   m_Name: SM_Veh_Cart_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4252945111077740
 Transform:
@@ -109,8 +109,8 @@ GameObject:
   m_Name: SM_Veh_Cart_Wheels_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4075502021237254
 Transform:

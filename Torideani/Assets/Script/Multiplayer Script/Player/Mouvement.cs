@@ -83,7 +83,18 @@ public class Mouvement : MonoBehaviourPun
             if (this.gameObject.tag == "Chasseur")
             {
                 GameObject yt = GameObject.FindWithTag("GameSetup");
-                yt.GetComponent<GameSetup>().CameraAim.gameObject.SetActive(Input.GetButton("Fire2"));
+                if (Input.GetButton("Fire2"))
+                {
+                    speed = 3f;
+                    yt.GetComponent<GameSetup>().CameraAim.gameObject.SetActive(true);
+                    Anim.SetBool("aim", true);
+                }
+                else
+                {
+                    speed = 6f;
+                    yt.GetComponent<GameSetup>().CameraAim.gameObject.SetActive(false);
+                    Anim.SetBool("aim", false);
+                }
             }
             if (this.gameObject.tag == "Bandit")
             {
@@ -135,16 +146,16 @@ public class Mouvement : MonoBehaviourPun
 
         Vector3 move;
 
-        if (Input.GetButton("Fire1"))
+        if (Input.GetButton("Fire3"))
         {
             move = transform.right * x  + transform.forward * z ;
-            Anim.SetFloat("Speed", z);
+            Anim.SetFloat("Speed", z * speed / 6);
             Anim.SetBool("Fire1", true);
         }
         else
         {
             move = transform.right * x /2+ transform.forward * z /2;
-            Anim.SetFloat("Speed", z/2);
+            Anim.SetFloat("Speed", z * speed / 12);
             Anim.SetBool("Fire1", false); 
         }
 
@@ -255,7 +266,7 @@ public class Mouvement : MonoBehaviourPun
 
     private void updateMenuAnimation()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetButtonDown("Fire3"))
         {
             setfalse();
         }
@@ -358,37 +369,34 @@ public class Mouvement : MonoBehaviourPun
         buttonsAnimation[curMenuItemAnimation].sceneimage.color = buttonsAnimation[curMenuItemAnimation].PressedColor;
         setfalse();
         Anim.SetTrigger("enter");
-        if (curMenuItemAnimation == 0)
+        switch (curMenuItemAnimation)
         {
-            Anim.SetBool("swimming", true);
-        }
-        if (curMenuItemAnimation == 1)
-        {
-            Anim.SetBool("belly", true);
-        }
-        if (curMenuItemAnimation == 2)
-        {
-            Anim.SetBool("breakdance", true);
-        }
-        if (curMenuItemAnimation == 3)
-        {
-            Anim.SetBool("jazz", true);
-        }
-        if (curMenuItemAnimation == 4)
-        {
-            Anim.SetBool("hiphop", true);
-        }
-        if (curMenuItemAnimation == 5)
-        {
-            Anim.SetBool("swing", true);
-        }
-        if (curMenuItemAnimation == 6)
-        {
-            Anim.SetBool("sittingyell", true);
-        }
-        if (curMenuItemAnimation == 7)
-        {
-            Anim.SetBool("lay", true);
+            case 0:
+                Anim.SetBool("swimming", true);
+                break;
+            case 1:
+                Anim.SetBool("belly", true);
+                break;
+            case 2:
+                Anim.SetBool("breakdance", true);
+                break;
+            case 3:
+                Anim.SetBool("jazz", true);
+                break;
+            case 4:
+                Anim.SetBool("hiphop", true);
+                break;
+            case 5:
+                Anim.SetBool("swing", true);
+                break;
+            case 6:
+                Anim.SetBool("sittingyell", true);
+                break;
+            case 7:
+                Anim.SetBool("lay", true);
+                break;
+            default:
+                break;
         }
     }
 
