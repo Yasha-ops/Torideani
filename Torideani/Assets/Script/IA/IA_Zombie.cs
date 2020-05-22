@@ -14,6 +14,8 @@ public class IA_Zombie : MonoBehaviour
     public ParticleSystem blood;
 
 
+    public GameObject[] skins;
+
     // variables pour destination
     public GameObject joueurSolo;
     private Transform destination;
@@ -40,8 +42,9 @@ public class IA_Zombie : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        skins[UnityEngine.Random.Range (0, skins.Length -1)].gameObject.SetActive(true);
         PlayerGetter();
-        Hp = 100;
+        Hp = 75;
         Anim = GetComponent<Animator>();
         destination = joueurSolo.transform;
         NavMeshAgent agent = GetComponent<NavMeshAgent>();

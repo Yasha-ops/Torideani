@@ -435,7 +435,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &9203985167585768689
 Transform:
   m_ObjectHideFlags: 0
@@ -1461,6 +1461,57 @@ MonoBehaviour:
   deathTime: 6
   IA_transform: {fileID: 8863732624222590060}
   blood: {fileID: 1178312764393293446}
+  skins:
+  - {fileID: 8013624837553549378}
+  - {fileID: 197047079538500287}
+  - {fileID: 5006308996772669449}
+  - {fileID: 7715093391999246272}
+  - {fileID: 9023364451679144373}
+  - {fileID: 3300247251383793861}
+  - {fileID: 6060665669762891212}
+  - {fileID: 8720210650981215771}
+  - {fileID: 4575585447807836250}
+  - {fileID: 5908704511514805276}
+  - {fileID: 8311454989827696639}
+  - {fileID: 7887633257802436372}
+  - {fileID: 1033422515561132984}
+  - {fileID: 1700220876025058454}
+  - {fileID: 4873454549215251939}
+  - {fileID: 1559627794169616593}
+  - {fileID: 1580869753876365696}
+  - {fileID: 6090198042118266768}
+  - {fileID: 7327206299252606854}
+  - {fileID: 981637402331143994}
+  - {fileID: 125541998338788119}
+  - {fileID: 3108895063933771565}
+  - {fileID: 4933959973075016680}
+  - {fileID: 523847351215965536}
+  - {fileID: 2320907313979043443}
+  - {fileID: 6028961909139266585}
+  - {fileID: 9023751601757372960}
+  - {fileID: 8173119743263056407}
+  - {fileID: 5786449183280365661}
+  - {fileID: 4914572762878587197}
+  - {fileID: 3635894836341078366}
+  - {fileID: 5320795057545705843}
+  - {fileID: 6364711859859372618}
+  - {fileID: 2754911072907285774}
+  - {fileID: 6797398493778752257}
+  - {fileID: 6348753090255114130}
+  - {fileID: 5641617457605190810}
+  - {fileID: 5741852858453520149}
+  - {fileID: 1737268425248224217}
+  - {fileID: 104609609530601776}
+  - {fileID: 6177391233180192207}
+  - {fileID: 4125773832997342350}
+  - {fileID: 6224201257256100057}
+  - {fileID: 1639740577397723920}
+  - {fileID: 7389559669758840398}
+  - {fileID: 8675175792262992107}
+  - {fileID: 934830200014742948}
+  - {fileID: 7472314005110621683}
+  - {fileID: 5411772147273797754}
+  - {fileID: 5280031243780244948}
   joueurSolo: {fileID: 0}
   proche: 0
   speed: 1
@@ -8355,30 +8406,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8863732624222590060}
     m_Modifications:
-    - target: {fileID: 166404, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
-      propertyPath: m_Name
-      value: BloodSplat_FX
-      objectReference: {fileID: 0}
-    - target: {fileID: 19808544, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
-      propertyPath: SizeModule.y.minMaxState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 19808544, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
-      propertyPath: SizeModule.z.minMaxState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 19808544, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
-      propertyPath: ShapeModule.m_Scale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 19808544, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
-      propertyPath: ShapeModule.m_Scale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 19808544, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
-      propertyPath: ShapeModule.m_Scale.z
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 499110, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.052369595
@@ -8433,6 +8460,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 499110, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
       propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 166404, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
+      propertyPath: m_Name
+      value: BloodSplat_FX
+      objectReference: {fileID: 0}
+    - target: {fileID: 19808544, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
+      propertyPath: SizeModule.y.minMaxState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 19808544, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
+      propertyPath: SizeModule.z.minMaxState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 19808544, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19808544, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19808544, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
+      propertyPath: ShapeModule.m_Scale.z
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

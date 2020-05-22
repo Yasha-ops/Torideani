@@ -2,13 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-
+using TMPro;
 
 public class BonusSolo : MonoBehaviour
 {
-    public int Price;
+    public float Price;
     public string bonusType;
 
+    void Start()
+    {
+         test.text = $"{Price} $";
+    }
+
+    public TextMeshPro test;
     void OnTriggerEnter(Collider col) //trouver un moyen de le faire qu'une fois
     {
         Debug.Log("Collider detected !");
@@ -31,6 +37,8 @@ public class BonusSolo : MonoBehaviour
                 default:
                     break;
             }
+            Price = (float)1.10*Price;
+            test.text = $"{Price} $";
             col.GetComponent<Solo_Class>().Money_Text.text =$"{col.GetComponent<Solo_Class>().money}";
         }
     }
@@ -71,6 +79,7 @@ public class BonusSolo : MonoBehaviour
             return;
         col.GetComponent<Solo_Class>().Damage += (damage*2)/3;
         col.GetComponent<Solo_Class>().money -= Price;
+        col.GetComponent<Solo_Class>().Money_Text.text =$"{col.GetComponent<Solo_Class>().money}";
     }
 
 

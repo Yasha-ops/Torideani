@@ -67,6 +67,7 @@ public class GameSetupSolo : MonoBehaviour
                 GenerateObject(package[i], nbrZombie);
         }
         RoundNumber++;
+        player.GetComponent<Solo_Class>().Vague_Text.text = $"Wave number : {RoundNumber}";
     }
 
     void GenerateObject(GameObject go, int amount)

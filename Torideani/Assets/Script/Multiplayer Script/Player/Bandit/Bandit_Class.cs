@@ -17,6 +17,7 @@ public class Bandit_Class : MonoBehaviour
     public string current_bonus; 
     public ParticleSystem blood;
 
+    public Text Text_currentbonus;
     public GameObject canvas; 
     public GameObject HealthBar;
 
@@ -28,9 +29,13 @@ public class Bandit_Class : MonoBehaviour
     public bool isInTrain = false;
     public bool Dead => dead;
 
+    public GameObject[] skins;
+    private GameObject currentSkin;
 
     void Start()
     {
+        currentSkin = skins[UnityEngine.Random.Range (0, skins.Length -1)];
+        currentSkin.gameObject.SetActive(true);
         PV = GetComponent<PhotonView>(); 
         PV.RPC("RPC_IncreassNumber", RpcTarget.All, true);
     }
@@ -42,6 +47,7 @@ public class Bandit_Class : MonoBehaviour
         {
             canvas.SetActive(false);
         }
+        Text_currentbonus.text = $"Current Bonus : {current_bonus}";
         if (health <= 0)
         {
             health = 0; 
@@ -67,6 +73,10 @@ public class Bandit_Class : MonoBehaviour
                 PV.RPC("RPC_EnableBonusMini", RpcTarget.All, true);
                 Invoke("Disable3",  10);
                 break;
+            case "Trans":
+                PV.RPC("RPC_EnableBonusTrans", RpcTarget.All);
+                break;
+
         }
     }
 
@@ -120,6 +130,13 @@ public class Bandit_Class : MonoBehaviour
         void  RPC_EnableBonusLocked(bool test)
         {
             this.gameObject.GetComponent<Mouvement>().enabled = test;
+        }
+
+    [PunRPC]
+        void RPC_EnableBonusTrans()
+        {
+            currentSkin.gameObject.SetActive(false);
+            currentSkin = skins[UnityEngine.Random.Range (0, skins.Length -1)];
         }
 
     [PunRPC]

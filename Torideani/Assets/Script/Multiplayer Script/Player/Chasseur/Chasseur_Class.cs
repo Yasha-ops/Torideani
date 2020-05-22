@@ -28,6 +28,8 @@ public class Chasseur_Class : MonoBehaviour
     public Text GameOver;
     public Text Info;
 
+    public Text Text_currentbonus;
+
     public int ID => PV.ViewID; 
     void Start()
     {
@@ -39,6 +41,7 @@ public class Chasseur_Class : MonoBehaviour
     {
         if (!PV.IsMine)
             canvas.SetActive(false);
+        Text_currentbonus.text = $"Current Bonus : {current_bonus}";
         if (health <= 0)
         {
             PV.RPC("RPC_IncreassNumber", RpcTarget.All, false);

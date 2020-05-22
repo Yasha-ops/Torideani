@@ -93,6 +93,9 @@ GameObject:
   - component: {fileID: 1927637577147979782}
   - component: {fileID: 3218431668744745975}
   - component: {fileID: 7560142596150010658}
+  - component: {fileID: 3785800353286024332}
+  - component: {fileID: 3990283333105791415}
+  - component: {fileID: 1246107402179535768}
   m_Layer: 0
   m_Name: bonus_random
   m_TagString: Untagged
@@ -183,9 +186,58 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itsPowerUpsChasseur: 
   itsPowerUpsBandit: 
-  bonusOfTheGameChasseur: []
-  bonusOfTheGameBandit: []
+  bonusOfTheGameChasseur:
+  - Locked
+  - Speed
+  - Scanner
+  bonusOfTheGameBandit:
+  - Locked
+  - Speed
+  - Mini
+  - Trans
   PV: {fileID: 1927637577147979782}
+--- !u!114 &3785800353286024332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7690390672282390406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e295a6ea86bad79c9eff0ec967a082c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &3990283333105791415
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7690390672282390406}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!64 &1246107402179535768
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7690390672282390406}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 0}
 --- !u!1 &8716525665867295093
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,11 +425,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2090943917021978848}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 94187882f8958834f8702101a219c658,
-        type: 3}
-      propertyPath: m_Name
-      value: untitled
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 94187882f8958834f8702101a219c658,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -448,11 +495,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 94187882f8958834f8702101a219c658,
+        type: 3}
+      propertyPath: m_Name
+      value: untitled
+      objectReference: {fileID: 0}
     - target: {fileID: -2416733968201007103, guid: 94187882f8958834f8702101a219c658,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 07794a22b92520a4ba4729c4a3550163, type: 2}
+    - target: {fileID: -2416733968201007103, guid: 94187882f8958834f8702101a219c658,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94187882f8958834f8702101a219c658, type: 3}
 --- !u!4 &1829101174445099878 stripped

@@ -54,5 +54,6 @@ MonoBehaviour:
   - RPC_EnableBonusMini
   - RPC_EnableBonusScanner
   - RPC_IncreassNumber
+  - RPC_EnableBonusTrans
   DisableAutoOpenWizard: 1
   ShowSettings: 1

@@ -61,7 +61,7 @@ public class Player_Bonus : MonoBehaviour
 
     public void Applying_Bonus(string bonus)
     {
-        if (bonus == "Mini") // Applique le bonus Mini a soit meme
+        if (bonus == "Mini" || bonus == "Trans") // Applique le bonus Mini a soit meme
         {
             this.GetComponent<Bandit_Class>().EnableBonus(bonus);
             return;

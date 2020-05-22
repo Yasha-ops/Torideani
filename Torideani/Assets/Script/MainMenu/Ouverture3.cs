@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-
+using UnityEngine.SceneManagement;
 public class Ouverture3 : MonoBehaviour
 {
     public GameObject door;
@@ -15,6 +15,10 @@ public class Ouverture3 : MonoBehaviour
         {
             door.transform.Rotate(- Vector3.up * speed * Time.deltaTime);
         }
+
+        if (Convert.ToInt32(door.transform.rotation.y * 100f) == 99)
+            SceneManager.LoadScene("Solo_Game");
+
     }
 
     public void OpenDoor()

@@ -16,6 +16,7 @@ public class IA_Bot : MonoBehaviour
     private float speed = 2f;
 
 
+    public GameObject[] skins;
 
     // variables pour les differentes destinations
 
@@ -37,6 +38,7 @@ public class IA_Bot : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        skins[UnityEngine.Random.Range (0, skins.Length -1)].gameObject.SetActive(true);
         waitTime = StartWatiTime;
         Anim = GetComponent<Animator>();
         controller = GetComponent<CharacterController>();

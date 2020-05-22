@@ -40,7 +40,7 @@ public class Solo_Class : MonoBehaviour
         set{score = value;}
     }
 
-    public int money;
+    public float money;
     public Transform rayOrigin;
     public ParticleSystem feu; 
     
@@ -81,7 +81,7 @@ public class Solo_Class : MonoBehaviour
         health = 20;
         CurrentAmmo_Text.text = $"{chargeurCapacity - currentAmmoChargeur} / {chargeurCapacity}";
         ammo = 400;
-        damage = 25.0f;
+        damage = 50.0f;
     }
 
     void Update()
