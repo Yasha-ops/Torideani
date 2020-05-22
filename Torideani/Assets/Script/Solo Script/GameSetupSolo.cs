@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-
 public class GameSetupSolo : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -78,16 +77,19 @@ public class GameSetupSolo : MonoBehaviour
             var randomIndex = UnityEngine.Random.Range (0, spawnPoints.Length-1);
             Vector3 position = spawnPoints[randomIndex].gameObject.transform.position;
             GameObject tmp = Instantiate(go);
+            float x = (float)(UnityEngine.Random.Range(0, 150)) / 100f;
+            int y = UnityEngine.Random.Range(0, 50);
             if (RoundNumber < 10)
             {
-                tmp.GetComponent<IA_Zombie>().Hp += 100;
-                tmp.GetComponent<IA_Zombie>().speed += 1;
+                Debug.Log("x" + x);
+                tmp.GetComponent<IA_Zombie>().Hp += y;
+                tmp.GetComponent<IA_Zombie>().speed += x + RoundNumber / 10;
                 tmp.GetComponent<IA_Zombie>().Damage += 1;
             }
             else
             { // Augmentation de 10% des que le round 10 est passé !
-                tmp.GetComponent<IA_Zombie>().Hp = (int)(Convert.ToDouble(tmp.GetComponent<IA_Zombie>().Hp)*1.10f);
-                tmp.GetComponent<IA_Zombie>().speed = (int)(Convert.ToDouble(tmp.GetComponent<IA_Zombie>().speed)*1.10f);
+                tmp.GetComponent<IA_Zombie>().Hp = (int)(Convert.ToDouble(tmp.GetComponent<IA_Zombie>().Hp)*1.10f) + y;
+                tmp.GetComponent<IA_Zombie>().speed = (float)(Convert.ToDouble(tmp.GetComponent<IA_Zombie>().speed)*1.10f) + x;
                 tmp.GetComponent<IA_Zombie>().Damage = (int)(Convert.ToDouble(tmp.GetComponent<IA_Zombie>().Damage)*1.10f);
             }
             tmp.gameObject.transform.position = position;

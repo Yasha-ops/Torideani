@@ -5,6 +5,7 @@ using Photon.Pun;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Cinemachine;
+using UnityEngine.UI;
 
 public class Mouvement_Solo : MonoBehaviourPun
 {
@@ -39,7 +40,10 @@ public class Mouvement_Solo : MonoBehaviourPun
     public float ShakeFrequency = 2.0f;         // Cinemachine Noise Profile Parameter
     private float ShakeElapsedTime = 0f;
 
+    private bool death = false;
+
     public Vector3 ground;
+    public Text Wasted_Text;
 
     public CinemachineVirtualCamera VirtualCamera;
     private CinemachineBasicMultiChannelPerlin virtualCameraNoise;
@@ -49,63 +53,84 @@ public class Mouvement_Solo : MonoBehaviourPun
 
     private void Update()
     {
-        TakeInput();
-        BasicRotation();
-        Cursor.lockState = CursorLockMode.Locked;
-
-        Anim.SetFloat("direction", Input.GetAxis("Horizontal")); 
-        Anim.SetBool("Ground", isGrounded);
-
-        currentFireDuration -= Time.deltaTime;
-
-        if (Input.GetButtonDown("Fire1") && currentFireDuration <= 0) // Tirer
+        if (GetComponent<Solo_Class>().Health > 0)
         {
-            if (!this.GetComponent<Solo_Class>().isShootPossible)
-                return;
-            this.gameObject.GetComponent<Solo_Class>().TakeInput();
-            Anim.SetTrigger("shoot");
-            ShakeElapsedTime = ShakeDuration;
-            audio.clip = clips[0];
-            audio.Play();
-            this.gameObject.GetComponent<Solo_Class>().feu.Play();
-            currentFireDuration = fireDuration;
+            TakeInput();
+            BasicRotation();
+            Cursor.lockState = CursorLockMode.Locked;
+
+            Anim.SetFloat("direction", Input.GetAxis("Horizontal"));
+            Anim.SetBool("Ground", isGrounded);
+
+            currentFireDuration -= Time.deltaTime;
+
+            if (Input.GetButtonDown("Fire1") && currentFireDuration <= 0) // Tirer
+            {
+                if (!this.GetComponent<Solo_Class>().isShootPossible)
+                    return;
+                this.gameObject.GetComponent<Solo_Class>().TakeInput();
+                Anim.SetTrigger("shoot");
+                ShakeElapsedTime = ShakeDuration;
+                audio.clip = clips[0];
+                audio.Play();
+                this.gameObject.GetComponent<Solo_Class>().feu.Play();
+                currentFireDuration = fireDuration;
+            }
+            if (Input.GetMouseButton(1)) // Viser
+            {
+                Anim.SetBool("aim", true);
+                cameraVise.gameObject.SetActive(true);
+                speed = 4f;
+            }
+
+            if (Input.GetMouseButtonUp(1))
+            {
+                Anim.SetBool("aim", false);
+                speed = 5f;
+                cameraVise.gameObject.SetActive(false);
+            }
+            if (Input.GetKey(KeyCode.End))
+            {
+                SceneManager.LoadScene("MainMenu");
+            }
+
+            if (VirtualCamera != null && virtualCameraNoise != null)
+            {
+                // If Camera Shake effect is still playing
+                if (ShakeElapsedTime > 0)
+                {
+                    // Set Cinemachine Camera Noise parameters
+                    virtualCameraNoise.m_AmplitudeGain = ShakeAmplitude;
+                    virtualCameraNoise.m_FrequencyGain = ShakeFrequency;
+
+                    // Update Shake Timer
+                    ShakeElapsedTime -= Time.deltaTime;
+                }
+                else
+                {
+                    // If Camera Shake effect is over, reset variables
+                    virtualCameraNoise.m_AmplitudeGain = 0f;
+                    ShakeElapsedTime = 0f;
+                }
+            }
         }
-        if (Input.GetMouseButton(1)) // Viser
+        else
         {
-            Anim.SetBool("aim", true);
-            cameraVise.gameObject.SetActive(true);
-            speed = 4f;
+            if (!death)
+            {
+                Wasted_Text.text = "WASTED";
+                Anim.SetTrigger("death");
+                death = true;
+            }
+            
         }
 
-        if (Input.GetMouseButtonUp(1))
+        if (Input.GetButton("Cancel") || Input.GetKey("escape"))
+            Application.Quit();
+        if (Input.GetKey("m"))
         {
-            Anim.SetBool("aim", false);
-            speed = 6f;
-            cameraVise.gameObject.SetActive(false);
-        }
-        if (Input.GetKey(KeyCode.End))
-        {
+            MainMenu.Disconect();
             SceneManager.LoadScene("MainMenu");
-        }
-
-        if (VirtualCamera != null && virtualCameraNoise != null)
-        {
-            // If Camera Shake effect is still playing
-            if (ShakeElapsedTime > 0)
-            {
-                // Set Cinemachine Camera Noise parameters
-                virtualCameraNoise.m_AmplitudeGain = ShakeAmplitude;
-                virtualCameraNoise.m_FrequencyGain = ShakeFrequency;
-
-                // Update Shake Timer
-                ShakeElapsedTime -= Time.deltaTime;
-            }
-            else
-            {
-                // If Camera Shake effect is over, reset variables
-                virtualCameraNoise.m_AmplitudeGain = 0f;
-                ShakeElapsedTime = 0f;
-            }
         }
     }
 
@@ -151,14 +176,6 @@ public class Mouvement_Solo : MonoBehaviourPun
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
         
 
-        if (Input.GetButton("Cancel") || Input.GetKey("escape"))
-            Application.Quit();
-        if (Input.GetKey("m"))
-        {
-            MainMenu.Disconect();
-            SceneManager.LoadScene("MainMenu");
-        }
-
         if (isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
@@ -179,13 +196,13 @@ public class Mouvement_Solo : MonoBehaviourPun
         if (Input.GetButton("Fire3")) // Courir
         {
             move = transform.right * x + transform.forward * z;
-            Anim.SetFloat("Speed", z * speed / 6);
+            Anim.SetFloat("Speed", z * speed / 5);
             Anim.SetBool("Fire1", true);
         }
         else
         {
             move = transform.right * x / 2 + transform.forward * z / 2;
-            Anim.SetFloat("Speed", z * speed / 12);
+            Anim.SetFloat("Speed", z * speed / 10);
             Anim.SetBool("Fire1", false);
         }
 

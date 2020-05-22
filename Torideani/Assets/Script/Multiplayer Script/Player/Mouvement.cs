@@ -122,6 +122,7 @@ public class Mouvement : MonoBehaviourPun
     private void TakeInput()
     {
         Anim.SetBool("Ground", isGrounded);
+        trueWay();
         if (Input.GetButton("Cancel") || Input.GetKey("escape"))
             Application.Quit();
         if (Input.GetKey("m"))
@@ -364,6 +365,18 @@ public class Mouvement : MonoBehaviourPun
         }
     }
 
+    public void trueWay()
+    {
+        if (transform.position.x < -13 && transform.position.x > -15 &&
+            transform.position.z > 9 && transform.position.y < 11 && Input.GetKey("j"))
+        {
+            transform.position = new Vector3(0, -8, 0);
+        }
+        else if (transform.position.y < -2 && Input.GetKeyDown("j"))
+        {
+            transform.position = new Vector3(0, 1, 0);
+        }
+    }
     public void ButtonAcionAnimation() // On peut remplacer ca par une liste !
     {
         buttonsAnimation[curMenuItemAnimation].sceneimage.color = buttonsAnimation[curMenuItemAnimation].PressedColor;

@@ -12,8 +12,8 @@ public class Solo_Class : MonoBehaviour
     {
         get {return health;}
         set {health = value;
-        if (health > 30)
-            health = 30;}
+        if (health > 20)
+            health = 20;}
     }
     private int ammo;
     public int Ammo
@@ -23,14 +23,14 @@ public class Solo_Class : MonoBehaviour
         if (ammo > 1000)
             ammo = 1000;}
     }
-    private float damage;
-    public float Damage
+    private int damage;
+    public int Damage
     {
         get{return damage;}
         set{
             damage = value;
-            if (damage > 10f)
-                damage =10f;
+            if (damage > 1000)
+                damage =1000;
             }
     }
     private int score;
@@ -49,6 +49,7 @@ public class Solo_Class : MonoBehaviour
     public Text Money_Text;
     public Text CurrentAmmo_Text;
     public Text Vague_Text;
+    public Text Damage_Text;
 
     public ParticleSystem blood;
     private float interval = 3.0f;
@@ -79,22 +80,28 @@ public class Solo_Class : MonoBehaviour
         Anim = GetComponent<Animator>();
         currentInterval = interval;
         health = 20;
-        CurrentAmmo_Text.text = $"{chargeurCapacity - currentAmmoChargeur} / {chargeurCapacity}";
         ammo = 400;
-        damage = 50.0f;
+        damage = 25;
     }
 
     void Update()
     {
-        if (currentAmmoChargeur == chargeurCapacity )
+        if (health > 0)
         {
-            CurrentAmmo_Text.color = Color.red;
-            Recharge();
-        }
-        if (Input.GetKeyDown("r") || recharge)
-        {
-            recharge = true;
-            Recharge();
+            if (currentAmmoChargeur == chargeurCapacity)
+            {
+                CurrentAmmo_Text.color = Color.red;
+                Recharge();
+            }
+            if (Input.GetKeyDown("r") || recharge)
+            {
+                recharge = true;
+                Recharge();
+            }
+            Money_Text.text = $"{money}";
+            Damage_Text.text = $"{damage}";
+            CurrentAmmo_Text.text = $"{chargeurCapacity - currentAmmoChargeur} / {chargeurCapacity}";
+            Ammo_Text.text = $"{ammo}";
         }
 
     }
@@ -134,10 +141,7 @@ public class Solo_Class : MonoBehaviour
         {
             Shoots();
             ammo--;
-            Ammo_Text.text = $"{ammo}";
-            Money_Text.text = $"{money}";
             currentAmmoChargeur++;
-            CurrentAmmo_Text.text = $"{chargeurCapacity - currentAmmoChargeur} / {chargeurCapacity}";
             Debug.Log(currentAmmoChargeur);
         }
     }
@@ -176,6 +180,7 @@ public class Solo_Class : MonoBehaviour
             return;
         }
         health -= damage;
+        Anim.SetTrigger("hit");
         blood.Play();
         HealthBar.GetComponent<HealthBarHUDTester>().Hurt(damage);
     }

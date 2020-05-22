@@ -23,9 +23,8 @@ public class AnimationSkipper : MonoBehaviour
             cinemachineTrackedDolly.m_AutoDolly.m_Enabled = false;
             return;
         }
-        if (Input.GetButton("Fire3"))
+        if (Input.GetButton("Fire3") || Input.GetButton("Submit") )
         {
-            Debug.Log("OK");
             cinemachineTrackedDolly.m_AutoDolly.m_Enabled = true;
         }
     }

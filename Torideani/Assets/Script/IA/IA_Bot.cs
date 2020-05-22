@@ -31,7 +31,7 @@ public class IA_Bot : MonoBehaviour
     public float waitTimeStop;
 
     // variables pour l'attente entre les actions
-    public float coolDownAnim;
+    public float coolDownAnim = 10f;
     public float coolDownStop;
 
 
@@ -106,10 +106,11 @@ public class IA_Bot : MonoBehaviour
 
         if (coolDownAnim < 0)
         {
-            int aleatoireAnim = Random.Range(1, 101);
+            int aleatoireAnim = Random.Range(1, 5001);
 
-            if (waitTimeAnim < 0 && aleatoireAnim < 20)
+            if (waitTimeAnim < 0 && aleatoireAnim == 1)
             {
+                Debug.Log(aleatoireAnim);
                 if (agent.speed == 0)
                 {
                     animstop();
@@ -141,7 +142,7 @@ public class IA_Bot : MonoBehaviour
     {
         if (coolDownStop < 0)
         {
-            int aleatoireStop = Random.Range(1, 1001);
+            int aleatoireStop = Random.Range(1, 501);
 
             if (waitTimeStop < 0 && aleatoireStop == 1)
             {

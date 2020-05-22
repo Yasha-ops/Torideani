@@ -6,19 +6,38 @@ using TMPro;
 
 public class BonusSolo : MonoBehaviour
 {
-    public float Price;
-    public string bonusType;
+    public int Price;
+    public string bonusType; 
+    private float timenomoney;
 
     void Start()
     {
          test.text = $"{Price} $";
     }
 
+    private void Update()
+    {
+        if (timenomoney < 0f)
+        {
+            nomoney.text = "";
+        }
+        else
+        {
+            timenomoney -= Time.deltaTime;
+        }
+    }
     public TextMeshPro test;
+    public UnityEngine.UI.Text nomoney;
+   
     void OnTriggerEnter(Collider col) //trouver un moyen de le faire qu'une fois
     {
         Debug.Log("Collider detected !");
-        if (col.gameObject.tag == "Player" && col.GetComponent<Solo_Class>().money >= Price)
+        if (col.GetComponent<Solo_Class>().money < Price)
+        {
+            nomoney.text = "not enough money";
+            timenomoney = 2f;
+        }
+        else if (col.gameObject.tag == "Player")
         {
             switch (bonusType)
             {
@@ -37,7 +56,6 @@ public class BonusSolo : MonoBehaviour
                 default:
                     break;
             }
-            Price = (float)1.10*Price;
             test.text = $"{Price} $";
             col.GetComponent<Solo_Class>().Money_Text.text =$"{col.GetComponent<Solo_Class>().money}";
         }
@@ -49,6 +67,7 @@ public class BonusSolo : MonoBehaviour
         if (ammo > 1000)
             return;
         col.GetComponent<Solo_Class>().money -= Price;
+        Price += Price / 5;
         col.GetComponent<Solo_Class>().Ammo += 100;
         col.GetComponent<Solo_Class>().Ammo_Text.text =$"{col.GetComponent<Solo_Class>().Ammo}";
     }
@@ -59,15 +78,17 @@ public class BonusSolo : MonoBehaviour
         if (recharge > 50)
             return;
         col.GetComponent<Solo_Class>().money -= Price;
-        col.GetComponent<Solo_Class>().chargeurCapacity += 5;
+        Price += Price / 2;
+        col.GetComponent<Solo_Class>().chargeurCapacity += 2;
     }
 
     private void Health(Collider col)
     {
         float health = col.GetComponent<Solo_Class>().Health;
-        if (health > 30)
+        if (health > 20)
             return;
         col.GetComponent<Solo_Class>().money -= Price;
+        Price += Price / 5;
         col.GetComponent<Solo_Class>().Health += 5;
         col.GetComponent<Solo_Class>().HealthBar.GetComponent<HealthBarHUDTester>().Heal(health+2);
     }
@@ -75,10 +96,13 @@ public class BonusSolo : MonoBehaviour
     private void Damage(Collider col)
     {
         float damage = col.GetComponent<Solo_Class>().Damage;
-        if (damage > 10f)
+        Debug.Log(damage);
+        if (damage > 1000f)
             return;
-        col.GetComponent<Solo_Class>().Damage += (damage*2)/3;
         col.GetComponent<Solo_Class>().money -= Price;
+        Price += Price / 5;
+        col.GetComponent<Solo_Class>().Damage += (int) (damage / 3);
+        Debug.Log(col.GetComponent<Solo_Class>().Damage);
         col.GetComponent<Solo_Class>().Money_Text.text =$"{col.GetComponent<Solo_Class>().money}";
     }
 

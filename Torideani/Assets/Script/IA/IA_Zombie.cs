@@ -2,10 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class IA_Zombie : MonoBehaviour
 {
     public int Hp;
+    public int MaxHp;
+
+    public RectTransform healthBar;
 
     private Animator Anim;
     private Vector3 velocity = new Vector3(0, 0.001f, 0);
@@ -42,9 +46,9 @@ public class IA_Zombie : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        MaxHp = Hp;
         skins[UnityEngine.Random.Range (0, skins.Length -1)].gameObject.SetActive(true);
         PlayerGetter();
-        Hp = 75;
         Anim = GetComponent<Animator>();
         destination = joueurSolo.transform;
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
@@ -78,6 +82,7 @@ public class IA_Zombie : MonoBehaviour
             death = true;
             Hit(agent);
         }
+        healthBar.sizeDelta = new Vector2(Hp * 100 / MaxHp, healthBar.sizeDelta.y);
 
     }
 
@@ -101,7 +106,7 @@ public class IA_Zombie : MonoBehaviour
             proche = true;
             if (timebeforAttaque < 0f)
             {
-                timebeforAttaque = 4f;
+                timebeforAttaque = 3f;
                 anime = true;
             }
 
@@ -180,10 +185,7 @@ public class IA_Zombie : MonoBehaviour
             joueurSolo.GetComponent<Solo_Class>().money += 25;
             if(Random.Range (0, 100) < 50)
             {
-                if (Random.Range (1,2) == 1) // Augmente les munitions
-                    joueurSolo.GetComponent<Solo_Class>().Ammo += 100;
-                else // Augmente les damages
-                    joueurSolo.GetComponent<Solo_Class>().Damage += 1.0f;
+               joueurSolo.GetComponent<Solo_Class>().Ammo += 10;
             }
             GameObject[] Setup = GameObject.FindGameObjectsWithTag("GameSetup");
             foreach(GameObject once in Setup)
