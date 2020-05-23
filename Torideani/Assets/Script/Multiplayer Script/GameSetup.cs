@@ -31,6 +31,11 @@ public class GameSetup : MonoBehaviour
     public GameObject PowerUps;
     public GameObject PowerUpsTime;
 
+    public GameObject firstcam;
+
+    public GameObject music1;
+    public GameObject music2;
+
     public float GameDuration = 300f;
 
     public GameObject CameraAim;
@@ -48,14 +53,14 @@ public class GameSetup : MonoBehaviour
         GameObject[] banditList = GameObject.FindGameObjectsWithTag("Bandit");
         GameObject[] chasseursList = GameObject.FindGameObjectsWithTag("Chasseur");
 
-        if (NbrChasseurs == 0)
+        if (chasseursList.Length == 0)
         {
             foreach(GameObject bandit in banditList)
                 bandit.GetComponent<Bandit_Class>().GameOver.text = "You won !";
             TextTimer.text = "GAME OVER!";
             return true;
         }
-        if (NbrBandit == 0)
+        if (banditList.Length == 0)
         {
             foreach(GameObject chasseurs in chasseursList)
                 chasseurs.GetComponent<Chasseur_Class>().GameOver.text = "You won !";
@@ -63,14 +68,14 @@ public class GameSetup : MonoBehaviour
             return true;
         }
 
-        if (GameDuration <=  0)
+        if (GameDuration <=  100)
         {
             foreach(GameObject bandit in banditList)
                 bandit.GetComponent<Bandit_Class>().Info.text = "The train arrived, you have to escape !";
             chasseursList[0].GetComponent<Chasseur_Class>().Info.text = "Stop the bandits or they will escape !";
         }
 
-        if (GameDuration <= -45)
+        if (GameDuration <= 0)
         {
             int nbr = 0;
             foreach(GameObject bandit in banditList)
@@ -107,7 +112,7 @@ public class GameSetup : MonoBehaviour
         timer += Time.deltaTime;
         seconds = (int)(timer % 60);
 
-        if ((int)timer % 100 == 0)
+        if ((int)timer % 100 == 0 && GameDuration > 120)
         {
             RemovePowerUps();
             GameObject pos = spawnPowerUps[rnd.Next(0, spawnPowerUps.Length-1)];
@@ -116,7 +121,12 @@ public class GameSetup : MonoBehaviour
             PhotonNetwork.Instantiate(PowerUpsTime.name, pos.transform.position , Quaternion.identity);
             timer = timer + 1.0f  ;
         }
-    }
+        else if (GameDuration < 120)
+        {
+            music1.SetActive(false);
+            music2.SetActive(true);
+        }
+        }
 
     private void RemovePowerUps()
     {

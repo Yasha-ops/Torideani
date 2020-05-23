@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class curseur : MonoBehaviour
 {
+    public GameObject music;
     // Start is called before the first frame update
     void Start()
     {
-        
+        music.SetActive(true);
     }
 
     // Update is called once per frame

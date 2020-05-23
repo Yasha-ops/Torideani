@@ -6,6 +6,7 @@ public class AnimationSkipper : MonoBehaviour
 {
     public CinemachineVirtualCamera currentCamera;
     private CinemachineTrackedDolly cinemachineTrackedDolly;
+    public GameObject music;
 
     public int FinalPathNumber;
     
@@ -25,6 +26,7 @@ public class AnimationSkipper : MonoBehaviour
         }
         if (Input.GetButton("Fire3") || Input.GetButton("Submit") )
         {
+            music.SetActive(false);
             cinemachineTrackedDolly.m_AutoDolly.m_Enabled = true;
         }
     }

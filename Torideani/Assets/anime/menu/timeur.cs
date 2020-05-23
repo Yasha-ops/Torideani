@@ -10,7 +10,7 @@ public class timeur : MonoBehaviour
     void Start()
     {
         Anim = GetComponent<Animator>();
-        time = 5f;
+        time = 0f;
     }
 
     // Update is called once per frame

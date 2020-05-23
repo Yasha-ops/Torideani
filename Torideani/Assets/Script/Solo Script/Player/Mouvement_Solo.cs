@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Cinemachine;
 using UnityEngine.UI;
+using UnityEngine.Rendering.PostProcessing;
 
 public class Mouvement_Solo : MonoBehaviourPun
 {
@@ -19,6 +20,7 @@ public class Mouvement_Solo : MonoBehaviourPun
 
     public AudioSource audio;
     public AudioClip[] clips;
+    public GameObject audiodeath;
 
     private float fireDuration = 1.70f;
     private float currentFireDuration = 0f;
@@ -48,6 +50,7 @@ public class Mouvement_Solo : MonoBehaviourPun
     public CinemachineVirtualCamera VirtualCamera;
     private CinemachineBasicMultiChannelPerlin virtualCameraNoise;
 
+    public GameObject filtre;
     public GameObject cameraVise;
     public Transform gun;
 
@@ -118,6 +121,8 @@ public class Mouvement_Solo : MonoBehaviourPun
         {
             if (!death)
             {
+                audiodeath.gameObject.SetActive(true);
+                filtre.gameObject.GetComponent<PostProcessVolume>().enabled = true;
                 Wasted_Text.text = "WASTED";
                 Anim.SetTrigger("death");
                 death = true;

@@ -179,7 +179,6 @@ public class IA_Bot : MonoBehaviour
             Anim.SetBool("Ground", false);
         }
         Anim.SetFloat("Speed", agent.speed / 6);
-        Anim.SetFloat("Direction", Input.GetAxis("Horizontal"));
 
     }
 

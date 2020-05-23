@@ -17,7 +17,8 @@ public class IA_Zombie : MonoBehaviour
     public Transform IA_transform;
     public ParticleSystem blood;
 
-
+    public AudioClip[] bruitage;
+    public AudioSource audioSource;
     public GameObject[] skins;
 
     // variables pour destination
@@ -53,6 +54,25 @@ public class IA_Zombie : MonoBehaviour
         destination = joueurSolo.transform;
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
         agent.SetDestination(destination.position);
+        int x = Random.Range(0, 3);
+        switch (x)
+        {
+            case 0:
+                Anim.SetBool("s1",true);
+                animAttaque = 1.2f;
+                break;
+            case 1:
+                Anim.SetBool("s2", true);
+                animAttaque = 0.5f;
+                break;
+            case 2:
+                Anim.SetBool("s3", true);
+                animAttaque = 1.2f;
+                break;
+            default:
+                break;
+        }
+        attaque = true;
 
     }
 
@@ -148,14 +168,17 @@ public class IA_Zombie : MonoBehaviour
         {
             case 0:
                 Anim.SetTrigger("attack1");
+                audioSource.PlayOneShot(bruitage[0]);
                 animAttaque = 1.2f;
                 break;
             case 1:
                 Anim.SetTrigger("attack3");
+                audioSource.PlayOneShot(bruitage[1]);
                 animAttaque = 0.5f;
                 break;
             case 2:
                 Anim.SetTrigger("attack2");
+                audioSource.PlayOneShot(bruitage[2]);
                 animAttaque = 1.2f;
                 break;
             default:

@@ -20,7 +20,7 @@ public class Ouverture2 : MonoBehaviour
     public void OpenDoor()
     {
         float test = 0f;
-        if (test < 145f)
+        while (test < 145f)
         {
             test += 0.001f;
             door.transform.localEulerAngles = new Vector3 (0f,test,0f);

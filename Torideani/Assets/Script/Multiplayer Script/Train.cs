@@ -23,11 +23,10 @@ public class Train : MonoBehaviour
     private float timeClose = 40f;
     private bool isOpen = false;
 
-    private float acc;
     void Update()
     {
-        acc += Time.deltaTime;
-        if (acc > gamesetup.GetComponent<GameSetup>().GameDuration - 60f && acc < gamesetup.GetComponent<GameSetup>().GameDuration + 45f)
+        Debug.Log(gamesetup.GetComponent<GameSetup>().GameDuration);
+        if ( gamesetup.GetComponent<GameSetup>().GameDuration < 100f && gamesetup.GetComponent<GameSetup>().GameDuration > 45f)
         {
             if (smok)
             {
@@ -60,14 +59,14 @@ public class Train : MonoBehaviour
                 door2_2.position -= new Vector3(doorspeed, 0, 0);
             }
         }
-        else if (acc >= gamesetup.GetComponent<GameSetup>().GameDuration + 45f)
+        else if (gamesetup.GetComponent<GameSetup>().GameDuration <= 45f)
         {
-            if (door1.position.x > 11.6f)
+            if (door1.position.x > 11.55f)
             {
-                door1.position -= new Vector3(doorspeed, 0, 0);
-                door2.position += new Vector3(doorspeed, 0, 0);
-                door1_2.position -= new Vector3(doorspeed, 0, 0);
-                door2_2.position += new Vector3(doorspeed, 0, 0);
+                door1.position -= new Vector3(doorspeed / 100, 0, 0);
+                door2.position += new Vector3(doorspeed / 100, 0, 0);
+                door1_2.position -= new Vector3(doorspeed / 100, 0, 0);
+                door2_2.position += new Vector3(doorspeed / 100, 0, 0);
             }
         }
     }

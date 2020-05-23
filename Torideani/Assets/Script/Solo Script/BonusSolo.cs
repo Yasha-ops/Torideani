@@ -9,6 +9,8 @@ public class BonusSolo : MonoBehaviour
     public int Price;
     public string bonusType; 
     private float timenomoney;
+    public AudioSource audioSource;
+    public AudioClip audioclip;
 
     void Start()
     {
@@ -67,6 +69,7 @@ public class BonusSolo : MonoBehaviour
         if (ammo > 1000)
             return;
         col.GetComponent<Solo_Class>().money -= Price;
+        audioSource.PlayOneShot(audioclip);
         Price += Price / 5;
         col.GetComponent<Solo_Class>().Ammo += 100;
         col.GetComponent<Solo_Class>().Ammo_Text.text =$"{col.GetComponent<Solo_Class>().Ammo}";
@@ -78,6 +81,7 @@ public class BonusSolo : MonoBehaviour
         if (recharge > 50)
             return;
         col.GetComponent<Solo_Class>().money -= Price;
+        audioSource.PlayOneShot(audioclip);
         Price += Price / 2;
         col.GetComponent<Solo_Class>().chargeurCapacity += 2;
     }
@@ -88,6 +92,7 @@ public class BonusSolo : MonoBehaviour
         if (health > 20)
             return;
         col.GetComponent<Solo_Class>().money -= Price;
+        audioSource.PlayOneShot(audioclip);
         Price += Price / 5;
         col.GetComponent<Solo_Class>().Health += 5;
         col.GetComponent<Solo_Class>().HealthBar.GetComponent<HealthBarHUDTester>().Heal(health+2);
@@ -100,6 +105,7 @@ public class BonusSolo : MonoBehaviour
         if (damage > 1000f)
             return;
         col.GetComponent<Solo_Class>().money -= Price;
+        audioSource.PlayOneShot(audioclip);
         Price += Price / 5;
         col.GetComponent<Solo_Class>().Damage += (int) (damage / 3);
         Debug.Log(col.GetComponent<Solo_Class>().Damage);

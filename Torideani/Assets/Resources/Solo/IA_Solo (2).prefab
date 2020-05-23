@@ -1463,6 +1463,7 @@ GameObject:
   - component: {fileID: 5294972028926708683}
   - component: {fileID: 3291668791098868204}
   - component: {fileID: 2221770819583760931}
+  - component: {fileID: 3472176322472459228}
   m_Layer: 0
   m_Name: IA_Solo (2)
   m_TagString: Zombie
@@ -1563,6 +1564,11 @@ MonoBehaviour:
   deathTime: 6
   IA_transform: {fileID: 8863732624222590060}
   blood: {fileID: 1178312764393293446}
+  bruitage:
+  - {fileID: 8300000, guid: 09521daff46578645b22e0b4edb2dad4, type: 3}
+  - {fileID: 8300000, guid: f7c94e66c142448418fb04acdc0ebee4, type: 3}
+  - {fileID: 8300000, guid: 9bd5c0ae0784b6240942723a133d7474, type: 3}
+  audioSource: {fileID: 3472176322472459228}
   skins:
   - {fileID: 8013624837553549378}
   - {fileID: 197047079538500287}
@@ -1639,6 +1645,102 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!82 &3472176322472459228
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292915559713813515}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 0.089159966
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 1
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1317878802051897703
 GameObject:
   m_ObjectHideFlags: 0
@@ -8655,6 +8757,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8863732624222590060}
     m_Modifications:
+    - target: {fileID: 166404, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
+      propertyPath: m_Name
+      value: BloodSplat_FX
+      objectReference: {fileID: 0}
+    - target: {fileID: 19808544, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
+      propertyPath: SizeModule.y.minMaxState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 19808544, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
+      propertyPath: SizeModule.z.minMaxState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 19808544, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19808544, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19808544, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
+      propertyPath: ShapeModule.m_Scale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 499110, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.052369595
@@ -8709,30 +8835,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 499110, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 166404, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
-      propertyPath: m_Name
-      value: BloodSplat_FX
-      objectReference: {fileID: 0}
-    - target: {fileID: 19808544, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
-      propertyPath: SizeModule.y.minMaxState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 19808544, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
-      propertyPath: SizeModule.z.minMaxState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 19808544, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
-      propertyPath: ShapeModule.m_Scale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 19808544, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
-      propertyPath: ShapeModule.m_Scale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 19808544, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
-      propertyPath: ShapeModule.m_Scale.z
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

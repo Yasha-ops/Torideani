@@ -88,12 +88,15 @@ public class Mouvement : MonoBehaviourPun
                     speed = 3f;
                     yt.GetComponent<GameSetup>().CameraAim.gameObject.SetActive(true);
                     Anim.SetBool("aim", true);
+                    yt.GetComponent<GameSetup>().firstcam.gameObject.SetActive(false);
+
                 }
                 else
                 {
                     speed = 6f;
                     yt.GetComponent<GameSetup>().CameraAim.gameObject.SetActive(false);
                     Anim.SetBool("aim", false);
+                    yt.GetComponent<GameSetup>().firstcam.gameObject.SetActive(true);
                 }
             }
             if (this.gameObject.tag == "Bandit")
