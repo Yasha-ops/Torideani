@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33617461324898360}
   - component: {fileID: 23413290997292150}
   - component: {fileID: 64515996594238348}
-  - component: {fileID: 3371643688062568648}
   m_Layer: 8
   m_Name: SM_Env_Train_Track_Curve_01
   m_TagString: Untagged
@@ -95,22 +94,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: cca6203d7e802d04ebc819bcbb10482f, type: 3}
---- !u!208 &3371643688062568648
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1482660068360222}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 13.290001, y: 0.20400001, z: 13.259001}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 11.710001, y: 0.124000005, z: 13.259001}
-  m_TimeToStationary: 0.5
 --- !u!1 &1951299091626180
 GameObject:
   m_ObjectHideFlags: 0

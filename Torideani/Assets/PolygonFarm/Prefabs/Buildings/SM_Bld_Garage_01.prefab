@@ -90,7 +90,6 @@ GameObject:
   - component: {fileID: 33872033865196718}
   - component: {fileID: 23541901327860798}
   - component: {fileID: -467679691734018885}
-  - component: {fileID: 1437161614919909247}
   m_Layer: 8
   m_Name: SM_Bld_Garage_01
   m_TagString: Untagged
@@ -173,19 +172,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 65793fc4a52d7124cbbf02462dbb6499, type: 3}
---- !u!208 &1437161614919909247
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1497001144474008}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 6.9440002, y: 2.433, z: 3.4410002}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 2.433, z: 0}
-  m_TimeToStationary: 0.5

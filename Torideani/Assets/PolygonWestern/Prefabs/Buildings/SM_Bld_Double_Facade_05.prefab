@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33409861630247608}
   - component: {fileID: 23925829166766508}
   - component: {fileID: 64367483348553848}
-  - component: {fileID: 254685961938577295}
   m_Layer: 8
   m_Name: SM_Bld_Double_Facade_05
   m_TagString: Untagged
@@ -94,19 +93,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 747b812901ef4b14da80e5140260f1c6, type: 3}
---- !u!208 &254685961938577295
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1388338838700230}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 5.234, y: 1.028, z: 0.192}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 7.0280004, z: 0.012}
-  m_TimeToStationary: 0.5

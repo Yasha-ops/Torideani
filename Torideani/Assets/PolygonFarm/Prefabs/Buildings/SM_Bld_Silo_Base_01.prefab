@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33935554784713652}
   - component: {fileID: 23945935164086650}
   - component: {fileID: 8346167374908103691}
-  - component: {fileID: -6235865519906244535}
   m_Layer: 8
   m_Name: SM_Bld_Silo_Base_01
   m_TagString: Untagged
@@ -94,19 +93,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 2f454bb8bea18264aac1e09b7a11163e, type: 3}
---- !u!208 &-6235865519906244535
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1001050291921754}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 3.4220002, y: 0.407, z: 3.4220002}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: -0.407, z: 0}
-  m_TimeToStationary: 0.5

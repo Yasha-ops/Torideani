@@ -7,6 +7,7 @@ using TMPro;
 public class BonusSolo : MonoBehaviour
 {
     public int Price;
+    public int up;
     public string bonusType; 
     private float timenomoney;
     public AudioSource audioSource;
@@ -15,6 +16,7 @@ public class BonusSolo : MonoBehaviour
     void Start()
     {
          test.text = $"{Price} $";
+         testup.text = "<" + $"{up}" + ">" ;
     }
 
     private void Update()
@@ -29,6 +31,7 @@ public class BonusSolo : MonoBehaviour
         }
     }
     public TextMeshPro test;
+    public TextMeshPro testup;
     public UnityEngine.UI.Text nomoney;
    
     void OnTriggerEnter(Collider col) //trouver un moyen de le faire qu'une fois
@@ -78,7 +81,7 @@ public class BonusSolo : MonoBehaviour
     private void Recharge(Collider col)
     {
         int recharge = col.GetComponent<Solo_Class>().chargeurCapacity;
-        if (recharge > 50)
+        if (recharge >= 50)
             return;
         col.GetComponent<Solo_Class>().money -= Price;
         audioSource.PlayOneShot(audioclip);
@@ -89,7 +92,7 @@ public class BonusSolo : MonoBehaviour
     private void Health(Collider col)
     {
         float health = col.GetComponent<Solo_Class>().Health;
-        if (health > 20)
+        if (health >= 20)
             return;
         col.GetComponent<Solo_Class>().money -= Price;
         audioSource.PlayOneShot(audioclip);
@@ -102,12 +105,14 @@ public class BonusSolo : MonoBehaviour
     {
         float damage = col.GetComponent<Solo_Class>().Damage;
         Debug.Log(damage);
-        if (damage > 1000f)
+        if (damage >= 1000f)
             return;
         col.GetComponent<Solo_Class>().money -= Price;
         audioSource.PlayOneShot(audioclip);
         Price += Price / 5;
-        col.GetComponent<Solo_Class>().Damage += (int) (damage / 3);
+        col.GetComponent<Solo_Class>().Damage += (int) up;
+        up = (int)(500 / col.GetComponent<Solo_Class>().Damage);
+        testup.text = "<" + $"{up}" + ">";
         Debug.Log(col.GetComponent<Solo_Class>().Damage);
         col.GetComponent<Solo_Class>().Money_Text.text =$"{col.GetComponent<Solo_Class>().money}";
     }

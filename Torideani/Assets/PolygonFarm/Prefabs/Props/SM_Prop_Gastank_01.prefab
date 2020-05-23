@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33503279100551422}
   - component: {fileID: 23255676697780602}
   - component: {fileID: 3871338584331011844}
-  - component: {fileID: -2345331149952579226}
   m_Layer: 8
   m_Name: SM_Prop_Gastank_01
   m_TagString: Untagged
@@ -94,19 +93,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 994f74d1a5d438647858746b9cfb1493, type: 3}
---- !u!208 &-2345331149952579226
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1128186481606252}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.72800004, y: 1.4540001, z: 1.2650001}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 1.4540001, z: 0.113000005}
-  m_TimeToStationary: 0.5

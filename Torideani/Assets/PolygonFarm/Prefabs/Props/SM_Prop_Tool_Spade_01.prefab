@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33870873370199102}
   - component: {fileID: 23013961179343866}
   - component: {fileID: -4401530763888991184}
-  - component: {fileID: 4087825245866605801}
   m_Layer: 8
   m_Name: SM_Prop_Tool_Spade_01
   m_TagString: Untagged
@@ -94,19 +93,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 1247151900394d541913840f639c2d9f, type: 3}
---- !u!208 &4087825245866605801
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1968298529172754}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.124000005, y: 0.734, z: 0.036000002}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: -0.70500004, z: -0.011000001}
-  m_TimeToStationary: 0.5

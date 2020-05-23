@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33694014091861994}
   - component: {fileID: 23221228913212680}
   - component: {fileID: -5066877482682997707}
-  - component: {fileID: 4520648902281286036}
   m_Layer: 8
   m_Name: SM_Prop_Windfarm_01
   m_TagString: Untagged
@@ -95,22 +94,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 05e4b3c293c93a240add9619ccd42eef, type: 3}
---- !u!208 &4520648902281286036
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1302288334142274}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 2.696, y: 32.908, z: 4.15}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 32.287003, z: -1.4540001}
-  m_TimeToStationary: 0.5
 --- !u!1 &1697111367775364
 GameObject:
   m_ObjectHideFlags: 0

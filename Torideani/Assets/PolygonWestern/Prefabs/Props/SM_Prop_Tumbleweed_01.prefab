@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33191902178498046}
   - component: {fileID: 23685675740848430}
   - component: {fileID: 64507490543760928}
-  - component: {fileID: 783028756872603784}
   m_Layer: 8
   m_Name: SM_Prop_Tumbleweed_01
   m_TagString: Untagged
@@ -94,19 +93,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 7e51a4691982c9140a5cda4c8cdb2640, type: 3}
---- !u!208 &783028756872603784
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1367905150670218}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.30200002, y: 0.31800002, z: 0.287}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5

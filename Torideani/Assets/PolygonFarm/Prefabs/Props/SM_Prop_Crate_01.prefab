@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 23463536765288966}
   - component: {fileID: 4220010646391309363}
   - component: {fileID: 5122180267301741355}
-  - component: {fileID: -4136599825308481883}
   m_Layer: 8
   m_Name: SM_Prop_Crate_01
   m_TagString: Untagged
@@ -109,19 +108,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 85316e6a5a2a2c047a384df19b383824, type: 3}
---- !u!208 &-4136599825308481883
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1077332851755960}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.41400003, y: 0.437, z: 0.407}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0.437, z: 0}
-  m_TimeToStationary: 0.5

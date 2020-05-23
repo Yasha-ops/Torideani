@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33836709624973628}
   - component: {fileID: 23634525414168390}
   - component: {fileID: 64267871085211392}
-  - component: {fileID: 2375747315679658109}
   m_Layer: 8
   m_Name: SM_Prop_Church_Podium_01
   m_TagString: Untagged
@@ -94,19 +93,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 860e9234d7f3d06439c6c2d2d5139b22, type: 3}
---- !u!208 &2375747315679658109
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1075896842894784}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.45900002, y: 0.59800005, z: 0.26000002}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0.59800005, z: 0}
-  m_TimeToStationary: 0.5

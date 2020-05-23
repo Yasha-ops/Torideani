@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33966329079426552}
   - component: {fileID: 23790371237225014}
   - component: {fileID: 64144653329969502}
-  - component: {fileID: 2637958746055418363}
   m_Layer: 8
   m_Name: SM_Prop_Table_Vegetables_01
   m_TagString: Untagged
@@ -94,19 +93,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: fba90fa6279d0984d87ddd8a32fc7a0e, type: 3}
---- !u!208 &2637958746055418363
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1153803230943710}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.69000006, y: 0.39000002, z: 0.409}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0.002, y: 0.39000002, z: -0.101}
-  m_TimeToStationary: 0.5

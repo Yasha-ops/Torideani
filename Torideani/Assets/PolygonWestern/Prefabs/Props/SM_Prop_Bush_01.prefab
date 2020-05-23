@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4561428493897970}
   - component: {fileID: 33010233001235718}
   - component: {fileID: 23909353958000124}
-  - component: {fileID: -5189787729003220574}
   m_Layer: 8
   m_Name: SM_Prop_Bush_01
   m_TagString: Untagged
@@ -79,19 +78,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!208 &-5189787729003220574
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1453011437210574}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.60800004, y: 0.43800002, z: 0.628}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: -0.003, y: 0.40300003, z: -0.047000002}
-  m_TimeToStationary: 0.5

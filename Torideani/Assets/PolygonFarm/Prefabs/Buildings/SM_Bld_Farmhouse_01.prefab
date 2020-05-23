@@ -91,7 +91,6 @@ GameObject:
   - component: {fileID: 23963026499939696}
   - component: {fileID: -721972604791141133}
   - component: {fileID: 7462391916960189016}
-  - component: {fileID: -7967318577490300951}
   m_Layer: 8
   m_Name: SM_Bld_Farmhouse_01
   m_TagString: Untagged
@@ -191,22 +190,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 5243c0c91203f794aa144f4cfbc03d95, type: 3}
---- !u!208 &-7967318577490300951
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1572243783172642}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 6.727, y: 4.912, z: 5.4760003}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 4.723, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1875201363225048
 GameObject:
   m_ObjectHideFlags: 0

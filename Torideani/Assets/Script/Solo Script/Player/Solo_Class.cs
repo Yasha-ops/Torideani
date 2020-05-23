@@ -33,6 +33,7 @@ public class Solo_Class : MonoBehaviour
                 damage =1000;
             }
     }
+
     private int score;
     public int Score
     {
@@ -133,7 +134,7 @@ public class Solo_Class : MonoBehaviour
 
     }
     
-        public void TakeInput()
+    public void TakeInput()
     {
         if (!isShootPossible)
             return;

@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 23764219767167064}
   - component: {fileID: -6457892622668309881}
   - component: {fileID: 5770112902184814697}
-  - component: {fileID: -8112887919494789231}
   m_Layer: 8
   m_Name: SM_Prop_Power_Pole_01
   m_TagString: Untagged
@@ -109,19 +108,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: ab544d0b7ed21554687abd40d38d682a, type: 3}
---- !u!208 &-8112887919494789231
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1943208573919118}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 1.1110001, y: 3.2400002, z: 0.17600001}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 2.5, z: 0.055000003}
-  m_TimeToStationary: 0.5

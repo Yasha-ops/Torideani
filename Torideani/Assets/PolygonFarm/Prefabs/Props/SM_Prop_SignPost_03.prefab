@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33080203833457014}
   - component: {fileID: 23938324849218196}
   - component: {fileID: 3156830580958525480}
-  - component: {fileID: -6217937819718213828}
   m_Layer: 8
   m_Name: SM_Prop_SignPost_03
   m_TagString: Untagged
@@ -94,19 +93,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 608d8aac94bfbf740b3b199b62cee519, type: 3}
---- !u!208 &-6217937819718213828
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1001433458380770}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.045, y: 0.683, z: 0.045}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0.683, z: 0}
-  m_TimeToStationary: 0.5

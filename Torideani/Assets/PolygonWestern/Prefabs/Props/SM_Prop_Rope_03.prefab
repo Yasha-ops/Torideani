@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33145525412736406}
   - component: {fileID: 23559415170594104}
   - component: {fileID: 95120150795190308}
-  - component: {fileID: -7083479903382517558}
   m_Layer: 8
   m_Name: SM_Prop_Rope_03
   m_TagString: Untagged
@@ -99,19 +98,3 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!208 &-7083479903382517558
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1012116966521640}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.055000003, y: 0.294, z: 0.21800001}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: -0.041, y: -0.20400001, z: 0.019000001}
-  m_TimeToStationary: 0.5

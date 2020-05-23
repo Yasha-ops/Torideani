@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33587251620604010}
   - component: {fileID: 23359087558196148}
   - component: {fileID: 825102481348746119}
-  - component: {fileID: -4728307343047033484}
   m_Layer: 8
   m_Name: SM_Prop_Power_Lines_01
   m_TagString: Untagged
@@ -94,19 +93,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 3651808bd09f6b647ab146775480ee17, type: 3}
---- !u!208 &-4728307343047033484
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1582228925654500}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.99200004, y: 0.574, z: 7.4750004}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0.002, y: 5.092, z: 7.6380005}
-  m_TimeToStationary: 0.5

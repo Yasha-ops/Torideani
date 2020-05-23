@@ -168,7 +168,6 @@ GameObject:
   - component: {fileID: 33227564496048642}
   - component: {fileID: 23396030860276100}
   - component: {fileID: 64813084841404956}
-  - component: {fileID: 920564615433402813}
   m_Layer: 8
   m_Name: SM_Bld_Double_02
   m_TagString: Untagged
@@ -252,19 +251,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: ec0fc87734d022946b3c7b8c01b25d25, type: 3}
---- !u!208 &920564615433402813
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1926042397765056}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 2.595, y: 3.7890003, z: 4.0950003}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 3.121, z: -4.056}
-  m_TimeToStationary: 0.5

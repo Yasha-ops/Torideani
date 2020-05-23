@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33164456237976448}
   - component: {fileID: 23861699529091260}
   - component: {fileID: 64635121955399602}
-  - component: {fileID: 2069866743832631112}
   m_Layer: 8
   m_Name: SM_Bld_Sign_01
   m_TagString: Untagged
@@ -94,19 +93,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 4d1bb3c1a8b8cca45b03c89a43367dd0, type: 3}
---- !u!208 &2069866743832631112
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1405090289656310}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.067, y: 0.731, z: 1.646}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0.056, y: 0, z: 0}
-  m_TimeToStationary: 0.5

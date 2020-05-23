@@ -86,7 +86,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: mixamo_com
-  m_Speed: 1.5
+  m_Speed: 1.75
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -8540917497211182100}
@@ -346,9 +346,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0.24999952
   m_TransitionOffset: 0
-  m_ExitTime: 0.9460432
+  m_ExitTime: 0.6227202
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -540,7 +540,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 1-walk_chase
-  m_Speed: 1
+  m_Speed: 1.25
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 5810204692187435876}
@@ -603,67 +603,67 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Jumpstart
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Ground
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: attack1
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: attack2
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Death
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: hit
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: attack3
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: s1
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: s2
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: s3
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -680,7 +680,7 @@ AnimatorController:
   - serializedVersion: 5
     m_Name: no leg
     m_StateMachine: {fileID: 1025560151972984017}
-    m_Mask: {fileID: 31900000, guid: 2694a53e50f95ab469e84c53978fc582, type: 2}
+    m_Mask: {fileID: 31900000, guid: bf0426bdfcc338041ad1e9a254fb12c1, type: 2}
     m_Motions: []
     m_Behaviours: []
     m_BlendingMode: 1
@@ -829,7 +829,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 110200000}
-    m_Position: {x: 620, y: 70, z: 0}
+    m_Position: {x: 620, y: 40, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1471739771742377461}
     m_Position: {x: -230, y: 480, z: 0}
@@ -841,7 +841,7 @@ AnimatorStateMachine:
     m_Position: {x: 620, y: 480, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -653324689611874329}
-    m_Position: {x: 940, y: 50, z: 0}
+    m_Position: {x: 930, y: 50, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1768731869682631935}
     m_Position: {x: -230, y: -80, z: 0}
@@ -859,10 +859,10 @@ AnimatorStateMachine:
     m_Position: {x: 620, y: -40, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8073947556478708925}
-    m_Position: {x: 920, y: 140, z: 0}
+    m_Position: {x: 940, y: 110, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8373565299821339823}
-    m_Position: {x: 880, y: 210, z: 0}
+    m_Position: {x: 910, y: 0, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: 7660125689510426823}
@@ -1190,7 +1190,7 @@ AnimatorStateTransition:
   serializedVersion: 3
   m_TransitionDuration: 0.25
   m_TransitionOffset: 0
-  m_ExitTime: 0.90384614
+  m_ExitTime: 0.7880252
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -1235,9 +1235,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0.53205085
   m_TransitionOffset: 0
-  m_ExitTime: 0.92574257
+  m_ExitTime: 0.419855
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -1447,7 +1447,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: mixamo_com
-  m_Speed: 2
+  m_Speed: 2.5
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 7680604457097842728}

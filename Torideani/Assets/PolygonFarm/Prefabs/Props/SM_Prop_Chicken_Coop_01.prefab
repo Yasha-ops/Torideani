@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33323737605841604}
   - component: {fileID: 23682897137274704}
   - component: {fileID: 6877851804192180765}
-  - component: {fileID: -7234648506754251268}
   m_Layer: 8
   m_Name: SM_Prop_Chicken_Coop_01
   m_TagString: Untagged
@@ -94,19 +93,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 5b4cfa49394ab1a4b977f14f86d8d0b4, type: 3}
---- !u!208 &-7234648506754251268
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1258219557364924}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 1.116, y: 1.241, z: 1.9480001}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 1.0550001, z: 0}
-  m_TimeToStationary: 0.5

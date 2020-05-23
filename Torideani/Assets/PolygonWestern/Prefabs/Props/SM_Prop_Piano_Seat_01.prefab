@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33860709267607952}
   - component: {fileID: 23868286609830368}
   - component: {fileID: 64508774574884166}
-  - component: {fileID: -5280366308254545228}
   m_Layer: 8
   m_Name: SM_Prop_Piano_Seat_01
   m_TagString: Untagged
@@ -94,19 +93,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 43d8157d9d21ded41adaf0585470891c, type: 3}
---- !u!208 &-5280366308254545228
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1241686575910930}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.41400003, y: 0.264, z: 0.22100002}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0.264, z: 0}
-  m_TimeToStationary: 0.5

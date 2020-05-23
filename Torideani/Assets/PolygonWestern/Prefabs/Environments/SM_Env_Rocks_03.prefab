@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33194670390200980}
   - component: {fileID: 23780639700294062}
   - component: {fileID: 95524782657523318}
-  - component: {fileID: -1219817109030052594}
   m_Layer: 8
   m_Name: SM_Env_Rocks_03
   m_TagString: Untagged
@@ -99,19 +98,3 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!208 &-1219817109030052594
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1545060122265892}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.40800002, y: 0.086, z: 0.275}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0.086, z: 0}
-  m_TimeToStationary: 0.5

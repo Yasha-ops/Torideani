@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33368563950662274}
   - component: {fileID: 23127505304301944}
   - component: {fileID: 64537606171552442}
-  - component: {fileID: -4295261283334644842}
   m_Layer: 8
   m_Name: SM_Prop_Church_Cross_01
   m_TagString: Untagged
@@ -94,19 +93,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: bd8c7b3daad282e48848f9279742d8fe, type: 3}
---- !u!208 &-4295261283334644842
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1481559329882800}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.777, y: 1.2800001, z: 0.081}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0.003, y: 1.2800001, z: 0}
-  m_TimeToStationary: 0.5

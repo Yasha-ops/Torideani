@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33070816948483882}
   - component: {fileID: 23875904900354038}
   - component: {fileID: 2945830060676075868}
-  - component: {fileID: -1543561440245875322}
   m_Layer: 8
   m_Name: SM_Prop_Sign_Cheeries_01
   m_TagString: Untagged
@@ -94,19 +93,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 5fcf3d3b89168f84581b60d9af05d778, type: 3}
---- !u!208 &-1543561440245875322
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1952233898629120}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.549, y: 0.18400002, z: 0.013}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0.18400002, z: 0.012}
-  m_TimeToStationary: 0.5

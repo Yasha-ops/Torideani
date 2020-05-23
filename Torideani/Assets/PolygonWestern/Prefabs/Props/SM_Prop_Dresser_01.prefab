@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33494732134577148}
   - component: {fileID: 23650549886042388}
   - component: {fileID: 64309904912486272}
-  - component: {fileID: 8414961380317765376}
   m_Layer: 8
   m_Name: SM_Prop_Dresser_01
   m_TagString: Untagged
@@ -94,19 +93,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 38588795de01a814f9d1626bf689b240, type: 3}
---- !u!208 &8414961380317765376
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1744473191889970}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.87000006, y: 0.52900004, z: 0.45400003}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0.52900004, z: -0.024}
-  m_TimeToStationary: 0.5

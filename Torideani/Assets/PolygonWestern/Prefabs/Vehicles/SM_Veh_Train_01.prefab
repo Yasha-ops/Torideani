@@ -15,8 +15,8 @@ GameObject:
   m_Name: SM_Veh_Train_01_Wheel_R_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4899576191739406
 Transform:
@@ -93,8 +93,8 @@ GameObject:
   m_Name: SM_Veh_Train_01_Wheel_L_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4639287071614920
 Transform:
@@ -171,8 +171,8 @@ GameObject:
   m_Name: SM_Veh_Train_01_Wheel_L_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4157361591958604
 Transform:
@@ -251,8 +251,8 @@ GameObject:
   m_Name: SM_Veh_Train_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4331832858961822
 Transform:
@@ -375,8 +375,8 @@ GameObject:
   m_Name: SM_Veh_Train_01_Stick_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4541715015512624
 Transform:
@@ -453,8 +453,8 @@ GameObject:
   m_Name: SM_Veh_Train_01_Wheel_R_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4092480005800760
 Transform:
@@ -531,8 +531,8 @@ GameObject:
   m_Name: SM_Veh_Train_01_Wheel_R_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4169152802920818
 Transform:
@@ -609,8 +609,8 @@ GameObject:
   m_Name: SM_Veh_Train_01_Wheel_L_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4119429431836760
 Transform:
@@ -687,8 +687,8 @@ GameObject:
   m_Name: SM_Veh_Train_01_Wheel_R_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4298297355554736
 Transform:
@@ -765,8 +765,8 @@ GameObject:
   m_Name: SM_Veh_Train_01_Bell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4569851027924914
 Transform:
@@ -843,8 +843,8 @@ GameObject:
   m_Name: SM_Veh_Train_01_Stick_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4901618069959100
 Transform:
@@ -921,8 +921,8 @@ GameObject:
   m_Name: SM_Veh_Train_01_Alt_Smokestack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4765853794101578
 Transform:
@@ -999,8 +999,8 @@ GameObject:
   m_Name: SM_Veh_Train_01_Wheel_L_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4845671953705034
 Transform:
@@ -1077,8 +1077,8 @@ GameObject:
   m_Name: SM_Veh_Train_01_Stick_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4186833124886038
 Transform:

@@ -89,7 +89,6 @@ GameObject:
   - component: {fileID: 4589849954756200}
   - component: {fileID: 33216262874153444}
   - component: {fileID: 23924003106096244}
-  - component: {fileID: 3575842653647043864}
   m_Layer: 8
   m_Name: SM_Bld_Door_02
   m_TagString: Untagged
@@ -158,19 +157,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!208 &3575842653647043864
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1851912194528046}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.349, y: 1.057, z: 0.093}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: -0.349, y: 1.057, z: -0.037}
-  m_TimeToStationary: 0.5

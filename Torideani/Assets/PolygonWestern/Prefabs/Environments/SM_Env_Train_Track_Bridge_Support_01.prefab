@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33978608977224590}
   - component: {fileID: 23571850321635142}
   - component: {fileID: 64633922091109290}
-  - component: {fileID: 6772263329840242487}
   m_Layer: 8
   m_Name: SM_Env_Train_Track_Bridge_Support_01
   m_TagString: Untagged
@@ -94,19 +93,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 7fa6483dad1760646a69aa635b3b9314, type: 3}
---- !u!208 &6772263329840242487
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1693800019329136}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 3.2670002, y: 5.585, z: 0.874}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: -0.18100001, y: -5.926, z: 0}
-  m_TimeToStationary: 0.5

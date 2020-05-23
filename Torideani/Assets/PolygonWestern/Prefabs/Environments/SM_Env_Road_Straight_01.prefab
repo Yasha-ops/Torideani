@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33996010330764762}
   - component: {fileID: 23764972557021850}
   - component: {fileID: 64878635150515876}
-  - component: {fileID: -1436998699183018640}
   m_Layer: 8
   m_Name: SM_Env_Road_Straight_01
   m_TagString: Untagged
@@ -94,19 +93,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 7baef90b0bf24914eb0af14a055942e4, type: 3}
---- !u!208 &-1436998699183018640
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1044123881021568}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 7.254, y: 0.28, z: 3.1060002}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0.28, z: 0}
-  m_TimeToStationary: 0.5

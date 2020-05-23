@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33836606228600410}
   - component: {fileID: 23434007746859880}
   - component: {fileID: 3277253552176814866}
-  - component: {fileID: -1609155321485877152}
   m_Layer: 8
   m_Name: SM_Wep_Shotgun_01
   m_TagString: Untagged
@@ -97,22 +96,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 8905b4c3dcf816e4f961806af20eb1d7, type: 3}
---- !u!208 &-1609155321485877152
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1343913474093690}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.025, y: 0.087000005, z: 0.23700002}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: -0.031000001, z: -0.043}
-  m_TimeToStationary: 0.5
 --- !u!1 &1555071149476752
 GameObject:
   m_ObjectHideFlags: 0

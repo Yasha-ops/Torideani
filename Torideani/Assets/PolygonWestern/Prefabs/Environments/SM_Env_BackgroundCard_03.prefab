@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4119275784398110}
   - component: {fileID: 33599827976384634}
   - component: {fileID: 23476292039108428}
-  - component: {fileID: -3952090998079755887}
   m_Layer: 8
   m_Name: SM_Env_BackgroundCard_03
   m_TagString: Untagged
@@ -79,19 +78,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!208 &-3952090998079755887
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1653573742322072}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 9.468, y: 3.1190002, z: 1.049}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: -0.66200006, z: 0}
-  m_TimeToStationary: 0.5

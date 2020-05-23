@@ -90,7 +90,6 @@ GameObject:
   - component: {fileID: 33409752048688410}
   - component: {fileID: 23489534713483272}
   - component: {fileID: 3219594624553629316}
-  - component: {fileID: -1370432239027473718}
   m_Layer: 8
   m_Name: SM_Prop_Weathervane_01
   m_TagString: Untagged
@@ -173,19 +172,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 8048a844f221ab64790b595cabc1ec78, type: 3}
---- !u!208 &-1370432239027473718
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1950602644535072}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.61700004, y: 0.632, z: 0.587}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: -0.053000003, y: 0.632, z: 0.013}
-  m_TimeToStationary: 0.5

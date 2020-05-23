@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33807806436022026}
   - component: {fileID: 23527955924242850}
   - component: {fileID: 4670299963077144661}
-  - component: {fileID: -2738849062027804265}
   m_Layer: 8
   m_Name: SM_Prop_Hay_Bale_Square_01_Green
   m_TagString: Untagged
@@ -94,19 +93,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 3c9f921b65e53c84d853cedd59fadf29, type: 3}
---- !u!208 &-2738849062027804265
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1222184437605266}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.95500004, y: 0.47400004, z: 0.70600003}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5

@@ -17,10 +17,12 @@ public class Mouvement_Solo : MonoBehaviourPun
     public float currentY = 0.0f;
     private float mouseSensitivity = 100f;
     public Transform camTransform;
+    private float jump;
 
     public AudioSource audio;
     public AudioClip[] clips;
     public GameObject audiodeath;
+    public AudioSource audioplay;
 
     private float fireDuration = 1.70f;
     private float currentFireDuration = 0f;
@@ -121,6 +123,7 @@ public class Mouvement_Solo : MonoBehaviourPun
         {
             if (!death)
             {
+                audioplay.gameObject.SetActive(false);
                 audiodeath.gameObject.SetActive(true);
                 filtre.gameObject.GetComponent<PostProcessVolume>().enabled = true;
                 Wasted_Text.text = "WASTED";
@@ -181,19 +184,20 @@ public class Mouvement_Solo : MonoBehaviourPun
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
         
 
-        if (isGrounded && velocity.y < 0)
-        {
-            velocity.y = -2f;
-        }
+       
 
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
-        if (isGrounded && Input.GetButtonDown("Jump"))
+        if (isGrounded && Input.GetButtonDown("Jump") && jump < 0)
         {
             Anim.SetTrigger("Jumpstart");
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-
+            jump = 1f;
+        }
+        else if (jump >= 0)
+        {
+            jump -= Time.deltaTime;
         }
 
         Vector3 move;

@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33259296439464874}
   - component: {fileID: 23502660074833012}
   - component: {fileID: -604077770346654922}
-  - component: {fileID: -8259897048344282449}
   m_Layer: 8
   m_Name: SM_Prop_Fence_Wood_Round_Inset_01
   m_TagString: Untagged
@@ -94,19 +93,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 3e08438df45519a4db12546be75e55b3, type: 3}
---- !u!208 &-8259897048344282449
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1959238548516768}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 1.187, y: 0.36800003, z: 0.09}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: -1.251, y: 0.73600006, z: 0}
-  m_TimeToStationary: 0.5

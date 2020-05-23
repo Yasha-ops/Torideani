@@ -90,7 +90,6 @@ GameObject:
   - component: {fileID: 33124580682850086}
   - component: {fileID: 23951256608651918}
   - component: {fileID: 64868771323685922}
-  - component: {fileID: -9012924833557472894}
   m_Layer: 8
   m_Name: SM_Bld_Large_01
   m_TagString: Untagged
@@ -174,22 +173,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: fa579352358ad7a41b98d636af80f0ee, type: 3}
---- !u!208 &-9012924833557472894
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1774579626545542}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 5.0950003, y: 3.7890003, z: 4.0950003}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 3.121, z: -4}
-  m_TimeToStationary: 0.5
 --- !u!1 &1835271617749434
 GameObject:
   m_ObjectHideFlags: 0

@@ -167,7 +167,6 @@ GameObject:
   - component: {fileID: 4820559086119664}
   - component: {fileID: 33174530849233438}
   - component: {fileID: 23711915723186520}
-  - component: {fileID: -7858631787470277940}
   m_Layer: 0
   m_Name: SM_Bld_Jail_01
   m_TagString: Untagged
@@ -243,22 +242,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!208 &-7858631787470277940
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1627664185657648}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 4.23, y: 2.8930001, z: 5.1000004}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 1.292, y: 2.226, z: -3.1320002}
-  m_TimeToStationary: 0.5
 --- !u!1 &1727643803186524
 GameObject:
   m_ObjectHideFlags: 0

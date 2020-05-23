@@ -13,7 +13,7 @@ public class IA_Zombie : MonoBehaviour
 
     private Animator Anim;
     private Vector3 velocity = new Vector3(0, 0.001f, 0);
-    public float deathTime = 6f;
+    public float deathTime = 8f;
     public Transform IA_transform;
     public ParticleSystem blood;
 
@@ -29,7 +29,7 @@ public class IA_Zombie : MonoBehaviour
     public bool death = false;
     public bool anime;
     public bool Death => death;
-    private float damage;
+    public float damage;
     public float Damage
     {
         get {return damage;}
@@ -97,7 +97,6 @@ public class IA_Zombie : MonoBehaviour
         }
         else
         {
-            Debug.Log("Mort");
             deathTime -= Time.deltaTime;
             death = true;
             Hit(agent);
@@ -121,7 +120,7 @@ public class IA_Zombie : MonoBehaviour
         agent.destination = destination.position;
 
 
-        if (Vector3.Distance(agent.transform.position, agent.destination) < 1.5f)
+        if (Vector3.Distance(agent.transform.position, agent.destination) < 2f)
         {
             proche = true;
             if (timebeforAttaque < 0f)
@@ -200,8 +199,12 @@ public class IA_Zombie : MonoBehaviour
         if (deathTime < 0)
             gameObject.SetActive(false);
         agent.speed = 0f;
-        IA_transform.position -= velocity;
-        velocity += velocity * 0.014f;
+        if (deathTime < 3f)
+        {
+            IA_transform.position -= velocity;
+            velocity += velocity * 0.014f;
+        }
+        
         if (unefois)
         {
             Anim.SetTrigger("Death");

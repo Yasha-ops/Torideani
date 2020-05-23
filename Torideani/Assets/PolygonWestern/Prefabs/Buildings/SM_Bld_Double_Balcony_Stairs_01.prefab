@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33319538461523512}
   - component: {fileID: 23661762465310240}
   - component: {fileID: 64724435900593242}
-  - component: {fileID: 766433961945782595}
   m_Layer: 8
   m_Name: SM_Bld_Double_Balcony_Stairs_01
   m_TagString: Untagged
@@ -95,22 +94,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: cf1e04c644257db4e8ded46f025bc070, type: 3}
---- !u!208 &766433961945782595
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1365055893867224}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 3.476, y: 2.3430002, z: 3.7630002}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0.836, y: 1.654, z: -1.8050001}
-  m_TimeToStationary: 0.5
 --- !u!1001 &8485357547679743584
 PrefabInstance:
   m_ObjectHideFlags: 0

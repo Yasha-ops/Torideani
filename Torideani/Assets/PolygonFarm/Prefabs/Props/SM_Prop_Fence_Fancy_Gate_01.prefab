@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33798031682091680}
   - component: {fileID: 23005428556885778}
   - component: {fileID: -4487344947876121343}
-  - component: {fileID: -2400966591918839348}
   m_Layer: 8
   m_Name: SM_Prop_Fence_Fancy_Gate_01
   m_TagString: Untagged
@@ -96,22 +95,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: b14bc43620657b14f879e2df0e5ba885, type: 3}
---- !u!208 &-2400966591918839348
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1057578451854958}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 2.5, y: 0.943, z: 0.10700001}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: -2.5, y: 0.605, z: 0.023000002}
-  m_TimeToStationary: 0.5
 --- !u!1 &1363426707307816
 GameObject:
   m_ObjectHideFlags: 0

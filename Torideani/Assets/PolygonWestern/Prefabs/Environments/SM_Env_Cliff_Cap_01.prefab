@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33392615593803600}
   - component: {fileID: 23797926698090168}
   - component: {fileID: 64004415926111498}
-  - component: {fileID: -6142492344869434671}
   m_Layer: 8
   m_Name: SM_Env_Cliff_Cap_01
   m_TagString: Untagged
@@ -94,19 +93,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 585bb6ce4d8140d4aa2a371d45351367, type: 3}
---- !u!208 &-6142492344869434671
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1473162748274636}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 14.038001, y: 6.7200003, z: 14.096001}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 6.7200003, z: 0}
-  m_TimeToStationary: 0.5

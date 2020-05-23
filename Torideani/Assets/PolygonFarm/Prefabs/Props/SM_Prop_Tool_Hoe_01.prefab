@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33378670413616736}
   - component: {fileID: 23217558634234440}
   - component: {fileID: -1337215280392222350}
-  - component: {fileID: -6290944065170740792}
   m_Layer: 8
   m_Name: SM_Prop_Tool_Hoe_01
   m_TagString: Untagged
@@ -94,19 +93,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 82c336f51f06ccb479a465ed9234a679, type: 3}
---- !u!208 &-6290944065170740792
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1309936475503278}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.16700001, y: 0.657, z: 0.16000001}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: -0.628, z: 0.049000002}
-  m_TimeToStationary: 0.5

@@ -1545,7 +1545,7 @@ NavMeshAgent:
   m_Height: 2
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 0
+  m_ObstacleAvoidanceType: 1
 --- !u!114 &3291668791098868204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1622,9 +1622,10 @@ MonoBehaviour:
   - {fileID: 5280031243780244948}
   joueurSolo: {fileID: 0}
   proche: 0
-  speed: 0.25
+  speed: 0.75
   death: 0
   anime: 0
+  damage: 1
   timebeforAttaque: 0
   animAttaque: 0
   attaque: 0

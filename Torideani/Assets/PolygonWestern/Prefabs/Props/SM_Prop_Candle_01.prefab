@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 23855595553303136}
   - component: {fileID: 95218122536938468}
   - component: {fileID: 64647830064972724}
-  - component: {fileID: 6259173622301969360}
   m_Layer: 8
   m_Name: SM_Prop_Candle_01
   m_TagString: Untagged
@@ -115,22 +114,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 2f273ddb4d179464dabcedde6aa211e7, type: 3}
---- !u!208 &6259173622301969360
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1984681885925222}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.12900001, y: 0.16900001, z: 0.109000005}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: -0.020000001, y: 0.16900001, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &6855727415229026491
 GameObject:
   m_ObjectHideFlags: 0

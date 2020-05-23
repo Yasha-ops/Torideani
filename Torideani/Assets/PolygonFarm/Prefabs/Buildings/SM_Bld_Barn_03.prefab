@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33293642097853108}
   - component: {fileID: 23238168595268244}
   - component: {fileID: -2375047449537927326}
-  - component: {fileID: 1176788239370711690}
   m_Layer: 8
   m_Name: SM_Bld_Barn_03
   m_TagString: Untagged
@@ -100,22 +99,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: e6a06380576d3f64fa509fb077cb8dd6, type: 3}
---- !u!208 &1176788239370711690
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1042997447125158}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 4.885, y: 4.5530005, z: 3.7180002}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 4.5530005, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1060297266071320
 GameObject:
   m_ObjectHideFlags: 0

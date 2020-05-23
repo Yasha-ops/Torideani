@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33812337850197980}
   - component: {fileID: 23702237158827794}
   - component: {fileID: -2472293302760293706}
-  - component: {fileID: -4705455746247093719}
   m_Layer: 8
   m_Name: SM_Prop_Beehive_01
   m_TagString: Untagged
@@ -94,19 +93,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: d013d20516a1b334ea8cc0c93b133888, type: 3}
---- !u!208 &-4705455746247093719
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1683511805475480}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.388, y: 0.60300004, z: 0.4}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0.60300004, z: 0}
-  m_TimeToStationary: 0.5

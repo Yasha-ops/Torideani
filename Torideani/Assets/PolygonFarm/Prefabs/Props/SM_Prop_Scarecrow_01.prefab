@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33360983432454486}
   - component: {fileID: 23407193153993638}
   - component: {fileID: 6931028399188215072}
-  - component: {fileID: -5786731896078364720}
   m_Layer: 8
   m_Name: SM_Prop_Scarecrow_01
   m_TagString: Untagged
@@ -94,19 +93,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 05703f5f6ef010343b7ee30f5160f09d, type: 3}
---- !u!208 &-5786731896078364720
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1436178878525030}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.83500004, y: 1.644, z: 0.252}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: -0.13800001, y: 0.9760001, z: 0.133}
-  m_TimeToStationary: 0.5

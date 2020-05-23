@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4067762181871734}
   - component: {fileID: 33254967911989706}
   - component: {fileID: 23099681321852626}
-  - component: {fileID: 8544682408519206856}
   m_Layer: 8
   m_Name: SM_Env_Cactus_06
   m_TagString: Untagged
@@ -79,19 +78,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!208 &8544682408519206856
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1470682134308206}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.404, y: 1.023, z: 0.377}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0.033, y: 1.023, z: -0.020000001}
-  m_TimeToStationary: 0.5

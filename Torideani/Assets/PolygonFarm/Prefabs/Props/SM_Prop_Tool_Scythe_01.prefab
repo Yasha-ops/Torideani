@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33057262343104484}
   - component: {fileID: 23326297064241404}
   - component: {fileID: -7095360972862776830}
-  - component: {fileID: 6561040031844166003}
   m_Layer: 8
   m_Name: SM_Prop_Tool_Scythe_01
   m_TagString: Untagged
@@ -94,19 +93,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: defb3cd6a9a614a42899bc1fa16d51c1, type: 3}
---- !u!208 &6561040031844166003
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1547028232771016}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.43800002, y: 0.61, z: 0.117000006}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: -0.34, y: -0.26500002, z: 0.097}
-  m_TimeToStationary: 0.5

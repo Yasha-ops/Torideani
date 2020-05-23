@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33439330821764926}
   - component: {fileID: 23318401376604244}
   - component: {fileID: -819323423989620078}
-  - component: {fileID: -4773062279046875575}
   m_Layer: 8
   m_Name: SM_Prop_Horse_Jump_01
   m_TagString: Untagged
@@ -94,19 +93,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 00acff2e766c01945aa903fc4caf1a7a, type: 3}
---- !u!208 &-4773062279046875575
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1441690963392110}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 1.9900001, y: 0.758, z: 0.39000002}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0.758, z: 0}
-  m_TimeToStationary: 0.5

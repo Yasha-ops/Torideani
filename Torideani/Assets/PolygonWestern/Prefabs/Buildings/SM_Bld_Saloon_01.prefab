@@ -636,7 +636,6 @@ GameObject:
   - component: {fileID: 4764298106409884}
   - component: {fileID: 33072409649217810}
   - component: {fileID: 23678710913649840}
-  - component: {fileID: 3815300674093089967}
   m_Layer: 8
   m_Name: SM_Bld_Saloon_01
   m_TagString: Untagged
@@ -712,22 +711,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!208 &3815300674093089967
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1769217604530678}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 8.328, y: 4.9570003, z: 8.342}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 4.775, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1813071995597042
 GameObject:
   m_ObjectHideFlags: 0

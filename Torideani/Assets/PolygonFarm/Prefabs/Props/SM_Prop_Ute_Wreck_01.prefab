@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33101461247063886}
   - component: {fileID: 23161497912260972}
   - component: {fileID: 173548258122462810}
-  - component: {fileID: -6869563731633432592}
   m_Layer: 8
   m_Name: SM_Prop_Ute_Wreck_01
   m_TagString: Untagged
@@ -94,19 +93,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 01303998544c102418ac94b95b32a435, type: 3}
---- !u!208 &-6869563731633432592
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1571276150743498}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 1.093, y: 0.98, z: 2.7500002}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: -0.044000003, y: 0.94600004, z: 0}
-  m_TimeToStationary: 0.5

@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33528570365154744}
   - component: {fileID: 23482051542203146}
   - component: {fileID: -2301527935822342885}
-  - component: {fileID: 6500895080230779203}
   m_Layer: 8
   m_Name: SM_Prop_Trough_01
   m_TagString: Untagged
@@ -95,22 +94,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 6016fe986ec11de49ac4b86f4d47436f, type: 3}
---- !u!208 &6500895080230779203
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1008055433420524}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 1.6120001, y: 0.21000001, z: 0.45900002}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0.136, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1961441830389592
 GameObject:
   m_ObjectHideFlags: 0

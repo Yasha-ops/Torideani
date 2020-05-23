@@ -12,13 +12,12 @@ GameObject:
   - component: {fileID: 33143038705378180}
   - component: {fileID: 23919091386770414}
   - component: {fileID: 64059716025637726}
-  - component: {fileID: 3050673834748497157}
   m_Layer: 8
   m_Name: SM_Prop_Hay_Bale_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4532099128707850
 Transform:
@@ -94,19 +93,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300002, guid: fd0a9503482593740bb8e3fcfa8e0a9f, type: 3}
---- !u!208 &3050673834748497157
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1901134270748684}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.9110001, y: 0.319, z: 0.45700002}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: -0.003, y: 0.266, z: 0.004}
-  m_TimeToStationary: 0.5

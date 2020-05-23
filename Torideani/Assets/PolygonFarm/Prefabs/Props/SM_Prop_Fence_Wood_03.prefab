@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33764483357912620}
   - component: {fileID: 23653592660496512}
   - component: {fileID: 4751896449653178703}
-  - component: {fileID: -7590158822696315496}
   m_Layer: 8
   m_Name: SM_Prop_Fence_Wood_03
   m_TagString: Untagged
@@ -94,19 +93,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 5297752f093e5914b83b102fb4ca8a77, type: 3}
---- !u!208 &-7590158822696315496
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1180001922870540}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 1.25, y: 0.518, z: 0.025}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: -1.25, y: 0.68, z: 0}
-  m_TimeToStationary: 0.5

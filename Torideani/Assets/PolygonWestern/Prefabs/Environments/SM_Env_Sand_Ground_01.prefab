@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33187302560494488}
   - component: {fileID: 23784461939307182}
   - component: {fileID: 64488926314093396}
-  - component: {fileID: 4398079736274202501}
   m_Layer: 8
   m_Name: SM_Env_Sand_Ground_01
   m_TagString: Untagged
@@ -94,19 +93,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 529837ecdd6004d4db99d3326c0569f3, type: 3}
---- !u!208 &4398079736274202501
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1670278198964608}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 4.0540004, y: 0.18900001, z: 4.165}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0.18900001, z: 0}
-  m_TimeToStationary: 0.5

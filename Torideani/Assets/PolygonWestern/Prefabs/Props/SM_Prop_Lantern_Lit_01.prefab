@@ -181,7 +181,6 @@ GameObject:
   - component: {fileID: 33780552599777568}
   - component: {fileID: 23463884317415256}
   - component: {fileID: 64356709310695716}
-  - component: {fileID: -4374698338096070727}
   m_Layer: 8
   m_Name: SM_Prop_Lantern_Lit_01
   m_TagString: Untagged
@@ -265,19 +264,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 07171454384603d4686663708ee56994, type: 3}
---- !u!208 &-4374698338096070727
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1654858326694772}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.171, y: 0.27800003, z: 0.087000005}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0.27800003, z: 0}
-  m_TimeToStationary: 0.5

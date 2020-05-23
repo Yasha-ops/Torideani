@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33310822367811808}
   - component: {fileID: 23968998775048758}
   - component: {fileID: -2838751651761818140}
-  - component: {fileID: 2916965979814501123}
   m_Layer: 8
   m_Name: SM_Prop_LetterBox_Numbers_01
   m_TagString: Untagged
@@ -94,19 +93,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 122c4cacc25b7384f86afd2612bb7711, type: 3}
---- !u!208 &2916965979814501123
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1044247180509054}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.12200001, y: 0.065000005, z: 0.011000001}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0.011000001}
-  m_TimeToStationary: 0.5

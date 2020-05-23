@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33711804486572188}
   - component: {fileID: 23152748179603468}
   - component: {fileID: 64311191632251010}
-  - component: {fileID: -4488372462189069120}
   m_Layer: 8
   m_Name: SM_Prop_HitchingPost_01
   m_TagString: Untagged
@@ -94,19 +93,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 615ed493e26ed55418401354f6f38c4c, type: 3}
---- !u!208 &-4488372462189069120
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1100369024477680}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 1.2420001, y: 0.565, z: 0.109000005}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0.565, z: 0}
-  m_TimeToStationary: 0.5

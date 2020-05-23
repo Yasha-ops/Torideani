@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 23787437520110124}
   - component: {fileID: 4482188685149489817}
   - component: {fileID: 905460064682543572}
-  - component: {fileID: -7701094314700952887}
   m_Layer: 8
   m_Name: SM_Bld_ProduceStand_01
   m_TagString: Untagged
@@ -109,19 +108,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: d76aea9ab6052b04b8613088b3844695, type: 3}
---- !u!208 &-7701094314700952887
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1504926191794242}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 1.5380001, y: 1.667, z: 1.539}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0.020000001, y: 1.667, z: 0.034}
-  m_TimeToStationary: 0.5

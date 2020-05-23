@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 23124938734267260}
   - component: {fileID: 95543368975774596}
   - component: {fileID: 64003404551504588}
-  - component: {fileID: -5653989014232851676}
   m_Layer: 8
   m_Name: SM_Bld_Roof_Patch_01
   m_TagString: Untagged
@@ -114,19 +113,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: d8487b0b6e240114093b22c1b14026fd, type: 3}
---- !u!208 &-5653989014232851676
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1576734858715664}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 1.205, y: 0.16100001, z: 1.9200001}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0.054, z: 0}
-  m_TimeToStationary: 0.5
