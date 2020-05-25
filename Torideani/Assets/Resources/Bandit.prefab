@@ -69,7 +69,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1213087379865930357}
-  - component: {fileID: 997253780615185476}
+  - component: {fileID: 436241583168791698}
   m_Layer: 0
   m_Name: HealthBarController
   m_TagString: Untagged
@@ -91,7 +91,7 @@ Transform:
   m_Father: {fileID: 6776716175753526099}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &997253780615185476
+--- !u!114 &436241583168791698
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -100,9 +100,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 936457387324368985}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c0f78e4acfe21a4594760304164796e, type: 3}
+  m_Script: {fileID: 11500000, guid: b4bab3f0b39a2124089a6b3ee78ef4ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hp: {fileID: 6776716175753526102}
   heartsParent: {fileID: 5898907027382708208}
   heartContainerPrefab: {fileID: 1000013667988280, guid: 677e3f20f0ab76a45bd59d5b73b0b446,
     type: 3}
@@ -529,6 +530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcf2586f5b209a045af9dff869aa39f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hp: {fileID: 6776716175753526102}
 --- !u!1 &6390855748378849175
 GameObject:
   m_ObjectHideFlags: 0
@@ -973,61 +975,61 @@ MonoBehaviour:
   ShowParameterInspector: 1
   m_SynchronizeParameters:
   - Type: 1
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: Speed
   - Type: 1
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: Direction
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: Jump
   - Type: 9
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: Jumpstart
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: Ground
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: Fire1
   - Type: 9
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: enter
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: swimming
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: belly
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: breakdance
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: jazz
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: hiphop
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: swing
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: lay
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: sittingyell
   - Type: 9
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: quit
   - Type: 9
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: shoot
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: aim
   - Type: 9
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: reload
   m_SynchronizeLayers:
   - SynchronizeType: 2
@@ -1618,14 +1620,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1383799692419554, guid: 7aad5b0274fd2894eafec31a58e26a32, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 95632277690515818, guid: 7aad5b0274fd2894eafec31a58e26a32,
         type: 3}
       propertyPath: m_Controller
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1383799692419554, guid: 7aad5b0274fd2894eafec31a58e26a32, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 95632277690515818, guid: 7aad5b0274fd2894eafec31a58e26a32, type: 3}

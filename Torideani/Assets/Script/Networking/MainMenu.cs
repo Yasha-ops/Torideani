@@ -16,7 +16,7 @@ public class MainMenu : MonoBehaviourPunCallbacks
    private bool isConnecting = false;
 
    private const string GameVersion = "0.1";
-   private const int MaxPlayerPerRoom = 1;
+   private const int MaxPlayerPerRoom = 2;
 
 
    public bool First = false; 

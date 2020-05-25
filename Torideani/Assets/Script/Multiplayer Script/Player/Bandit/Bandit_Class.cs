@@ -62,7 +62,7 @@ public class Bandit_Class : MonoBehaviour
         switch (bonus)
         {
             case "Locked":
-                PV.RPC("RPC_EnableBonusLocked", RpcTarget.All, true);
+                PV.RPC("RPC_EnableBonusLocked", RpcTarget.All, false);
                 Invoke("Disable1",10);
                 break;
             case "Speed":
@@ -121,9 +121,8 @@ public class Bandit_Class : MonoBehaviour
     [PunRPC]
         void TakeDamage()
         {
-            health -= 0.25f;
-            HealthBar.GetComponent<HealthBarHUDTester>().Hurt(0.25f);
-            blood.Play();
+        health -= 1f;
+        blood.Play();
         }
 
     [PunRPC]
@@ -170,6 +169,7 @@ public class Bandit_Class : MonoBehaviour
     {
         PV.RPC("TakeDamage", RpcTarget.All);
         Debug.Log($"Player shooted health : {health}");
+        
     }
 
 }

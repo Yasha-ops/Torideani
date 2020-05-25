@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.Remoting.Lifetime;
 using Photon.Pun;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -28,7 +29,6 @@ public class Mouvement : MonoBehaviourPun
     private bool RingAnimation;
     private bool RingSong;
     private float angle;
-
 
     //ringMenu
     public List<MenuButton> buttonsMenu = new List<MenuButton>();
@@ -85,15 +85,21 @@ public class Mouvement : MonoBehaviourPun
                 GameObject yt = GameObject.FindWithTag("GameSetup");
                 if (Input.GetButton("Fire2"))
                 {
-                    speed = 3f;
+                    if (speed != 12f)
+                    {
+                        speed = 3f;
+                    }
                     yt.GetComponent<GameSetup>().CameraAim.gameObject.SetActive(true);
                     Anim.SetBool("aim", true);
                     yt.GetComponent<GameSetup>().firstcam.gameObject.SetActive(false);
 
                 }
-                else
+                else 
                 {
-                    speed = 6f;
+                    if (speed != 12f)
+                    {
+                        speed = 6f;
+                    }
                     yt.GetComponent<GameSetup>().CameraAim.gameObject.SetActive(false);
                     Anim.SetBool("aim", false);
                     yt.GetComponent<GameSetup>().firstcam.gameObject.SetActive(true);

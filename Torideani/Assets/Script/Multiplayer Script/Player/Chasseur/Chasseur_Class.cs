@@ -60,7 +60,7 @@ public class Chasseur_Class : MonoBehaviour
         switch (bonus)
         {
             case "Locked":
-                PV.RPC("RPC_EnableBonusLocked", RpcTarget.All , true);
+                PV.RPC("RPC_EnableBonusLocked", RpcTarget.All , false);
                 Invoke("Disable1" , 10);
                 break;
             case "Speed":
@@ -76,7 +76,7 @@ public class Chasseur_Class : MonoBehaviour
 
     private void Disable1()
     {
-        PV.RPC("RPC_EnableBonusLocked", RpcTarget.All , false);
+        PV.RPC("RPC_EnableBonusLocked", RpcTarget.All , true);
 
     }
 
@@ -91,14 +91,14 @@ public class Chasseur_Class : MonoBehaviour
         PV.RPC("TakeDamage", RpcTarget.All); 
         Debug.Log($"Player shooted health : {health}");
         blood.Play();
+       
     }
 
 
     [PunRPC]
         void TakeDamage()
         {
-            health -= 0.25f; 
-            HealthBar.GetComponent<HealthBarHUDTester>().Hurt(0.25f);
+            health -= 1f;
         }
 
     [PunRPC]

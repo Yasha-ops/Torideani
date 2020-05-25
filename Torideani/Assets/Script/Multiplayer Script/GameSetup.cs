@@ -53,20 +53,24 @@ public class GameSetup : MonoBehaviour
         GameObject[] banditList = GameObject.FindGameObjectsWithTag("Bandit");
         GameObject[] chasseursList = GameObject.FindGameObjectsWithTag("Chasseur");
 
-        if (chasseursList.Length == 0)
+        if (GameDuration < 570)
         {
-            foreach(GameObject bandit in banditList)
-                bandit.GetComponent<Bandit_Class>().GameOver.text = "You won !";
-            TextTimer.text = "GAME OVER!";
-            return true;
+            if (chasseursList.Length == 0)
+            {
+                foreach (GameObject bandit in banditList)
+                    bandit.GetComponent<Bandit_Class>().GameOver.text = "You won !";
+                TextTimer.text = "GAME OVER!";
+                return true;
+            }
+            if (banditList.Length == 0)
+            {
+                foreach (GameObject chasseurs in chasseursList)
+                    chasseurs.GetComponent<Chasseur_Class>().GameOver.text = "You won !";
+                TextTimer.text = "GAME OVER!";
+                return true;
+            }
         }
-        if (banditList.Length == 0)
-        {
-            foreach(GameObject chasseurs in chasseursList)
-                chasseurs.GetComponent<Chasseur_Class>().GameOver.text = "You won !";
-            TextTimer.text = "GAME OVER!";
-            return true;
-        }
+        
 
         if (GameDuration <=  100)
         {

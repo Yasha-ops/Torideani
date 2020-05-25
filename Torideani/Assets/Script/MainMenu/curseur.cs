@@ -15,5 +15,7 @@ public class curseur : MonoBehaviour
     void Update()
     {
         Cursor.lockState = CursorLockMode.None;
+        if (Input.GetButton("Cancel") || Input.GetKey("escape"))
+            Application.Quit();
     }
 }

@@ -10,6 +10,8 @@ public class HealthBarController : MonoBehaviour
     private GameObject[] heartContainers;
     private Image[] heartFills;
 
+    public GameObject hp;
+
     public Transform heartsParent;
     public GameObject heartContainerPrefab;
 
@@ -49,7 +51,7 @@ public class HealthBarController : MonoBehaviour
     {
         for (int i = 0; i < heartFills.Length; i++)
         {
-            if (i < PlayerStats.Instance.Health)
+            if (i < hp.gameObject.GetComponent<Chasseur_Class>().health)
             {
                 heartFills[i].fillAmount = 1;
             }

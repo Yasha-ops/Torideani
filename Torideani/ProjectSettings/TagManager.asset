@@ -17,6 +17,7 @@ TagManager:
   - FxTemporaire
   - AimCamera
   - Arrived
+  - Sound
   layers:
   - Default
   - TransparentFX
